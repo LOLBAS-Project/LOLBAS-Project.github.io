@@ -1,0 +1,23 @@
+---
+functions:
+  execute:
+    -
+      Name: SQLToolsPS.exe
+      Description: Execute, evade logging
+      Author: ''
+      Created: '2018-05-25'
+      Categories: |
+      
+      Commands: |
+          Command: SQLToolsPS.exe -noprofile -command Start-Process calc.exe
+          Description: Run PowerShell scripts and commands.
+      Full_Path:
+          C:\Program files (x86)\Microsoft SQL Server\130\Tools\Binn\sqlps.exe
+      Code_Sample: |
+          
+      Detection: |
+          
+      Resources: |
+          https://twitter.com/pabraeken/status/993298228840992768
+      Notes: Thanks to Pierre-Alexandre Braeken - @pabraeken
+---

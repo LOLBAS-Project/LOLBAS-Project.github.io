@@ -1,0 +1,199 @@
+---
+---
+
+$accent: #bf0707;
+$lighter: #fff4f4;
+$hover: #ff0000;
+
+// layout
+
+$column-width: 800px;
+$grace-space: 200px;
+$layout-break: "(min-width: #{$column-width + $grace-space})";
+
+@media #{$layout-break} {
+    body {
+        width: $column-width;
+        margin: 40px auto;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+@media not all and #{$layout-break} {
+    .github-corner {
+        display: none;
+    }
+}
+
+// common tags
+
+body {
+    font-family: sans, sans-serif;
+}
+
+code {
+    padding: 0.15em 0.25em;
+    border-radius: 0.25em;
+    color: $accent;
+    background: $lighter;
+}
+
+pre {
+    background: $lighter;
+    padding: 1em;
+    overflow-x: auto;
+
+    code {
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+a:link, a:visited {
+    color: $accent;
+}
+
+a:hover {
+    color: $hover;
+}
+
+// permalink on headings
+
+h2, h3, h4, h5, h5 {
+    .permalink {
+        margin-left: 5px;
+        text-decoration: none;
+        visibility: hidden;
+
+        &::before {
+            content: "#";
+        }
+    }
+
+    &:target {
+        border-left: 5px solid $accent;
+        padding-left: 5px;
+    }
+
+    &:hover {
+        .permalink {
+            visibility: visible;
+        }
+    }
+}
+
+// binary list and search
+
+#bin-search {
+    margin-top: 50px;
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#bin-table {
+    width: 100%;
+
+    th, td {
+        padding: 0.2em 1em;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    tbody tr:hover {
+        background: $lighter;
+    }
+
+    #search-message {
+        display: none;
+        text-align: center;
+        padding: 1em;
+    }
+}
+
+// function description
+
+.function-list {
+    font-size: 0.8rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        margin: 0.2em 0;
+        border: 1px solid $accent;
+
+        a:link, a:visited {
+            color: $accent;
+            text-decoration: none;
+        }
+
+        &:hover, a:hover {
+            color: $hover;
+            border-color: $hover;
+        }
+    }
+}
+
+// bin examples
+
+.examples {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: table-row;
+
+        &:not(:only-child):before {
+            display: table-cell;
+            font-size: 0.8rem;
+            font-weight: bold;
+            width: 3em;
+            text-align: center;
+            counter-increment: item;
+            content: "(" counter(item, lower-alpha) ")";
+        }
+    }
+}
+
+// other classes
+
+.logo {
+    $margin: 20px;
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-left: $margin;
+    margin-bottom: $margin;
+}
+
+.bin-name {
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.function-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.github-buttons {
+    display: inline-block;
+    margin-left: 10px;
+
+    // avoid displaying the link text during loading
+    a.github-button {
+        visibility: hidden;
+    }
+}

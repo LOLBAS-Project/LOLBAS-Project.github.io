@@ -1,0 +1,17 @@
+---
+title: LOLBAS
+
+exclude: ['/Gemfile', '/Makefile', '/README.md', '/CONTRIBUTING.md']
+
+permalink: pretty
+
+collections:
+  lolbas:
+    output: true
+
+defaults:
+  - scope:
+      path: '_lolbas'
+    values:
+      name: 'MSBuild.exe'
+      layout: 'bin'

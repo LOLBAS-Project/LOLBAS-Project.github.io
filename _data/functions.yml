@@ -1,0 +1,10 @@
+---
+execute:
+  label: Execute
+  description: |
+    The LOLBAS can achieve abritrary code execution.
+
+download:
+  label: Download
+  description: |
+    The LOLBAS can download files.

@@ -1,0 +1,94 @@
+<input id="bin-search" type="text" placeholder="Search among {{ site.lolbas | size }} binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute')"/>
+
+<div id="bin-table-wrapper">
+    <table id="bin-table">
+        <thead>
+            <tr>
+                <th>Binary</th>
+                <th>Functions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in site.lolbas %}
+            <tr>
+                <td><a href="{{ file.url }}" class="bin-name">{% include get_bin_name path=file.path %}</a></td>
+                <td>{% include function_list.html bin=file %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr><td id="search-message" colspan="2">No binary matches...</td></tr>
+        </tfoot>
+    </table>
+</div>
+
+<script>
+ function filter(query) {
+     // consistently update the URL
+     location.hash = query;
+
+     // determine the query type
+     var queryType = query[0];
+     if (queryType === '/') {
+         query = query.slice(1);
+     }
+
+     // filter rows
+     var noResults = true;
+     document.querySelectorAll('#bin-table tbody tr').forEach(function (row) {
+         var binName = row.children[0].firstElementChild.innerText.toLowerCase();
+         var functions = Array.from(row.children[1].firstElementChild.children)
+                              .map(function (x) { return x.innerText })
+                              .join('\n').toLowerCase();
+
+         var against = (queryType === '/' ? functions : binName);
+         if (against.indexOf(query) !== -1) {
+             row.style.display = '';
+             noResults = false;
+         } else {
+             row.style.display = 'none';
+         }
+     });
+
+     // update the search message visibility
+     var searchMessage = document.getElementById('search-message');
+     searchMessage.style.display = noResults ? 'table-cell' : 'none';
+ }
+
+ (function () {
+     var searchBox = document.getElementById('bin-search');
+
+     // ensure height during filtering
+     var binTableWrapper = document.getElementById('bin-table-wrapper');
+     binTableWrapper.style.height = binTableWrapper.clientHeight + 'px';
+
+     // handle user input
+     searchBox.addEventListener('input', function () {
+         var query = searchBox.value.toLowerCase().trim();
+         filter(query);
+     });
+
+     // handle shortcuts
+     addEventListener('keydown', function (event) {
+         // focus search box on valid keydown
+         if (event.key.toLowerCase().match(/^[\/a-z]$/) &&
+             !(event.ctrlKey || event.altKey || event.metaKey)) {
+             searchBox.focus();
+         }
+         // clear filter on escape
+         else if (event.key === 'Escape') {
+             searchBox.value = '';
+             searchBox.focus();
+             filter('');
+         }
+     });
+
+     // filter on load according to the URL
+     var query = decodeURIComponent(location.hash.slice(1));
+     filter(query);
+     if (query) {
+         searchBox.value = query;
+         searchBox.focus();
+     }
+ })();
+</script>

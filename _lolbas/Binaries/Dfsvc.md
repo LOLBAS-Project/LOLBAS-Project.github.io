@@ -1,0 +1,26 @@
+---
+functions:
+  execute:
+    -
+      Name: Dfsvc.exe
+      Description: Execute
+      Author: ''
+      Created: '2018-05-25'
+      Categories: |
+          
+      Commands: |
+          Command: Missing Example
+          Description: ''
+      Full_Path:
+          C:\Windows\Microsoft.NET\Framework\v2.0.50727\Dfsvc.exe
+          C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Dfsvc.exe
+          C:\Windows\Microsoft.NET\Framework\v4.0.30319\Dfsvc.exe
+          C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Dfsvc.exe
+      Code_Sample: |
+          
+      Detection: |
+          
+      Resources: |
+          https://github.com/api0cradle/ShmooCon-2015/blob/master/ShmooCon-2015-Simple-WLEvasion.pdf
+      Notes: Thanks to Casey Smith - @subtee
+---

@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            
+            LOLBAS
+        </title>
+        <link rel="icon" href="/assets/logo.png">
+        <link rel="stylesheet" href="/assets/style.css" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </head>
+    <body>
+        <a href="https://github.com/LOLBAS-Project/LOLBAS" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+        <h1>
+    
+    LOLBAS
+    <div class="github-buttons">
+        <a class="github-button" href="https://github.com/LOLBAS-Project/LOLBAS" data-icon="octicon-star" data-show-count="true" aria-label="Star api0cradle/LOLBAS on GitHub">Star</a>
+    </div>
+</h1>
+
+
+<h1 id="living-off-the-land-binaries-and-scripts-and-now-also-libraries">Living Off The Land Binaries and Scripts (and now also Libraries)</h1>
+
+<p><img src="https://github.com/LOLBAS-Project/LOLBAS/raw/master/Logo/LOLBAS.png" height="250" /></p>
+
+<p>There are currently three different lists.</p>
+
+<ul>
+  <li><a href="LOLBins.md">LOLBins</a></li>
+  <li><a href="LOLLibs.md">LOLLibs</a></li>
+  <li><a href="LOLScripts.md">LOLScripts</a></li>
+</ul>
+
+<p>The goal of these lists are to document every binary, script and library that can be used for Living Off The Land techniques.</p>
+
+<p>Definition of LOLBAS candidates (Binaries,scripts and libraries):</p>
+<ul>
+  <li>LOLBAS candidates must be present on the system by default or introduced by application/software “installation” from a “reputable” vendor or open-source entity. Otherwise, LOLBAS determination is subject to scrutiny by the (security) community and agreed upon standards.</li>
+  <li>Can be used as an attacker tool directly or can perform other actions than what it was intended to do (Ex: regsvr32 - execute code from SCT online)
+    <ul>
+      <li>executing code</li>
+      <li>downloading/upload files</li>
+      <li>bypass UAC</li>
+      <li>compile code</li>
+      <li>getting creds/dumping process</li>
+      <li>surveillance (keylogger, network trace)</li>
+      <li>evade logging/remove log entry</li>
+      <li>side-loading/hijacking of DLL</li>
+      <li>pass-through execution of other programs, script (via a LOLBin)</li>
+      <li>pass-through persistence utilizing existing LOLBin</li>
+      <li>persistence (Hide data in ADS, execute at logon etc)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Right now it is me that decides if the files are a valid contribution or not. 
+I try my best to conclude with help from others in the InfoSec community and I do not wish to exclude anything. 
+Also, please be patient if it takes some time for your contribution to be added to the list. I am just one guy.</p>
+
+<p>Every binary, script and library has it’s own .md file in the subfolders. That way I should be easier to maintain and reuse. 
+I have borrowed examples from the community (And a lot from Red Canary - Atomic Red Team - Thanks @subtee)
+Would really love if the community could contribute as much as possible. That would make it better for everyone.
+If you think it is hard to make a pull request using github, don’t hesitate to send me a tweet and I will add the contribution for you.</p>
+
+<h2 id="story">STORY</h2>
+<p>“Living off the land” was coined by Matt Graeber - @mattifestation &lt;3  <br />
+One of the first “Living Off The Land” talks (That I know of) is this one:
+https://www.youtube.com/watch?v=j-r6UonEkUw</p>
+
+<p>The term LOLBins came from a twitter discussion on what to call these binaries. It was first proposed by Philip Goh - @MathCasualty here:
+https://twitter.com/MathCasualty/status/969174982579273728</p>
+
+<p>The term LOLScripts came from Jimmy - @bohops: 
+https://twitter.com/bohops/status/984828803120881665</p>
+
+<p>Common hashtags for these files are:</p>
+
+<p>#LOLBin <br />
+#LOLBins <br />
+#LOLScript <br />
+#LOLScripts <br />
+#LOLLib <br />
+#LOLLibs</p>
+
+<p>A “highly scientific poll” was also conducted to agree (69% yes) on the name LOLBins.
+https://twitter.com/Oddvarmoe/status/985432848961343488</p>
+
+<p>The domain http://lolbins.com has been registered by an unknown individual and redirected it to this project. (Thank you)</p>
+
+<p>The awesome logos in the logo folder was provided by Adam Nadrowski (@_sup_mane) - Thank you so much man!
+Love this logo: <br />
+<img src="https://github.com/LOLBAS-Project/LOLBAS/raw/master/Logo/LOL1.png" height="250" /></p>
+
+<p>See the full list of <a href="/functions/">functions</a>.</p>
+
+<p><input id="bin-search" type="text" placeholder="Search among 102 binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute')" /></p>
+
+<div id="bin-table-wrapper">
+    <table id="bin-table">
+        <thead>
+            <tr>
+                <th>Binary</th>
+                <th>Functions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="/lolbas/Atbroker/" class="bin-name">Atbroker</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Bash/" class="bin-name">Bash</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Atbroker/" class="bin-name">Atbroker</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Atbroker/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Bash/" class="bin-name">Bash</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Bash/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Bitsadmin/" class="bin-name">Bitsadmin</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Certutil/" class="bin-name">Certutil</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Cmdkey/" class="bin-name">Cmdkey</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Cmstp/" class="bin-name">Cmstp</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Cmstp/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Control/" class="bin-name">Control</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Control/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Csc/" class="bin-name">Csc</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Cscript/" class="bin-name">Cscript</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Cscript/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Dfsvc/" class="bin-name">Dfsvc</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Dfsvc/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Diskshadow/" class="bin-name">Diskshadow</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Diskshadow/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Dns/" class="bin-name">Dns</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Dns/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Esentutl/" class="bin-name">Esentutl</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Expand/" class="bin-name">Expand</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Explorer/" class="bin-name">Explorer</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Explorer/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Extexport/" class="bin-name">Extexport</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Extexport/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Extrac32/" class="bin-name">Extrac32</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Findstr/" class="bin-name">Findstr</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Forfiles/" class="bin-name">Forfiles</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Forfiles/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Gpscript/" class="bin-name">Gpscript</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Gpscript/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Hh/" class="bin-name">Hh</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Hh/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Ie4unit/" class="bin-name">Ie4unit</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Ie4unit/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Ieexec/" class="bin-name">Ieexec</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Ieexec/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Infdefaultinstall/" class="bin-name">Infdefaultinstall</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Infdefaultinstall/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Installutil/" class="bin-name">Installutil</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Installutil/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Makecab/" class="bin-name">Makecab</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Mavinject/" class="bin-name">Mavinject</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Mavinject/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Msbuild/" class="bin-name">Msbuild</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Msbuild/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Msconfig/" class="bin-name">Msconfig</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Msconfig/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Msdt/" class="bin-name">Msdt</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Msdt/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Mshta/" class="bin-name">Mshta</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Mshta/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Msiexec/" class="bin-name">Msiexec</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Msiexec/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Nltest/" class="bin-name">Nltest</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Odbcconf/" class="bin-name">Odbcconf</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Odbcconf/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Openwith/" class="bin-name">Openwith</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Openwith/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Pcalua/" class="bin-name">Pcalua</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Pcalua/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Pcwrun/" class="bin-name">Pcwrun</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Pcwrun/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Powershell/" class="bin-name">Powershell</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Powershell/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Presentationhost/" class="bin-name">Presentationhost</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Presentationhost/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Print/" class="bin-name">Print</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Psr/" class="bin-name">Psr</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Reg/" class="bin-name">Reg</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Regasm/" class="bin-name">Regasm</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Regasm/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Regedit/" class="bin-name">Regedit</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Register-cimprovider/" class="bin-name">Register-cimprovider</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Register-cimprovider/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Regsvcs/" class="bin-name">Regsvcs</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Regsvcs/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Regsvr32/" class="bin-name">Regsvr32</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Regsvr32/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Replace/" class="bin-name">Replace</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Robocopy/" class="bin-name">Robocopy</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Rpcping/" class="bin-name">Rpcping</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Rundll32/" class="bin-name">Rundll32</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Rundll32/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Runonce/" class="bin-name">Runonce</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Runonce/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Runscripthelper/" class="bin-name">Runscripthelper</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Runscripthelper/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Sc/" class="bin-name">Sc</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Sc/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Scriptrunner/" class="bin-name">Scriptrunner</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Scriptrunner/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Syncappvpublishingserver/" class="bin-name">Syncappvpublishingserver</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Syncappvpublishingserver/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Wab/" class="bin-name">Wab</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Wab/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Wmic/" class="bin-name">Wmic</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Wmic/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Wscript/" class="bin-name">Wscript</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Wscript/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Binaries/Xwizard/" class="bin-name">Xwizard</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Xwizard/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Bitsadmin/" class="bin-name">Bitsadmin</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Explorer/" class="bin-name">Explorer</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Msbuild/" class="bin-name">Msbuild</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Msbuild/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Msconfig/" class="bin-name">Msconfig</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Msconfig/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Advpack/" class="bin-name">Advpack</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Advpack/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Ieadvpack/" class="bin-name">Ieadvpack</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Ieadvpack/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Ieframe/" class="bin-name">Ieframe</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Ieframe/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Mshtml/" class="bin-name">Mshtml</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Mshtml/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Pcwutl/" class="bin-name">Pcwutl</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Pcwutl/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Setupapi/" class="bin-name">Setupapi</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Setupapi/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Shdocvw/" class="bin-name">Shdocvw</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Shdocvw/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Shell32/" class="bin-name">Shell32</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Shell32/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Syssetup/" class="bin-name">Syssetup</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Syssetup/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Url/" class="bin-name">Url</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Url/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSLibraries/Zipfldr/" class="bin-name">Zipfldr</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSLibraries/Zipfldr/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/CL_mutexverifiers/" class="bin-name">CL_mutexverifiers</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/CL_mutexverifiers/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/Cl_invocation/" class="bin-name">Cl_invocation</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/Cl_invocation/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/Manage-bde/" class="bin-name">Manage-bde</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/Manage-bde/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/Pubprn/" class="bin-name">Pubprn</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/Pubprn/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/Slmgr/" class="bin-name">Slmgr</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/Slmgr/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/Syncappvpublishingserver/" class="bin-name">Syncappvpublishingserver</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/Syncappvpublishingserver/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/Winrm/" class="bin-name">Winrm</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/Winrm/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OSScripts/pester/" class="bin-name">pester</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OSScripts/pester/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Appvlp/" class="bin-name">Appvlp</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Appvlp/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Bginfo/" class="bin-name">Bginfo</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Bginfo/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Cdb/" class="bin-name">Cdb</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Cdb/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Csi/" class="bin-name">Csi</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Csi/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Dnx/" class="bin-name">Dnx</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Dnx/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Dxcap/" class="bin-name">Dxcap</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Dxcap/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Mftrace/" class="bin-name">Mftrace</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Mftrace/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Msdeploy/" class="bin-name">Msdeploy</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Msdeploy/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Msxsl/" class="bin-name">Msxsl</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Msxsl/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Rcsi/" class="bin-name">Rcsi</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Rcsi/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Sqldumper/" class="bin-name">Sqldumper</a></td>
+                <td><ul class="function-list">
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Sqlps/" class="bin-name">Sqlps</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Sqlps/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Sqltoolsps/" class="bin-name">Sqltoolsps</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Sqltoolsps/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Te/" class="bin-name">Te</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Te/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Tracker/" class="bin-name">Tracker</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Tracker/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Vsjitdebugger/" class="bin-name">Vsjitdebugger</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Vsjitdebugger/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/OtherMSBinaries/Winword/" class="bin-name">Winword</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/OtherMSBinaries/Winword/#execute">Execute</a></li>
+    
+</ul></td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr><td id="search-message" colspan="2">No binary matches...</td></tr>
+        </tfoot>
+    </table>
+</div>
+
+<script>
+ function filter(query) {
+     // consistently update the URL
+     location.hash = query;
+
+     // determine the query type
+     var queryType = query[0];
+     if (queryType === '/') {
+         query = query.slice(1);
+     }
+
+     // filter rows
+     var noResults = true;
+     document.querySelectorAll('#bin-table tbody tr').forEach(function (row) {
+         var binName = row.children[0].firstElementChild.innerText.toLowerCase();
+         var functions = Array.from(row.children[1].firstElementChild.children)
+                              .map(function (x) { return x.innerText })
+                              .join('\n').toLowerCase();
+
+         var against = (queryType === '/' ? functions : binName);
+         if (against.indexOf(query) !== -1) {
+             row.style.display = '';
+             noResults = false;
+         } else {
+             row.style.display = 'none';
+         }
+     });
+
+     // update the search message visibility
+     var searchMessage = document.getElementById('search-message');
+     searchMessage.style.display = noResults ? 'table-cell' : 'none';
+ }
+
+ (function () {
+     var searchBox = document.getElementById('bin-search');
+
+     // ensure height during filtering
+     var binTableWrapper = document.getElementById('bin-table-wrapper');
+     binTableWrapper.style.height = binTableWrapper.clientHeight + 'px';
+
+     // handle user input
+     searchBox.addEventListener('input', function () {
+         var query = searchBox.value.toLowerCase().trim();
+         filter(query);
+     });
+
+     // handle shortcuts
+     addEventListener('keydown', function (event) {
+         // focus search box on valid keydown
+         if (event.key.toLowerCase().match(/^[\/a-z]$/) &&
+             !(event.ctrlKey || event.altKey || event.metaKey)) {
+             searchBox.focus();
+         }
+         // clear filter on escape
+         else if (event.key === 'Escape') {
+             searchBox.value = '';
+             searchBox.focus();
+             filter('');
+         }
+     });
+
+     // filter on load according to the URL
+     var query = decodeURIComponent(location.hash.slice(1));
+     filter(query);
+     if (query) {
+         searchBox.value = query;
+         searchBox.focus();
+     }
+ })();
+</script>
+
+
+        <script>
+         // add permalink on headings
+         document.querySelectorAll('h2, h3, h4, h5, h5').forEach((heading) => {
+             const link = document.createElement('a');
+             link.className = 'permalink';
+             link.href = `#${heading.id}`;
+             heading.appendChild(link);
+         });
+        </script>
+    </body>
+</html>

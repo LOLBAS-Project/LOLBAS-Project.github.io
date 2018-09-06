@@ -1,0 +1,67 @@
+---
+layout: common
+---
+
+{% capture bin_name %}{% include get_bin_name path=page.path %}{% endcapture %}
+
+{% include page_title.html title=bin_name %}
+
+{{ page.description | markdownify }}
+
+{% for function in page.functions %}
+
+{% assign function_name = function[0] %}
+{% assign examples = function[1] %}
+
+<h2 id="{{ function_name }}" class="function-name">
+    {{- site.data.functions[function_name].label -}}
+</h2>
+
+{{ site.data.functions[function_name].description | markdownify }}
+
+<ul class="examples">
+
+	{% for example in examples %}
+
+		{% capture Name %}
+		{{ example.Name }}
+		{% endcapture %}
+
+		{% capture Commands %}
+		{{ example.Commands }}
+		{% endcapture %}
+
+		{% capture Full_Path %}
+		{{ example.Full_Path }}
+		{% endcapture %}
+
+		{% capture Code_Sample %}
+		{{ example.Code_Sample }}
+		{% endcapture %}
+
+		{% capture Resources %}
+		{{ example.Resources }}
+		{% endcapture %}
+
+		{% capture Notes %}
+		{{ example.Notes }}
+		{% endcapture %}
+	{% endfor %}
+    <li>
+        <h3>Name</h3>
+		<pre><code>{{ Name | strip }}</code></pre>
+        <h3>Commands</h3>
+        <pre><code>{{- Commands | strip -}}</code></pre>
+        <h3>Full Path</h3>
+        <pre><code>{{- Full_Path | strip -}}</code></pre>
+        <h3>Code Sample</h3>
+        <pre><code>{{- Code_Sample | strip -}}</code></pre>
+        <h3>Resources</h3>
+		<pre><code>{{- Resources | strip -}}</code></pre>
+        <h3>Notes</h3>
+        <pre><code>{{- Notes | strip -}}</code></pre>
+    </li>
+    
+</ul>
+
+{% endfor %}
