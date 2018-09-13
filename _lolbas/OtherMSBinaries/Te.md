@@ -1,22 +1,13 @@
 ---
+name: te.exe
+description: 
 functions:
   execute:
-    -
-      Name: te.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: te.exe bypass.wsc
-          Description: Run COM Scriptlets (e.g. VBScript) by calling a Windows Script Component (WSC) file.
-      Full_Path: ''
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/gn3mes1s/status/927680266390384640?lang=bg
-      Notes: Thanks to Giuseppe N3mes1s - @gN3mes1s
+    - description: Run COM Scriptlets (e.g. VBScript) by calling a Windows Script Component (WSC) file.
+      code: te.exe bypass.wsc
+resources: 
+    - resource: https://twitter.com/gn3mes1s/status/927680266390384640?lang=bg
+fullpath: 
+    - path: Missing
+notes: Thanks to Giuseppe N3mes1s - @gN3mes1s
 ---

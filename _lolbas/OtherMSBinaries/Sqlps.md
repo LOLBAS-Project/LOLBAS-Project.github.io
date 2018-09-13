@@ -1,23 +1,13 @@
 ---
+name: 
+description: 
 functions:
   execute:
-    -
-      Name: Sqlps.exe
-      Description: Execute, evade logging
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: Sqlps.exe -noprofile
-          Description: Drop into a SQL Server PowerShell console without Module and ScriptBlock Logging.
-      Full_Path:
-          C:\Program files (x86\Microsoft SQL Server\100\Tools\Binn\sqlps.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/bryon_/status/975835709587075072
-      Notes: Thanks to Bryon - @bryon_
+    - description: Drop into a SQL Server PowerShell console without Module and ScriptBlock Logging.
+      code: Sqlps.exe -noprofile
+resources: 
+    - resource: https://twitter.com/bryon_/status/975835709587075072
+fullpath: 
+    - path: C:\Program files (x86\Microsoft SQL Server\100\Tools\Binn\sqlps.exe
+notes: Thanks to Bryon - @bryon_
 ---

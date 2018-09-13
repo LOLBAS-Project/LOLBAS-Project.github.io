@@ -1,25 +1,15 @@
 ---
+name: csi.exe
+description: 
 functions:
   execute:
-    -
-      Name: csi.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: csi.exe file
-          Description: Use csi.exe to run unsigned C# code.
-      Full_Path:
-          c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\csi.exe
-          c:\Program Files (x86)\Microsoft Web Tools\Packages\Microsoft.Net.Compilers.X.Y.Z\tools\csi.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/subTee/status/781208810723549188
-          https://enigma0x3.net/2016/11/17/bypassing-application-whitelisting-by-using-dnx-exe/
-      Notes: Thanks to Casey Smith - @subtee
+    - description:  Use csi.exe to run unsigned C# code.
+      code: csi.exe file
+resources: 
+    - resource: https://twitter.com/subTee/status/781208810723549188
+    - resource: https://enigma0x3.net/2016/11/17/bypassing-application-whitelisting-by-using-dnx-exe/
+fullpath: 
+    - path: c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\csi.exe
+    - path: c:\Program Files (x86)\Microsoft Web Tools\Packages\Microsoft.Net.Compilers.X.Y.Z\tools\csi.exe
+notes: Thanks to Casey Smith - @subtee
 ---

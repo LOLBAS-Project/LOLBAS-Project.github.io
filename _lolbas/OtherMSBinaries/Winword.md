@@ -1,24 +1,14 @@
 ---
+name: winword.exe
+description: 
 functions:
   execute:
-    -
-      Name: winword.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: winword.exe /l dllfile.dll
-          Description: Launch DLL payload.
-      Full_Path:
-          c:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/vysecurity/status/884755482707210241
-          https://twitter.com/Hexacorn/status/885258886428725250
-      Notes: Thanks to Vincent Yiu - @@vysecurity (Cmd), Adam - @Hexacorn (Internals)
+    - description:  Launch DLL payload.
+      code: winword.exe /l dllfile.dll
+resources: 
+    - resource: https://twitter.com/vysecurity/status/884755482707210241
+    - resource: https://twitter.com/Hexacorn/status/885258886428725250
+fullpath: 
+    - path: C:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE
+notes: Thanks to Vincent Yiu - @@vysecurity (Cmd), Adam - @Hexacorn (Internals)
 ---
