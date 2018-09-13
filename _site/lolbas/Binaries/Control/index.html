@@ -31,42 +31,70 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Control/#ads">Alternate data streams</a></li>
+    
+</ul>
+
+
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\control.exe</li>
+	
+	<li>c:\windows\sysWOW64\control.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://pentestlab.blog/2017/05/24/applocker-bypass-control-panel/">https://pentestlab.blog/2017/05/24/applocker-bypass-control-panel/</a></li>
+	
+	<li><a href="https://www.contextis.com/resources/blog/applocker-bypass-registry-key-manipulation/">https://www.contextis.com/resources/blog/applocker-bypass-registry-key-manipulation/</a></li>
+	
+	<li><a href="https://bohops.com/2018/01/23/loading-alternate-data-stream-ads-dll-cpl-binaries-to-bypass-applocker/">https://bohops.com/2018/01/23/loading-alternate-data-stream-ads-dll-cpl-binaries-to-bypass-applocker/</a></li>
+	
+	<li><a href="https://twitter.com/bohops/status/955659561008017409">https://twitter.com/bohops/status/955659561008017409</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Jimmy - @bohops</p>
+
+<br>
 
 
 
 
 
 
+<h2 id="ads" class="function-name">Alternate data streams</h2>
 
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
+<p>The LOLBAS can write or read alternate data streams.</p>
 
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Control.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: control.exe c:\windows\tasks\file.txt:evil.dll
-Description: Execute evil.dll which is stored in an Alternate Data Stream (ADS).</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\system32\control.exe C:\Windows\sysWOW64\control.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://pentestlab.blog/2017/05/24/applocker-bypass-control-panel/
-https://www.contextis.com/resources/blog/applocker-bypass-registry-key-manipulation/
-https://bohops.com/2018/01/23/loading-alternate-data-stream-ads-dll-cpl-binaries-to-bypass-applocker/
-https://twitter.com/bohops/status/955659561008017409</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Jimmy - @bohops</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Execute evil.dll which is stored in an Alternate Data Stream (ADS).</p>
+
+        <pre><code>control.exe c:\windows\tasks\file.txt:evil.dll</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

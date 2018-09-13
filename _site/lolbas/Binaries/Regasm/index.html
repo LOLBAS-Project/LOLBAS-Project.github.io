@@ -31,9 +31,72 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Regasm/#awl-bypass">AWL bypass</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Regasm/#execute">Execute</a></li>
+    
+</ul>
 
 
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\regasm.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/">https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/</a></li>
+	
+	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="awl-bypass" class="function-name">AWL bypass</h2>
+
+<p>The LOLBAS can bypass application whitelisting solutions.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Loads the target .DLL file and executes the RegisterClass function.</p>
+
+        <pre><code>regasm.exe AllTheThingsx64.dll</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 
@@ -46,29 +109,21 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Regasm.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: regasm.exe /U AllTheThingsx64.dll
-Description: Loads the target .DLL file and executes the UnRegisterClass function.
-Command: regasm.exe AllTheThingsx64.dll
-Description: Loads the target .DLL file and executes the RegisterClass function.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe C:\Windows\Microsoft.NET\Framework64\v2.0.50727\regasm.exe C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/
-https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/RegSvcsRegAsmBypass.cs
-https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/RegsvcsRegasm.md
-https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Casey Smith - @subtee</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Loads the target .DLL file and executes the RegisterClass function.</p>
+
+        <pre><code>regasm.exe AllTheThingsx64.dll</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

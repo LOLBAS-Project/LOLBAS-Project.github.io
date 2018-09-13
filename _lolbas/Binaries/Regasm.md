@@ -1,32 +1,26 @@
 ---
+name: regasm.exe
+description: 
 functions:
+  awl-bypass:
+    - description: Loads the target .DLL file and executes the UnRegisterClass function.
+      code: regasm.exe /U AllTheThingsx64.dll
+  awl-bypass:
+    - description: Loads the target .DLL file and executes the RegisterClass function.
+      code: regasm.exe AllTheThingsx64.dll
   execute:
-    -
-      Name: Regasm.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: regasm.exe /U AllTheThingsx64.dll
-          Description: Loads the target .DLL file and executes the UnRegisterClass function.
-          Command: regasm.exe AllTheThingsx64.dll
-          Description: Loads the target .DLL file and executes the RegisterClass function.
-      Full_Path:
-          C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe
-          C:\Windows\Microsoft.NET\Framework64\v2.0.50727\regasm.exe
-          C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe
-          C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/
-          https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/RegSvcsRegAsmBypass.cs
-          https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/RegsvcsRegasm.md
-          https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/
-      Notes: Thanks to Casey Smith - @subtee
-
+    - description: Loads the target .DLL file and executes the UnRegisterClass function.
+      code: regasm.exe /U AllTheThingsx64.dll
+  execute:
+    - description: Loads the target .DLL file and executes the RegisterClass function.
+      code: regasm.exe AllTheThingsx64.dll
+resources: 
+    - resource: https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/
+    - resource: https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/
+fullpath: 
+    - path: C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe
+    - path: C:\Windows\Microsoft.NET\Framework64\v2.0.50727\regasm.exe
+    - path: C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe
+    - path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe
+notes: Thanks to Casey Smith - @subtee
 ---

@@ -6,7 +6,27 @@ layout: common
 
 {% include page_title.html title=bin_name %}
 
+{% include function_list.html bin=page %}
+
 {{ page.description | markdownify }}
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	{% for ent in page.fullpath %}
+	<li>{{ent.path}}</li>
+	{% endfor %} 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	{% for ent in page.resources %}
+	<li><a href="{{ent.resource}}">{{ent.resource}}</a></li>
+	{% endfor %} 
+	</ul>
+<br>
+<b>Contributors:</b> {{ page.notes | markdownify }}
+<br>
 
 {% for function in page.functions %}
 
@@ -21,47 +41,20 @@ layout: common
 
 <ul class="examples">
 
-	{% for example in examples %}
+    {% for example in examples %}
 
-		{% capture Name %}
-		{{ example.Name }}
-		{% endcapture %}
+{% capture code %}
+{{ example.code }}
+{% endcapture %}
 
-		{% capture Commands %}
-		{{ example.Commands }}
-		{% endcapture %}
-
-		{% capture Full_Path %}
-		{{ example.Full_Path }}
-		{% endcapture %}
-
-		{% capture Code_Sample %}
-		{{ example.Code_Sample }}
-		{% endcapture %}
-
-		{% capture Resources %}
-		{{ example.Resources }}
-		{% endcapture %}
-
-		{% capture Notes %}
-		{{ example.Notes }}
-		{% endcapture %}
-	{% endfor %}
     <li>
-        <h3>Name</h3>
-		<pre><code>{{ Name | strip }}</code></pre>
-        <h3>Commands</h3>
-        <pre><code>{{- Commands | strip -}}</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>{{- Full_Path | strip -}}</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code>{{- Code_Sample | strip -}}</code></pre>
-        <h3>Resources</h3>
-		<pre><code>{{- Resources | strip -}}</code></pre>
-        <h3>Notes</h3>
-        <pre><code>{{- Notes | strip -}}</code></pre>
+        {{ example.description | markdownify }}
+        <pre><code>{{- code | strip -}}</code></pre>
     </li>
-    
-</ul>
 
+    {% endfor %}
+
+</ul>
+<br>
 {% endfor %}
+

@@ -31,7 +31,152 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#download">Download</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#encode">Encode</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#decode">Decode</a></li>
+    
+</ul>
 
+<p>Windows binary used for handeling certificates</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\certutil.exe</li>
+	
+	<li>c:\windows\sysWOW64\certutil.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://twitter.com/Moriarty_Meng/status/984380793383370752">https://twitter.com/Moriarty_Meng/status/984380793383370752</a></li>
+	
+	<li><a href="https://twitter.com/mattifestation/status/620107926288515072">https://twitter.com/mattifestation/status/620107926288515072</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Matt Graeber - @mattifestation, Moriarty - @Moriarty2016</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="download" class="function-name">Download</h2>
+
+<p>The LOLBAS can download files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Download and save 7zip to disk in the current folder.</p>
+
+        <pre><code>certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Download and save a PS1 file to an Alternate Data Stream (ADS).</p>
+
+        <pre><code>certutil.exe -urlcache -split -f https://raw.githubusercontent.com/Moriarty2016/git/master/test.ps1 c:\temp:ttt</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="encode" class="function-name">Encode</h2>
+
+<p>The LOLBAS can encode files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Command to encode a file using Base64</p>
+
+        <pre><code>certutil -encode inputFileName encodedOutputFileName</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="decode" class="function-name">Decode</h2>
+
+<p>The LOLBAS can decode files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Command to decode a Base64 encoded file.</p>
+
+        <pre><code>certutil -decode encodedInputFileName decodedOutputFileName</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

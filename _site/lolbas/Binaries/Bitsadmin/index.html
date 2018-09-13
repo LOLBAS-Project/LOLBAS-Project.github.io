@@ -31,9 +31,128 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#download">Download</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#copy">Copy</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#execute">Execute</a></li>
+    
+</ul>
+
+<p>Used for background intelligent transfer.</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\Windows\System32\bitsadmin.exe</li>
+	
+	<li>c:\Windows\SysWOW64\bitsadmin.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679 - slide 53">https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679 - slide 53</a></li>
+	
+	<li><a href="https://www.youtube.com/watch?v=_8xJaaQlpBo">https://www.youtube.com/watch?v=_8xJaaQlpBo</a></li>
+	
+	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Rob Fuller - @mubix , Chris Gates - @carnal0wnage, Oddvar Moe - @oddvarmoe</p>
+
+<br>
 
 
 
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job. It will execute the file located in the Alternate data stream.</p>
+
+        <pre><code>bitsadmin /create 1 bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="download" class="function-name">Download</h2>
+
+<p>The LOLBAS can download files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.</p>
+
+        <pre><code>bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\data\playfolder\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="copy" class="function-name">Copy</h2>
+
+<p>The LOLBAS can copy file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>One-liner for copying file</p>
+
+        <pre><code>bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 
@@ -46,42 +165,21 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Bitsadmin.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: |
-bitsadmin /create 1
-bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe
-bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\1.txt:cmd.exe NULL
-bitsadmin /RESUME 1
-bitsadmin /complete 1
-      Description: Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.
-Command: |
-bitsadmin /create 1
-bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\data\playfolder\autoruns.exe
-bitsadmin /RESUME 1
-bitsadmin /complete 1
-Description: Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.
-Command: bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
-Description: One-liner version that creates a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.
-Command: bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\1.txt:cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset
-Description: One-Liner version that creates a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>c:\Windows\System32\bitsadmin.exe c:\Windows\SysWOW64\bitsadmin.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679
-  Slide 53
-https://www.youtube.com/watch?v=_8xJaaQlpBo
-https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Rob Fuller - @mubix , Chris Gates - @carnal0wnage, Oddvar Moe - @oddvarmoe</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>One-liner that creates a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.</p>
+
+        <pre><code>bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

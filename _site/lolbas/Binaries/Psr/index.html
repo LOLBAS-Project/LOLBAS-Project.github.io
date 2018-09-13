@@ -31,7 +31,83 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Psr/#credentials">Credentials</a></li>
+    
+</ul>
 
+<p>Problem step recorder.</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\psr.exe</li>
+	
+	<li>c:\windows\sysWOW64\psr.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://www.sans.org/summit-archives/file/summit-archive-1493861893.pdf">https://www.sans.org/summit-archives/file/summit-archive-1493861893.pdf</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> 
+
+<br>
+
+
+
+
+
+
+<h2 id="credentials" class="function-name">Credentials</h2>
+
+<p>The LOLBAS can view credentials file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Capture screenshots of the desktop and save them in the target .ZIP file.</p>
+
+        <pre><code>psr.exe /start /gui 0 /output c:\users\user\out.zip</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Capture a maximum of 100 screenshots of the desktop and save them in the target .ZIP file.</p>
+
+        <pre><code>psr.exe /start /maxsc 100 /gui 0 /output c:\users\user\out.zip</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Stop the Problem Step Recorder.</p>
+
+        <pre><code>psr.exe /stop</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

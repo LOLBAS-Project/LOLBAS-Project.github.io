@@ -8,3 +8,48 @@ download:
   label: Download
   description: |
     The LOLBAS can download files.
+    
+upload:
+  label: Upload
+  description: |
+    The LOLBAS can upload files.
+    
+encode:
+  label: Encode
+  description: |
+    The LOLBAS can encode files.
+    
+decode:
+  label: Decode
+  description: |
+    The LOLBAS can decode files.
+    
+ads:
+  label: Alternate data streams
+  description: |
+    The LOLBAS can write or read alternate data streams.
+
+copy:
+  label: Copy
+  description: |
+    The LOLBAS can copy file.
+
+credentials:
+  label: Credentials
+  description: |
+    The LOLBAS can view credentials file.
+    
+compile:
+  label: Compile
+  description: |
+    The LOLBAS can compile code.
+    
+awl-bypass:
+  label: AWL bypass
+  description: |
+    The LOLBAS can bypass application whitelisting solutions.
+    
+reconnaissance:
+  label: Reconnaissance
+  description: |
+    The LOLBAS can be used to gather interesting information.

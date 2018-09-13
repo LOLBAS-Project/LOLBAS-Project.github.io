@@ -1,11 +1,12 @@
-<input id="bin-search" type="text" placeholder="Search among {{ site.lolbas | size }} binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute')"/>
+<input id="bin-search" type="text" placeholder="Search among {{ site.lolbas | size }} binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute') or by type (e.g., 'Script')"/>
 
 <div id="bin-table-wrapper">
     <table id="bin-table">
         <thead>
             <tr>
                 <th>Binary</th>
-                <th>Functions</th>
+				<th>Functions</th>
+				<th>Type</th>
             </tr>
         </thead>
         <tbody>
@@ -13,6 +14,7 @@
             <tr>
                 <td><a href="{{ file.url }}" class="bin-name">{% include get_bin_name path=file.path %}</a></td>
                 <td>{% include function_list.html bin=file %}</td>
+				<td>{% include get_type_name path=file.path %}</td>
             </tr>
             {% endfor %}
         </tbody>

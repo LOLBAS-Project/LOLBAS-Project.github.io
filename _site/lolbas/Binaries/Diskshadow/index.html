@@ -31,8 +31,38 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Diskshadow/#execute">Execute</a></li>
+    
+</ul>
 
+<p>diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS). By default, diskshadow uses an interactive command interpreter similar to that of diskraid or DiskPart. diskshadow also includes a scriptable mode.</p>
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\diskshadow.exe</li>
+	
+	<li>c:\windows\sysWOW64\diskshadow.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/">https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/</a></li>
+	
+	<li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Jimmy - @bohops</p>
+
+<br>
 
 
 
@@ -46,26 +76,31 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Diskshadow.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: diskshadow.exe /s c:\test\diskshadow.txt
-Description: Execute commands using diskshadow.exe from a prepared diskshadow script.
-Command: diskshadow> exec calc.exe
-Description: Execute a calc.exe using diskshadow.exe.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>c:\windows\system32\diskshadow.exe c:\windows\sysWOW64\diskshadow.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Jimmy - @bohops</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Execute commands using diskshadow.exe from a prepared diskshadow script.</p>
+
+        <pre><code>diskshadow.exe /s c:\test\diskshadow.txt</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Execute a calc.exe using diskshadow.exe.</p>
+
+        <pre><code>diskshadow> exec calc.exe</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

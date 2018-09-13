@@ -1,25 +1,14 @@
 ---
+name: extexport.exe
+description: 
 functions:
   execute:
-    -
-      Name: Extexport.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-          
-      Commands: |
-          Command: Extexport.exe c:\test foo bar
-          Description: 'Load a DLL located in the c:\\test folder with one of the following names: mozcrt19.dll, mozsqlite3.dll, or sqlite.dll'
-      Full_Path:
-          C:\Program Files\Internet Explorer\Extexport.exe
-          C:\Program Files\Internet Explorer(x86)\Extexport.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/
-      Notes: Thanks to Adam - @hexacorn
-
+    - description: Load a DLL located in the c:\\test folder with one of the following names mozcrt19.dll, mozsqlite3.dll, or sqlite.dll
+      code: Extexport.exe c:\test foo bar
+resources: 
+    - resource: http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/
+fullpath: 
+    - path: C:\Program Files\Internet Explorer\Extexport.exe
+    - path: C:\Program Files\Internet Explorer(x86)\Extexport.exe
+notes: Thanks to Adam - @hexacorn
 ---

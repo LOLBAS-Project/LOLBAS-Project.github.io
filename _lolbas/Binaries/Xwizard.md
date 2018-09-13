@@ -1,28 +1,18 @@
 ---
+name: xwizard.exe
+description: 
 functions:
   execute:
-    -
-      Name: Xwizard.exe
-      Description: DLL hijack, Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: xwizard.exe
-          Description: Xwizard.exe will load a .DLL file located in the same directory (DLL Hijack) named xwizards.dll.
-          Command: xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}
-          Description: Xwizard.exe running a custom class that has been added to the registry.
-      Full_Path:
-          c:\windows\system32\xwizard.exe
-          c:\windows\sysWOW32\xwizard.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/
-          https://www.youtube.com/watch?v=LwDHX7DVHWU
-          https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5
-      Notes: Thanks to Adam - @Hexacorn, Nick Tyrer - @nicktyrer
+    - description: Xwizard.exe will load a .DLL file located in the same directory (DLL Hijack) named xwizards.dll.
+      code: xwizard.exe
+    - description: Xwizard.exe running a custom class that has been added to the registry.
+      code: xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}
+resources: 
+    - resource: http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/
+    - resource: https://www.youtube.com/watch?v=LwDHX7DVHWU
+    - resource: https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5
+fullpath: 
+    - path: c:\windows\system32\xwizard.exe
+    - path: c:\windows\sysWOW64\xwizard.exe
+notes: Thanks to Adam - @Hexacorn, Nick Tyrer - @nicktyrer
 ---

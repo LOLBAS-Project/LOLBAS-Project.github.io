@@ -1,27 +1,15 @@
 ---
+name: wab.exe
+description: 
 functions:
   execute:
-    -
-      Name: Wab.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-          
-      Commands: |
-          Command: Wab.exe
-          Description: Loads a DLL configured in the registry under HKLM.
-      Full_Path:
-          C:\Program Files\Windows Mail\wab.exe
-          C:\Program Files (x86)\Windows Mail\wab.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
-          https://twitter.com/Hexacorn/status/991447379864932352
-      Notes: |
-          Thanks to Adam - @Hexacorn
-          Requires registry changes, Requires Administrative Access
+    - description: Loads a DLL configured in the registry under HKLM. Requires registry changes, Requires Administrative Access
+      code: Wab.exe
+resources: 
+    - resource: http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
+    - resource: https://twitter.com/Hexacorn/status/991447379864932352
+fullpath: 
+    - path: C:\Program Files\Windows Mail\wab.exe
+    - path: C:\Program Files (x86)\Windows Mail\wab.exe
+notes: Thanks to Adam - @Hexacorn
 ---

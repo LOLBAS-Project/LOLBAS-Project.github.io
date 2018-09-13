@@ -1,29 +1,16 @@
 ---
+name: odbcconf.exe
+description: 
 functions:
   execute:
-    -
-      Name: odbcconf.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-          
-      Commands: |
-          Command: odbcconf -f file.rsp
-          Description: Load DLL specified in target .RSP file.
-      Full_Path:
-          c:\windows\system32\odbcconf.exe
-          c:\windows\sysWOW64\odbcconf.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b
-          https://github.com/woanware/application-restriction-bypasses
-          https://twitter.com/subTee/status/789459826367606784
-      Notes: |
-          Thanks to Casey Smith - @subtee, Nick Tyrer - @NickTyrer
-          See the Playloads folder for an example .RSP file.
-
+    - description:  Load DLL specified in target .RSP file. See the Playloads folder for an example .RSP file.
+      code:  odbcconf -f file.rsp
+resources: 
+    - resource: https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b
+    - resource: https://github.com/woanware/application-restriction-bypasses
+    - resource: https://twitter.com/subTee/status/789459826367606784
+fullpath: 
+    - path: c:\windows\system32\odbcconf.exe
+    - path: c:\windows\sysWOW64\odbcconf.exe
+notes: Thanks to Casey Smith - @subtee, Nick Tyrer - @NickTyrer
 ---

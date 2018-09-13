@@ -31,9 +31,78 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Installutil/#awl-bypass">AWL bypass</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Installutil/#execute">Execute</a></li>
+    
+</ul>
 
 
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/">https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/</a></li>
+	
+	<li><a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12</a></li>
+	
+	<li><a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1118/T1118.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1118/T1118.md</a></li>
+	
+	<li><a href="https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/">https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/</a></li>
+	
+	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="awl-bypass" class="function-name">AWL bypass</h2>
+
+<p>The LOLBAS can bypass application whitelisting solutions.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Execute the target .NET DLL or EXE.</p>
+
+        <pre><code>InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 
@@ -46,29 +115,21 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>InstallUtil.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll
-Description: 'Execute the target .NET DLL or EXE.'</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe C:\Windows\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/
-https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12
-http://subt0x10.blogspot.no/2017/09/banned-file-execution-via.html
-https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/InstallUtil.md
-https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/
-https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Casey Smith - @subtee</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Execute the target .NET DLL or EXE.</p>
+
+        <pre><code>InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

@@ -1,20 +1,16 @@
 ---
-Name: Robocopy.exe
-Description: Copy
-Author: ''
-Created: '2018-05-25'
-Categories: []
-Commands:
-  - Command: Robocopy.exe C:\SourceFolder C:\DestFolder
-    Description: Copy the entire contents of the SourceFolder to the DestFolder.
-  - Command: Robocopy.exe \\SERVER\SourceFolder C:\DestFolder
-    Description: Copy the entire contents of the SourceFolder to the DestFolder.
-Full Path:
-  - c:\windows\system32\binary.exe
-  - c:\windows\sysWOW64\binary.exe
-Code Sample: []
-Detection: []
-Resources:
-  - https://social.technet.microsoft.com/wiki/contents/articles/1073.robocopy-and-a-few-examples.aspx
-Notes: Thanks to Name of guy - @twitterhandle
-
+name: robocopy.exe
+description: Used to perform file copy in Windows
+functions:
+  copy:
+    - description: Copy the entire contents of the SourceFolder to the DestFolder.
+      code: Robocopy.exe C:\SourceFolder C:\DestFolder
+    - description: Copy the entire contents of the SourceFolder to the DestFolder.
+      code: Robocopy.exe \\SERVER\SourceFolder C:\DestFolder
+resources: 
+    - resource: https://social.technet.microsoft.com/wiki/contents/articles/1073.robocopy-and-a-few-examples.aspx
+fullpath: 
+    - path: c:\windows\system32\robocopy.exe
+    - path: c:\windows\sysWOW64\robocopy.exe
+notes:
+---

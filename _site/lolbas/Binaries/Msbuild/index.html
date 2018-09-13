@@ -31,9 +31,78 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Msbuild/#awl-bypass">AWL bypass</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Msbuild/#execute">Execute</a></li>
+    
+</ul>
+
+<p>Used to build and execute code</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Msbuild.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v3.5\Msbuild.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v3.5\Msbuild.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe</li>
+	
+	<li>C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Msbuild.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://github.com/Cn33liz/MSBuildShell">https://github.com/Cn33liz/MSBuildShell</a></li>
+	
+	<li><a href="https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/">https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/</a></li>
+	
+	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee, Cn33liz - @Cneelis</p>
+
+<br>
 
 
 
+
+
+
+<h2 id="awl-bypass" class="function-name">AWL bypass</h2>
+
+<p>The LOLBAS can bypass application whitelisting solutions.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Build and execute a C# project stored in the target XML file.</p>
+
+        <pre><code>msbuild.exe pshell.xml</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 
@@ -46,29 +115,21 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Msbuild.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: msbuild.exe pshell.xml
-Description: Build and execute a C# project stored in the target XML file.
-Command: msbuild.exe Msbuild.csproj
-Description: Build and execute a C# project stored in the target CSPROJ file.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Msbuild.exe C:\Windows\Microsoft.NET\Framework\v3.5\Msbuild.exe C:\Windows\Microsoft.NET\Framework64\v3.5\Msbuild.exe C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Msbuild.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/Trusted_Developer_Utilities.md
-https://github.com/Cn33liz/MSBuildShell
-https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/
-https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Casey Smith - @subtee, Cn33liz - @Cneelis</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Build and execute a C# project stored in the target XML file.</p>
+
+        <pre><code>msbuild.exe project.csproj</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

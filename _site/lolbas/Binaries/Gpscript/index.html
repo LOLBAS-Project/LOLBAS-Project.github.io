@@ -31,8 +31,36 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Gpscript/#execute">Execute</a></li>
+    
+</ul>
 
+<p>Used by group policy to process scripts</p>
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\gpscript.exe</li>
+	
+	<li>c:\windows\sysWOW64\gpscript.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://oddvar.moe/2018/04/27/gpscript-exe-another-lolbin-to-the-list/">https://oddvar.moe/2018/04/27/gpscript-exe-another-lolbin-to-the-list/</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Oddvar Moe - @oddvarmoe</p>
+
+<br>
 
 
 
@@ -46,27 +74,31 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Gpscript.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: Gpscript /logon
-Description: 'Executes logon scripts configured in Group Policy.'
-Command: Gpscript /startup
-Description: 'Executes startup scripts configured in Group Policy.'</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>c:\windows\system32\gpscript.exe c:\windows\sysWOW64\gpscript.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://oddvar.moe/2018/04/27/gpscript-exe-another-lolbin-to-the-list/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Oddvar Moe - @oddvarmoe
-Requires administrative rights and modifications to local group policy settings.</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Executes logon scripts configured in Group Policy. Requires administrative rights and modifications to local group policy settings.</p>
+
+        <pre><code>Gpscript /logon</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Executes startup scripts configured in Group Policy.</p>
+
+        <pre><code>Gpscript /startup</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

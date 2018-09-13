@@ -31,7 +31,79 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Rpcping/#credentials">Credentials</a></li>
+    
+</ul>
 
+<p>Used to verify rpc connection</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\rpcping.exe</li>
+	
+	<li>c:\windows\sysWOW64\rpcping.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://twitter.com/subtee/status/872797890539913216">https://twitter.com/subtee/status/872797890539913216</a></li>
+	
+	<li><a href="https://github.com/vysec/RedTips">https://github.com/vysec/RedTips</a></li>
+	
+	<li><a href="https://twitter.com/vysecurity/status/974806438316072960">https://twitter.com/vysecurity/status/974806438316072960</a></li>
+	
+	<li><a href="https://twitter.com/vysecurity/status/873181705024266241">https://twitter.com/vysecurity/status/873181705024266241</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Casey Smith - @subtee, Vincent Yiu - @vysecurity</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="credentials" class="function-name">Credentials</h2>
+
+<p>The LOLBAS can view credentials file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Send a RPC test connection to the target server (-s) sending the password hash in the process.</p>
+
+        <pre><code>rpcping -s 127.0.0.1 -t ncacn_np</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Send a RPC test connection to the target server (-s) and force the NTLM hash to be sent in the process.</p>
+
+        <pre><code>rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

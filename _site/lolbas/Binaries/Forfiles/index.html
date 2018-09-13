@@ -31,8 +31,42 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Forfiles/#execute">Execute</a></li>
+    
+</ul>
 
+<p>Selects and executes a command on a file or set of files. This command is useful for batch processing.</p>
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\forfiles.exe</li>
+	
+	<li>c:\windows\sysWOW64\forfiles.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://twitter.com/vector_sec/status/896049052642533376">https://twitter.com/vector_sec/status/896049052642533376</a></li>
+	
+	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	
+	<li><a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a></li>
+	
+	<li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/forfiles">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/forfiles</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Eric - @vector_sec, Oddvar Moe - @oddvarmoe</p>
+
+<br>
 
 
 
@@ -46,28 +80,31 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Forfiles.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: forfiles /p c:\windows\system32 /m notepad.exe /c calc.exe
-Description: 'Executes calc.exe since there is a match for notepad.exe in the c:\\windows\\System32 folder.'
-Command: forfiles /p c:\windows\system32 /m notepad.exe /c "c:\folder\normal.dll:evil.exe"
-Description: 'Executes the evil.exe Alternate Data Stream (AD) since there is a match for notepad.exe in the c:\\windows\\system32 folder.'</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\system32\forfiles.exe C:\Windows\sysWOW64\forfiles.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://twitter.com/vector_sec/status/896049052642533376
-https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f
-https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to Eric - @vector_sec, Oddvar Moe - @oddvarmoe</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Executes calc.exe since there is a match for notepad.exe in the c:\windows\System32 folder.</p>
+
+        <pre><code>forfiles /p c:\windows\system32 /m notepad.exe /c calc.exe</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Executes the evil.exe Alternate Data Stream (AD) since there is a match for notepad.exe in the c:\windows\system32 folder.</p>
+
+        <pre><code>forfiles /p c:\windows\system32 /m notepad.exe /c "c:\folder\normal.dll:evil.exe"</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>

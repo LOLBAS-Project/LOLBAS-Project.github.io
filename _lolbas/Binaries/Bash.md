@@ -1,24 +1,14 @@
 ---
+name: bash.exe
+description: Part of the Windows subsystem for Linux. Must be enabled for binary to be present.
 functions:
   execute:
-    -
-      Name: Bash.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: bash.exe -c calc.exe
-          Description: Execute calc.exe.
-      Full_Path:
-          '?'
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          ''
-      Notes: Thanks to ?
-
+    - description: Execute calc.exe
+      code: bash.exe -c calc.exe
+resources: 
+    - resource: 
+fullpath: 
+    - path: c:\windows\system32\bash.exe
+    - path: c:\windows\sysWOW64\bash.exe
+notes: Thanks to Matt Graeber - @mattifestation, Moriarty - @Moriarty2016
 ---

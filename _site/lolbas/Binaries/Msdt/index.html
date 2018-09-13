@@ -31,8 +31,40 @@
 </h1>
 
 
+<ul class="function-list">
+    
+    
+    <li><a href="/lolbas/Binaries/Msdt/#execute">Execute</a></li>
+    
+</ul>
 
+<p>Microsoft diagnostics tool</p>
 
+<br>
+<p><b>Paths:</b> 
+	<ul style="list-style-type:none">
+	
+	<li>c:\windows\system32\msdt.exe</li>
+	
+	<li>c:\windows\sysWOW64\msdt.exe</li>
+	 
+	</ul>
+</p>
+<br>
+<b>Resources:</b> 	
+	<ul style="list-style-type:none">
+	
+	<li><a href="https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/">https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/</a></li>
+	
+	<li><a href="https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/">https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/</a></li>
+	
+	<li><a href="https://twitter.com/harr0ey/status/991338229952598016">https://twitter.com/harr0ey/status/991338229952598016</a></li>
+	 
+	</ul>
+<br>
+<b>Contributors:</b> 
+
+<br>
 
 
 
@@ -46,29 +78,21 @@
 
 <ul class="examples">
 
-	
-    <li>
-        <h3>Name</h3>
-		<pre><code>Msdt.exe</code></pre>
-        <h3>Commands</h3>
-        <pre><code>Command: Open .diagcab package
-Description: 
-Command: msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE
-Description: Executes the Microsoft Diagnostics Tool and executes the malicious .MSI referenced in the PCW8E57.xml file.</code></pre>
-        <h3>Full Path</h3>
-        <pre><code>C:\Windows\System32\Msdt.exe C:\Windows\SysWOW64\Msdt.exe</code></pre>
-        <h3>Code Sample</h3>
-        <pre><code></code></pre>
-        <h3>Resources</h3>
-		<pre><code>https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/
-https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/
-https://twitter.com/harr0ey/status/991338229952598016</code></pre>
-        <h3>Notes</h3>
-        <pre><code>Thanks to:
-See the Payloads folder for an example PCW8E57.xml file.</code></pre>
-    </li>
     
+
+
+
+    <li>
+        <p>Executes the Microsoft Diagnostics Tool and executes the malicious .MSI referenced in the PCW8E57.xml file. See the Payloads folder for an example PCW8E57.xml file.</p>
+
+        <pre><code>msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE</code></pre>
+    </li>
+
+    
+
 </ul>
+<br>
+
 
 
         <script>
