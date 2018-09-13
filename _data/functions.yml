@@ -53,3 +53,8 @@ reconnaissance:
   label: Reconnaissance
   description: |
     The LOLBAS can be used to gather interesting information.
+    
+dump:
+  label: Dump
+  description: |
+    The LOLBAS can be used to dump process.
