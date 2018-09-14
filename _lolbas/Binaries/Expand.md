@@ -18,5 +18,5 @@ resources:
 fullpath: 
     - path: c:\windows\system32\expand.exe
     - path: c:\windows\sysWOW64\expand.exe
-notes:
+notes: Thanks to Rahmat Nurfauzi - @infosecn1nja, Oddvar Moe - @oddvarmoe
 ---
