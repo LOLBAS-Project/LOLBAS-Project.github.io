@@ -1192,7 +1192,7 @@
 
      // determine the query type
      var queryType = query[0];
-     if (queryType === '/' || queryType === '#') {
+     if (queryType === '/') {
          query = query.slice(1);
      }
 
@@ -1205,18 +1205,9 @@
                               .join('\n').toLowerCase();
 	 var types = row.children[2].textContent.toLowerCase();
 	 
-	 if (queryType === '/')
-	 {
-	 	var against = functions;
-	 }
-	 else if (queryType === '#')
-	 {
-	 	var against = types;
-	 }
-	 else
-	 {
-         	var against = binName;
-	 }
+	 document.write(types);
+
+         var against = (queryType === '/' ? functions : binName);
          if (against.indexOf(query) !== -1) {
              row.style.display = '';
              noResults = false;
