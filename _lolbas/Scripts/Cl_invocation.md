@@ -1,6 +1,6 @@
 ---
 name: cl_invocation.ps1
-description: 
+description: Windows PowerShell Troubleshooting Pack support script
 functions:
   execute:
     - description: Import the PowerShell Diagnostic CL_Invocation script and call SyncInvoke to launch an executable.
