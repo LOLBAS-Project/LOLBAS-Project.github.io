@@ -1,6 +1,6 @@
 ---
 name: manage-bde.wsf
-description: 
+description: For managing BitLocker Drive Encryption
 functions:
   execute:
     - description: Set the comspec variable to another executable prior to calling manage-bde.wsf for execution.
