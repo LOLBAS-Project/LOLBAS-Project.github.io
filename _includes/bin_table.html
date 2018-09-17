@@ -12,7 +12,7 @@
         <tbody>
             {% for file in site.lolbas %}
             <tr>
-                <td><a href="{{ file.url }}" class="bin-name">{% include get_bin_name path=file.path %}</a></td>
+                <td><a href="{{ file.url }}" class="bin-name">{{ file.name }}</a></td>
                 <td>{% include function_list.html bin=file %}</td>
 				<td>{% include get_type_name path=file.path %}</td>
             </tr>
