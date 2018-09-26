@@ -44,7 +44,7 @@ compile:
   description: |
     The LOLBAS can compile code.
     
-awl-bypass:
+awl bypass:
   label: AWL bypass
   description: |
     The LOLBAS can bypass application whitelisting solutions.

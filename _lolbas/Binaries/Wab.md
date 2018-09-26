@@ -1,15 +1,24 @@
 ---
-name: wab.exe
-description: 
+name: Wab.exe
+description: Windows address book manager
 functions:
   execute:
-    - description: Loads a DLL configured in the registry under HKLM. Requires registry changes, Requires Administrative Access
-      code: Wab.exe
-resources: 
-    - resource: http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
+    - description: Change HKLM\Software\Microsoft\WAB\DLLPath and execute DLL of choice
+      code: wab.exe
+      mitreid: T1218
+      mitrelink: https://attack.mitre.org/wiki/Technique/T1218
+      operatingsystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+      privileges: Administrator
+      usecase: Execute dll file. Bypass defensive counter measures
+resources:
     - resource: https://twitter.com/Hexacorn/status/991447379864932352
-fullpath: 
+    - resource: http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
+fullpath:
     - path: C:\Program Files\Windows Mail\wab.exe
     - path: C:\Program Files (x86)\Windows Mail\wab.exe
-notes: Thanks to Adam - @Hexacorn
+detection:
+  - IOC: WAB.exe should normally never be used
+acknowledgement:
+  - Person: Adam
+    Handle: '@Hexacorn'
 ---

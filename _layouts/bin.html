@@ -23,7 +23,22 @@ layout: common
 	{% endfor %} 
 	</ul>
 <br>
-<b>Contributors:</b> {{ page.notes | markdownify }}
+<p><b>Acknowledgement:</b> 
+	<ul style="list-style-type:none">
+	{% for pers in page.acknowledgement %}
+	<li>{{pers.Person}} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a </li>
+	{% endfor %} 
+	</ul>
+</p>
+<br>
+<p><b>Detection:</b> 
+	<ul style="list-style-type:none">
+	{% for ioc in page.detection %}
+	<li>{{ioc.IOC}}</li>
+	{% endfor %} 
+	</ul>
+</p>
+<br>
 <br>
 
 {% for function in page.functions %}
@@ -47,12 +62,15 @@ layout: common
 
     <li>
         {{ example.description | markdownify }}
+		Usecase:{{example.usecase}}
         <pre><code>{{- code | strip -}}</code></pre>
     </li>
-
+	<li>Privileges required:{{example.privileges}}</li>
+	<li>OS:{{example.operatingsystem}}</li>
+	<li>Mitre:<a href="{{example.mitrelink}}">{{example.mitreid}}</a></li>
+	<br><br>	
     {% endfor %}
 
 </ul>
-<br>
+<br><br>
 {% endfor %}
-

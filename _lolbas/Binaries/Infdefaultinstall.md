@@ -1,16 +1,24 @@
 ---
-name: infdefaultinstall.exe
-description: 
+name: Infdefaultinstall.exe
+description: Binary used to perform installation based on content inside inf files
 functions:
   execute:
     - description: Executes SCT script using scrobj.dll from a command in entered into a specially prepared INF file.
       code: InfDefaultInstall.exe Infdefaultinstall.inf
-resources: 
+      mitreid: T1218
+      mitrelink: https://attack.mitre.org/wiki/Technique/T1218
+      operatingsystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+      privileges: User
+      usecase: Code execution
+resources:
     - resource: https://twitter.com/KyleHanslovan/status/911997635455852544
-    - resource: https://gist.github.com/KyleHanslovan/5e0f00d331984c1fb5be32c40f3b265a
     - resource: https://blog.conscioushacker.io/index.php/2017/10/25/evading-microsofts-autoruns/
-fullpath: 
-    - path: c:\windows\system32\infdefaultinstall.exe
-    - path: c:\windows\sysWOW64\infdefaultinstall.exe
-notes: Thanks to Kyle Hanslovan - @kylehanslovan and Chris "Lopi" Spehn - @ConsciousHacker
+fullpath:
+    - path: C:\Windows\System32\Infdefaultinstall.exe
+    - path: C:\Windows\SysWOW64\Infdefaultinstall.exe
+detection:
+  - IOC: 
+acknowledgement:
+  - Person: Kyle Hanslovan
+    Handle: '@kylehanslovan'
 ---

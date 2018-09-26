@@ -93,9 +93,7 @@ h2:hover .permalink, h3:hover .permalink, h4:hover .permalink, h5:hover .permali
       font-size: 0.8rem;
       font-weight: bold;
       width: 3em;
-      text-align: center;
-      counter-increment: item;
-      content: "(" counter(item,lower-alpha) ")"; }
+      text-align: center; }
 
 .logo {
   float: right;
