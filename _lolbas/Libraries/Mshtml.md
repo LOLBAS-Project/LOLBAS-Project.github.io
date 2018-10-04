@@ -19,4 +19,6 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Pierre-Alexandre Braeken
+    Handle: '@pabraeken'
 ---

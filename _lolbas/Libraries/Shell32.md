@@ -36,4 +36,12 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Adam (Control_RunDLL)
+    Handle: '@hexacorn'
+  - Person: Pierre-Alexandre Braeken (ShellExec_RunDLL)
+    Handle: '@pabraeken'
+  - Person: Matt Graeber (ShellExec_RunDLL)
+    Handle: '@mattifestation'
+  - Person: Kyle Hanslovan (ShellExec_RunDLL)
+    Handle: '@KyleHanslovan'
 ---

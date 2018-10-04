@@ -32,6 +32,9 @@
 <ul class="function-list">
     
     
+    <li><a href="/lolbas/Libraries/Ieadvpack/#execute">Execute</a></li>
+    
+    
     <li><a href="/lolbas/Libraries/Ieadvpack/#awl bypass">AWL bypass</a></li>
     
 </ul>
@@ -62,6 +65,12 @@
 <br>
 <p><b>Acknowledgement:</b> 
 	<ul style="list-style-type:none">
+	
+	<li>Jimmy (LaunchINFSection) - <a href="https://twitter.com/@bohops">@bohops</a </li>
+	
+	<li>Fabrizio (RegisterOCX - DLL) - <a href="https://twitter.com/@0rbz_">@0rbz_</a </li>
+	
+	<li>Pierre-Alexandre Braeken (RegisterOCX - CMD) - <a href="https://twitter.com/@pabraeken">@pabraeken</a </li>
 	 
 	</ul>
 </p>
@@ -76,6 +85,64 @@
 <br>
 <br>
 
+
+
+
+
+
+<h2 id="execute" class="function-name">Execute</h2>
+
+<p>The LOLBAS can achieve abritrary code execution.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Launch a DLL payload by calling the RegisterOCX function.</p>
+
+		Usecase:Load a DLL payload.
+        <pre><code>rundll32.exe ieadvpack.dll,RegisterOCX test.dll</code></pre>
+    </li>
+	<li>Privileges required:User</li>
+	<li>OS:Windows</li>
+	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
+	<br><br>	
+    
+
+
+
+    <li>
+        <p>Launch an executable by calling the RegisterOCX function.</p>
+
+		Usecase:Run an executable payload.
+        <pre><code>rundll32.exe ieadvpack.dll,RegisterOCX calc.exe</code></pre>
+    </li>
+	<li>Privileges required:User</li>
+	<li>OS:</li>
+	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
+	<br><br>	
+    
+
+
+
+    <li>
+        <p>Launch command line by calling the RegisterOCX function.</p>
+
+		Usecase:Run an executable payload.
+        <pre><code>rundll32 ieadvpack.dll, RegisterOCX "cmd.exe /c calc.exe"</code></pre>
+    </li>
+	<li>Privileges required:User</li>
+	<li>OS:</li>
+	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
+	<br><br>	
+    
+
+</ul>
+<br><br>
 
 
 

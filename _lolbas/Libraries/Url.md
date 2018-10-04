@@ -58,4 +58,12 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Adam (OpenURL)
+    Handle: '@hexacorn'
+  - Person: Jimmy (OpenURL)
+    Handle: '@bohops'
+  - Person: Malwrologist (FileProtocolHandler - HTA)
+    Handle: '@DissectMalware'
+  - Person: r0lan (Obfuscation)
+    Handle: '@r0lan'
 ---

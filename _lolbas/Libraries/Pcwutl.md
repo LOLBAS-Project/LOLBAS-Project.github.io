@@ -19,4 +19,6 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Matt harr0ey
+    Handle: '@harr0ey'
 ---

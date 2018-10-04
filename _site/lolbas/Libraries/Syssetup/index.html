@@ -32,6 +32,9 @@
 <ul class="function-list">
     
     
+    <li><a href="/lolbas/Libraries/Syssetup/#execute">Execute</a></li>
+    
+    
     <li><a href="/lolbas/Libraries/Syssetup/#awl bypass">AWL bypass</a></li>
     
 </ul>
@@ -64,6 +67,12 @@
 <br>
 <p><b>Acknowledgement:</b> 
 	<ul style="list-style-type:none">
+	
+	<li>Pierre-Alexandre Braeken (Execute) - <a href="https://twitter.com/@pabraeken">@pabraeken</a </li>
+	
+	<li>Matt harr0ey (Execute) - <a href="https://twitter.com/@harr0ey">@harr0ey</a </li>
+	
+	<li>Jimmy (Scriptlet) - <a href="https://twitter.com/@bohops">@bohops</a </li>
 	 
 	</ul>
 </p>
@@ -78,6 +87,36 @@
 <br>
 <br>
 
+
+
+
+
+
+<h2 id="execute" class="function-name">Execute</h2>
+
+<p>The LOLBAS can achieve abritrary code execution.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Launch an executable file via the SetupInfObjectInstallAction function and .inf file section directive.</p>
+
+		Usecase:Load an executable payload.
+        <pre><code>rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\temp\something.inf</code></pre>
+    </li>
+	<li>Privileges required:User</li>
+	<li>OS:Windows</li>
+	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
+	<br><br>	
+    
+
+</ul>
+<br><br>
 
 
 

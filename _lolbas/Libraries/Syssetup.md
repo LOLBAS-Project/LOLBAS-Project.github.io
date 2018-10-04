@@ -2,6 +2,14 @@
 name: Syssetup.dll
 description: Windows NT System Setup
 functions:
+  execute:
+    - description: Launch an executable file via the SetupInfObjectInstallAction function and .inf file section directive.
+      code: rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\temp\something.inf
+      mitreid: T1085
+      mitrelink: https://attack.mitre.org/wiki/Technique/T1085
+      operatingsystem: Windows
+      privileges: User
+      usecase: Load an executable payload.
   awl bypass:
     - description: Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).
       code: rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\test\shady.inf
@@ -21,4 +29,10 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Pierre-Alexandre Braeken (Execute)
+    Handle: '@pabraeken'
+  - Person: Matt harr0ey (Execute)
+    Handle: '@harr0ey'
+  - Person: Jimmy (Scriptlet)
+    Handle: '@bohops'
 ---

@@ -27,4 +27,8 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Moriarty (Execution)
+    Handle: '@moriarty_meng'
+  - Person: r0lan (Obfuscation)
+    Handle: '@r0lan'
 ---

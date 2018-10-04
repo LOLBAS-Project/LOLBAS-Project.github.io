@@ -2,6 +2,28 @@
 name: Advpack.dll
 description: Utility for installing software and drivers with rundll32.exe
 functions:
+  execute:
+    - description: Launch a DLL payload by calling the RegisterOCX function.
+      code: rundll32.exe advpack.dll,RegisterOCX test.dll
+      mitreid: T1085
+      mitrelink: https://attack.mitre.org/wiki/Technique/T1085
+      operatingsystem: Windows
+      privileges: User
+      usecase: Load a DLL payload.
+    - description: Launch an executable by calling the RegisterOCX function.
+      code: rundll32.exe advpack.dll,RegisterOCX calc.exe
+      mitreid: T1085
+      mitrelink: https://attack.mitre.org/wiki/Technique/T1085
+      operatingsystem: 
+      privileges: User
+      usecase: Run an executable payload.
+    - description: Launch command line by calling the RegisterOCX function.
+      code: rundll32 advpack.dll, RegisterOCX "cmd.exe /c calc.exe"
+      mitreid: T1085
+      mitrelink: https://attack.mitre.org/wiki/Technique/T1085
+      operatingsystem: 
+      privileges: User
+      usecase: Run an executable payload.
   awl bypass:
     - description: Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).
       code: rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,DefaultInstall_SingleUser,1,

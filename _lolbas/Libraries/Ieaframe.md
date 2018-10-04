@@ -21,4 +21,8 @@ fullpath:
 detection:
   - IOC: 
 acknowledgement:
+  - Person: Jimmy
+    Handle: '@bohops'
+  - Person: Adam
+    Handle: '@hexacorn'
 ---

@@ -32,6 +32,9 @@
 <ul class="function-list">
     
     
+    <li><a href="/lolbas/Libraries/Setupapi/#execute">Execute</a></li>
+    
+    
     <li><a href="/lolbas/Libraries/Setupapi/#awl bypass">AWL bypass</a></li>
     
 </ul>
@@ -62,6 +65,14 @@
 <br>
 <p><b>Acknowledgement:</b> 
 	<ul style="list-style-type:none">
+	
+	<li>Kyle Hanslovan (COM Scriptlet) - <a href="https://twitter.com/@KyleHanslovan">@KyleHanslovan</a </li>
+	
+	<li>Huntress Labs (COM Scriptlet) - <a href="https://twitter.com/@HuntressLabs">@HuntressLabs</a </li>
+	
+	<li>Casey Smith (COM Scriptlet) - <a href="https://twitter.com/@subTee">@subTee</a </li>
+	
+	<li>Nick Carr (Threat Intel) - <a href="https://twitter.com/@ItsReallyNick">@ItsReallyNick</a </li>
 	 
 	</ul>
 </p>
@@ -76,6 +87,36 @@
 <br>
 <br>
 
+
+
+
+
+
+<h2 id="execute" class="function-name">Execute</h2>
+
+<p>The LOLBAS can achieve abritrary code execution.</p>
+
+
+<ul class="examples">
+
+    
+
+
+
+    <li>
+        <p>Launch an executable file via the InstallHinfSection function and .inf file section directive.</p>
+
+		Usecase:Load an executable payload.
+        <pre><code>rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\Tools\\calc_exe.inf</code></pre>
+    </li>
+	<li>Privileges required:User</li>
+	<li>OS:Windows</li>
+	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
+	<br><br>	
+    
+
+</ul>
+<br><br>
 
 
 
