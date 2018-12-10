@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Cdb/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Cdb/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Debugging tool included with Windows Debugging Tools.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,62 +54,53 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="http://www.exploit-monday.com/2016/08/windbg-cdb-shellcode-runner.html">http://www.exploit-monday.com/2016/08/windbg-cdb-shellcode-runner.html</a></li>
+	<a href="http://www.exploit-monday.com/2016/08/windbg-cdb-shellcode-runner.html">http://www.exploit-monday.com/2016/08/windbg-cdb-shellcode-runner.html</a>
+	<br>
 	
-	<li><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options">https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options</a></li>
+	<a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options">https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/mattifestation/94e2b0a9e3fe1ac0a433b5c3e6bd0bda">https://gist.github.com/mattifestation/94e2b0a9e3fe1ac0a433b5c3e6bd0bda</a></li>
+	<a href="https://gist.github.com/mattifestation/94e2b0a9e3fe1ac0a433b5c3e6bd0bda">https://gist.github.com/mattifestation/94e2b0a9e3fe1ac0a433b5c3e6bd0bda</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch 64-bit shellcode from the x64_calc.wds file using cdb.exe.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch 64-bit shellcode from the x64_calc.wds file using cdb.exe.
+		<br>
+		<pre><code>cdb.exe -cf x64_calc.wds -o notepad.exe</code></pre>
 		Usecase:Local execution of assembly shellcode.
-        <pre><code>cdb.exe -cf x64_calc.wds -o notepad.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

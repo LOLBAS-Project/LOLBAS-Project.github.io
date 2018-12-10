@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Csc/#compile">Compile</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Csc/#compile">Compile</a></li>
+	
 </ul>
 
+	
+
 <p>Binary file used by .NET to compile C# code</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,74 +54,65 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe</a></li>
+	<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li> - <a href="https://twitter.com/"></a </li>
+	 - <a href="https://twitter.com/"></a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Csc.exe should normally not run a system unless it is used for development.</li>
+	Csc.exe should normally not run a system unless it is used for development.
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="compile" class="function-name">Compile</h2>
-
-<p>The LOLBAS can compile code.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Use CSC.EXE to compile C# code stored in File.cs and output the compiled version to My.exe.</p>
-
+	
+<h2 id="compile" class ="function-name">Compile</h2>
+	
+		Use CSC.EXE to compile C# code stored in File.cs and output the compiled version to My.exe.
+		<br>
+		<pre><code>csc.exe -out:My.exe File.cs</code></pre>
 		Usecase:Compile attacker code on system. Bypass defensive counter measures.
-        <pre><code>csc.exe -out:My.exe File.cs</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Use CSC.EXE to compile C# code stored in File.cs and output the compiled version to a dll file.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Use CSC.EXE to compile C# code stored in File.cs and output the compiled version to a dll file.
+		<br>
+		<pre><code>csc -target:library File.cs</code></pre>
 		Usecase:Compile attacker code on system. Bypass defensive counter measures.
-        <pre><code>csc -target:library File.cs</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

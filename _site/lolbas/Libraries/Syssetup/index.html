@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Syssetup/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Libraries/Syssetup/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Syssetup/#awl bypass">AWL bypass</a></li>
+	
+	
+	<li><a href="/lolbas/Libraries/Syssetup/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Windows NT System Setup</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,100 +57,84 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/pabraeken/status/994392481927258113">https://twitter.com/pabraeken/status/994392481927258113</a></li>
+	<a href="https://twitter.com/pabraeken/status/994392481927258113">https://twitter.com/pabraeken/status/994392481927258113</a>
+	<br>
 	
-	<li><a href="https://twitter.com/harr0ey/status/975350238184697857">https://twitter.com/harr0ey/status/975350238184697857</a></li>
+	<a href="https://twitter.com/harr0ey/status/975350238184697857">https://twitter.com/harr0ey/status/975350238184697857</a>
+	<br>
 	
-	<li><a href="https://twitter.com/bohops/status/975549525938135040">https://twitter.com/bohops/status/975549525938135040</a></li>
+	<a href="https://twitter.com/bohops/status/975549525938135040">https://twitter.com/bohops/status/975549525938135040</a>
+	<br>
 	
-	<li><a href="https://windows10dll.nirsoft.net/syssetup_dll.html">https://windows10dll.nirsoft.net/syssetup_dll.html</a></li>
+	<a href="https://windows10dll.nirsoft.net/syssetup_dll.html">https://windows10dll.nirsoft.net/syssetup_dll.html</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Pierre-Alexandre Braeken (Execute) - <a href="https://twitter.com/@pabraeken">@pabraeken</a </li>
+	Pierre-Alexandre Braeken (Execute) - <a href="https://twitter.com/@pabraeken">@pabraeken</a>
+	<br>
 	
-	<li>Matt harr0ey (Execute) - <a href="https://twitter.com/@harr0ey">@harr0ey</a </li>
+	Matt harr0ey (Execute) - <a href="https://twitter.com/@harr0ey">@harr0ey</a>
+	<br>
 	
-	<li>Jimmy (Scriptlet) - <a href="https://twitter.com/@bohops">@bohops</a </li>
+	Jimmy (Scriptlet) - <a href="https://twitter.com/@bohops">@bohops</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).
+		<br>
+		<pre><code>rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\test\shady.inf</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch an executable file via the SetupInfObjectInstallAction function and .inf file section directive.</p>
-
-		Usecase:Load an executable payload.
-        <pre><code>rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\temp\something.inf</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).</p>
-
-		Usecase:Run local or remote script(let) code through INF file specification (Note May pop an error window).
-        <pre><code>rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\test\shady.inf</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch an executable file via the SetupInfObjectInstallAction function and .inf file section directive.
+		<br>
+		<pre><code>rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\temp\something.inf</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Advpack/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Libraries/Advpack/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Advpack/#awl bypass">AWL bypass</a></li>
+	
+	
+	<li><a href="/lolbas/Libraries/Advpack/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Utility for installing software and drivers with rundll32.exe</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,136 +57,120 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/">https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/</a></li>
+	<a href="https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/">https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/</a>
+	<br>
 	
-	<li><a href="https://twitter.com/ItsReallyNick/status/967859147977850880">https://twitter.com/ItsReallyNick/status/967859147977850880</a></li>
+	<a href="https://twitter.com/ItsReallyNick/status/967859147977850880">https://twitter.com/ItsReallyNick/status/967859147977850880</a>
+	<br>
 	
-	<li><a href="https://twitter.com/bohops/status/974497123101179904">https://twitter.com/bohops/status/974497123101179904</a></li>
+	<a href="https://twitter.com/bohops/status/974497123101179904">https://twitter.com/bohops/status/974497123101179904</a>
+	<br>
 	
-	<li><a href="https://twitter.com/moriarty_meng/status/977848311603380224">https://twitter.com/moriarty_meng/status/977848311603380224</a></li>
+	<a href="https://twitter.com/moriarty_meng/status/977848311603380224">https://twitter.com/moriarty_meng/status/977848311603380224</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).
+		<br>
+		<pre><code>rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,DefaultInstall_SingleUser,1,</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (DefaultInstall section implied).
+		<br>
+		<pre><code>rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,,1,</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch a DLL payload by calling the RegisterOCX function.</p>
-
-		Usecase:Load a DLL payload.
-        <pre><code>rundll32.exe advpack.dll,RegisterOCX test.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable by calling the RegisterOCX function.</p>
-
-		Usecase:Run an executable payload.
-        <pre><code>rundll32.exe advpack.dll,RegisterOCX calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch command line by calling the RegisterOCX function.</p>
-
-		Usecase:Run an executable payload.
-        <pre><code>rundll32 advpack.dll, RegisterOCX "cmd.exe /c calc.exe"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).</p>
-
-		Usecase:Run local or remote script(let) code through INF file specification.
-        <pre><code>rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,DefaultInstall_SingleUser,1,</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (DefaultInstall section implied).</p>
-
-		Usecase:Run local or remote script(let) code through INF file specification.
-        <pre><code>rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,,1,</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch a DLL payload by calling the RegisterOCX function.
+		<br>
+		<pre><code>rundll32.exe advpack.dll,RegisterOCX test.dll</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable by calling the RegisterOCX function.
+		<br>
+		<pre><code>rundll32.exe advpack.dll,RegisterOCX calc.exe</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch command line by calling the RegisterOCX function.
+		<br>
+		<pre><code>rundll32 advpack.dll, RegisterOCX "cmd.exe /c calc.exe"</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

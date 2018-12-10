@@ -5,7 +5,7 @@
         <title>
             
             
-            winword
+            ieframe
             
             |
             
@@ -22,90 +22,94 @@
     
     <a href="/">..</a> /
     
-    winword.exe
+    Ieaframe.dll
     <div class="github-buttons">
         <a class="github-button" href="https://github.com/LOLBAS-Project/LOLBAS" data-icon="octicon-star" data-show-count="true" aria-label="Star api0cradle/LOLBAS on GitHub">Star</a>
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Winword/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Ieframe/#execute">Execute</a></li>
+	
 </ul>
 
-<p>Document editor included with Microsoft Office.</p>
+	
+
+<p>Internet Browser DLL for translating HTML code.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
 	<ul style="list-style-type:none">
 	
-	<li>c:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE</li>
+	<li>c:\windows\system32\ieframe.dll</li>
+	
+	<li>c:\windows\syswow64\ieframe.dll</li>
 	 
 	</ul>
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/vysecurity/status/884755482707210241">https://twitter.com/vysecurity/status/884755482707210241</a></li>
+	<a href="http://www.hexacorn.com/blog/2018/03/15/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline-part-5/">http://www.hexacorn.com/blog/2018/03/15/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline-part-5/</a>
+	<br>
 	
-	<li><a href="https://twitter.com/Hexacorn/status/885258886428725250">https://twitter.com/Hexacorn/status/885258886428725250</a></li>
+	<a href="https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/">https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/</a>
+	<br>
+	
+	<a href="https://twitter.com/bohops/status/997690405092290561">https://twitter.com/bohops/status/997690405092290561</a>
+	<br>
+	
+	<a href="https://windows10dll.nirsoft.net/ieframe_dll.html">https://windows10dll.nirsoft.net/ieframe_dll.html</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Vincent Yiu (cmd) - <a href="https://twitter.com/@@vysecurity">@@vysecurity</a </li>
+	Jimmy - <a href="https://twitter.com/@bohops">@bohops</a>
+	<br>
 	
-	<li>Adam (Internals) - <a href="https://twitter.com/@Hexacorn">@Hexacorn</a </li>
+	Adam - <a href="https://twitter.com/@hexacorn">@hexacorn</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch DLL payload.</p>
-
-		Usecase:Execute a locally stored DLL using winword.exe.
-        <pre><code>winword.exe /l dllfile.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch an executable payload via proxy through a(n) URL (information) file by calling OpenURL.
+		<br>
+		<pre><code>rundll32.exe ieframe.dll,OpenURL "C:\test\calc.url"</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

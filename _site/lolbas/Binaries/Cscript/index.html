@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Cscript/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Cscript/#ads">Alternate data streams</a></li>
+	
 </ul>
 
+	
+
 <p>Binary used to execute scripts in Windows</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,62 +54,53 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	<a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a></li>
+	<a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Cscript.exe executing files from alternate data streams</li>
+	Cscript.exe executing files from alternate data streams
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Use cscript.exe to exectute a Visual Basic script stored in an Alternate Data Stream (ADS).</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Use cscript.exe to exectute a Visual Basic script stored in an Alternate Data Stream (ADS).
+		<br>
+		<pre><code>cscript c:\ads\file.txt:script.vbs</code></pre>
 		Usecase:Can be used to evade defensive countermeasures or to hide as a persistence mechanism
-        <pre><code>cscript c:\ads\file.txt:script.vbs</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

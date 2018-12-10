@@ -28,13 +28,17 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Runonce/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Runonce/#execute">Execute</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -50,62 +54,53 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/pabraeken/status/990717080805789697">https://twitter.com/pabraeken/status/990717080805789697</a></li>
+	<a href="https://twitter.com/pabraeken/status/990717080805789697">https://twitter.com/pabraeken/status/990717080805789697</a>
+	<br>
 	
-	<li><a href="https://cmatskas.com/configure-a-runonce-task-on-windows/">https://cmatskas.com/configure-a-runonce-task-on-windows/</a></li>
+	<a href="https://cmatskas.com/configure-a-runonce-task-on-windows/">https://cmatskas.com/configure-a-runonce-task-on-windows/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Pierre-Alexandre Braeken - <a href="https://twitter.com/@pabraeken">@pabraeken</a </li>
+	Pierre-Alexandre Braeken - <a href="https://twitter.com/@pabraeken">@pabraeken</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\YOURKEY</li>
+	HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\YOURKEY
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Executes a Run Once Task that has been configured in the registry</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Executes a Run Once Task that has been configured in the registry
+		<br>
+		<pre><code>Runonce.exe /AlternateShellStartup</code></pre>
 		Usecase:Persistence, bypassing defensive counter measures
-        <pre><code>Runonce.exe /AlternateShellStartup</code></pre>
-    </li>
-	<li>Privileges required:Administrator</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:Administrator
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

@@ -1,23 +1,27 @@
 ---
-name: Register-cimprovider.exe
-description: Used to register new wmi providers
-functions:
-  execute:
-    - description: Load the target .DLL.
-      code: Register-cimprovider -path "C:\folder\evil.dll"
-      mitreid: T1218
-      mitrelink: https://attack.mitre.org/wiki/Technique/T1218
-      operatingsystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-      privileges: User
-      usecase: Execute code within dll file
-resources:
-    - resource: https://twitter.com/PhilipTsukerman/status/992021361106268161
-fullpath:
-    - path: C:\Windows\System32\Register-cimprovider.exe
-    - path: C:\Windows\SysWOW64\Register-cimprovider.exe
-detection:
-  - IOC: 
-acknowledgement:
+Name: Register-cimprovider.exe
+Description: Used to register new wmi providers
+Author: 'Oddvar Moe'
+Created: '2018-05-25'
+Commands:
+  - Command: Register-cimprovider -path "C:\folder\evil.dll"
+    Description: Load the target .DLL.
+    Usecase: Execute code within dll file
+    Category: Execute
+    Privileges: User
+    MitreID: T1218
+    MitreLink: https://attack.mitre.org/wiki/Technique/T1218
+    OperatingSystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+Full_Path:
+  - Path: C:\Windows\System32\Register-cimprovider.exe
+  - Path: C:\Windows\SysWOW64\Register-cimprovider.exe
+Code_Sample: 
+- Code:
+Detection:
+ - IOC:
+Resources:
+  - Link: https://twitter.com/PhilipTsukerman/status/992021361106268161
+Acknowledgement:
   - Person: Philip Tsukerman
     Handle: '@PhilipTsukerman'
 ---

@@ -28,13 +28,17 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Runscripthelper/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Runscripthelper/#execute">Execute</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -50,62 +54,53 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://posts.specterops.io/bypassing-application-whitelisting-with-runscripthelper-exe-1906923658fc">https://posts.specterops.io/bypassing-application-whitelisting-with-runscripthelper-exe-1906923658fc</a></li>
+	<a href="https://posts.specterops.io/bypassing-application-whitelisting-with-runscripthelper-exe-1906923658fc">https://posts.specterops.io/bypassing-application-whitelisting-with-runscripthelper-exe-1906923658fc</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Matt Graeber - <a href="https://twitter.com/@mattifestation">@mattifestation</a </li>
+	Matt Graeber - <a href="https://twitter.com/@mattifestation">@mattifestation</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Event 4014 - Powershell logging</li>
+	Event 4014 - Powershell logging
+	<br>
 	
-	<li>Event 400</li>
+	Event 400
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the PowerShell script named test.txt</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Execute the PowerShell script named test.txt
+		<br>
+		<pre><code>runscripthelper.exe surfacecheck \\?\C:\Test\Microsoft\Diagnosis\scripts\test.txt C:\Test</code></pre>
 		Usecase:Bypass constrained language mode and execute Powershell script
-        <pre><code>runscripthelper.exe surfacecheck \\?\C:\Test\Microsoft\Diagnosis\scripts\test.txt C:\Test</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

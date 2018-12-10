@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Sqlps/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Sqlps/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Tool included with Microsoft SQL Server that loads SQL Server cmdlets.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -48,60 +52,50 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/bryon_/status/975835709587075072">https://twitter.com/bryon_/status/975835709587075072</a></li>
+	<a href="https://twitter.com/bryon_/status/975835709587075072">https://twitter.com/bryon_/status/975835709587075072</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Bryon - <a href="https://twitter.com/@bryon_">@bryon_</a </li>
+	Bryon - <a href="https://twitter.com/@bryon_">@bryon_</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Drop into a SQL Server PowerShell console without Module and ScriptBlock Logging.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Drop into a SQL Server PowerShell console without Module and ScriptBlock Logging.
+		<br>
+		<pre><code>Sqlps.exe -noprofile</code></pre>
 		Usecase:Execute PowerShell commands without ScriptBlock logging.
-        <pre><code>Sqlps.exe -noprofile</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

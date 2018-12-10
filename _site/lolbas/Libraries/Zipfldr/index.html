@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Zipfldr/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Zipfldr/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Compressed Folder library</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,80 +54,74 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/moriarty_meng/status/977848311603380224">https://twitter.com/moriarty_meng/status/977848311603380224</a></li>
+	<a href="https://twitter.com/moriarty_meng/status/977848311603380224">https://twitter.com/moriarty_meng/status/977848311603380224</a>
+	<br>
 	
-	<li><a href="https://twitter.com/bohops/status/997896811904929792">https://twitter.com/bohops/status/997896811904929792</a></li>
+	<a href="https://twitter.com/bohops/status/997896811904929792">https://twitter.com/bohops/status/997896811904929792</a>
+	<br>
 	
-	<li><a href="https://windows10dll.nirsoft.net/zipfldr_dll.html">https://windows10dll.nirsoft.net/zipfldr_dll.html</a></li>
+	<a href="https://windows10dll.nirsoft.net/zipfldr_dll.html">https://windows10dll.nirsoft.net/zipfldr_dll.html</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Moriarty (Execution) - <a href="https://twitter.com/@moriarty_meng">@moriarty_meng</a </li>
+	Moriarty (Execution) - <a href="https://twitter.com/@moriarty_meng">@moriarty_meng</a>
+	<br>
 	
-	<li>r0lan (Obfuscation) - <a href="https://twitter.com/@r0lan">@r0lan</a </li>
+	r0lan (Obfuscation) - <a href="https://twitter.com/@r0lan">@r0lan</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch an executable payload by calling RouteTheCall.</p>
-
-		Usecase:Launch an executable.
-        <pre><code>rundll32.exe zipfldr.dll,RouteTheCall calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable payload by calling RouteTheCall (obfuscated).</p>
-
-		Usecase:Launch an executable.
-        <pre><code>rundll32.exe zipfldr.dll,RouteTheCall file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch an executable payload by calling RouteTheCall.
+		<br>
+		<pre><code>rundll32.exe zipfldr.dll,RouteTheCall calc.exe</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable payload by calling RouteTheCall (obfuscated).
+		<br>
+		<pre><code>rundll32.exe zipfldr.dll,RouteTheCall file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

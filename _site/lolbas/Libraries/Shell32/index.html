@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Shell32/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Shell32/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Windows Shell Common Dll</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,102 +54,101 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/Hexacorn/status/885258886428725250">https://twitter.com/Hexacorn/status/885258886428725250</a></li>
+	<a href="https://twitter.com/Hexacorn/status/885258886428725250">https://twitter.com/Hexacorn/status/885258886428725250</a>
+	<br>
 	
-	<li><a href="https://twitter.com/pabraeken/status/991768766898941953">https://twitter.com/pabraeken/status/991768766898941953</a></li>
+	<a href="https://twitter.com/pabraeken/status/991768766898941953">https://twitter.com/pabraeken/status/991768766898941953</a>
+	<br>
 	
-	<li><a href="https://twitter.com/mattifestation/status/776574940128485376">https://twitter.com/mattifestation/status/776574940128485376</a></li>
+	<a href="https://twitter.com/mattifestation/status/776574940128485376">https://twitter.com/mattifestation/status/776574940128485376</a>
+	<br>
 	
-	<li><a href="https://twitter.com/KyleHanslovan/status/905189665120149506">https://twitter.com/KyleHanslovan/status/905189665120149506</a></li>
+	<a href="https://twitter.com/KyleHanslovan/status/905189665120149506">https://twitter.com/KyleHanslovan/status/905189665120149506</a>
+	<br>
 	
-	<li><a href="https://windows10dll.nirsoft.net/shell32_dll.html">https://windows10dll.nirsoft.net/shell32_dll.html</a></li>
+	<a href="https://windows10dll.nirsoft.net/shell32_dll.html">https://windows10dll.nirsoft.net/shell32_dll.html</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Adam (Control_RunDLL) - <a href="https://twitter.com/@hexacorn">@hexacorn</a </li>
+	Adam (Control_RunDLL) - <a href="https://twitter.com/@hexacorn">@hexacorn</a>
+	<br>
 	
-	<li>Pierre-Alexandre Braeken (ShellExec_RunDLL) - <a href="https://twitter.com/@pabraeken">@pabraeken</a </li>
+	Pierre-Alexandre Braeken (ShellExec_RunDLL) - <a href="https://twitter.com/@pabraeken">@pabraeken</a>
+	<br>
 	
-	<li>Matt Graeber (ShellExec_RunDLL) - <a href="https://twitter.com/@mattifestation">@mattifestation</a </li>
+	Matt Graeber (ShellExec_RunDLL) - <a href="https://twitter.com/@mattifestation">@mattifestation</a>
+	<br>
 	
-	<li>Kyle Hanslovan (ShellExec_RunDLL) - <a href="https://twitter.com/@KyleHanslovan">@KyleHanslovan</a </li>
+	Kyle Hanslovan (ShellExec_RunDLL) - <a href="https://twitter.com/@KyleHanslovan">@KyleHanslovan</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch a DLL payload by calling the Control_RunDLL function.</p>
-
-		Usecase:Load a DLL payload.
-        <pre><code>rundll32.exe shell32.dll,Control_RunDLL payload.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable by calling the ShellExec_RunDLL function.</p>
-
-		Usecase:Run an executable payload.
-        <pre><code>rundll32.exe shell32.dll,ShellExec_RunDLL beacon.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch command line by calling the ShellExec_RunDLL function.</p>
-
-		Usecase:Run an executable payload.
-        <pre><code>rundll32 SHELL32.DLL,ShellExec_RunDLL "cmd.exe" "/c echo hi"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch a DLL payload by calling the Control_RunDLL function.
+		<br>
+		<pre><code>rundll32.exe shell32.dll,Control_RunDLL payload.dll</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable by calling the ShellExec_RunDLL function.
+		<br>
+		<pre><code>rundll32.exe shell32.dll,ShellExec_RunDLL beacon.exe</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch command line by calling the ShellExec_RunDLL function.
+		<br>
+		<pre><code>rundll32 SHELL32.DLL,ShellExec_RunDLL "cmd.exe" "/c echo hi"</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

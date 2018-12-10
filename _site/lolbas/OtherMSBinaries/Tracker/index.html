@@ -28,15 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Tracker/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Tracker/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Tracker/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
+	
+
 <p>Tool included with Microsoft .Net Framework.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -48,60 +55,69 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/subTee/status/793151392185589760">https://twitter.com/subTee/status/793151392185589760</a></li>
+	<a href="https://twitter.com/subTee/status/793151392185589760">https://twitter.com/subTee/status/793151392185589760</a>
+	<br>
 	
-	<li><a href="https://attack.mitre.org/wiki/Execution">https://attack.mitre.org/wiki/Execution</a></li>
+	<a href="https://attack.mitre.org/wiki/Execution">https://attack.mitre.org/wiki/Execution</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Use tracker.exe to proxy execution of an arbitrary DLL into another process. Since tracker.exe is also signed it can be used to bypass application whitelisting solutions.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Use tracker.exe to proxy execution of an arbitrary DLL into another process. Since tracker.exe is also signed it can be used to bypass application whitelisting solutions.
+		<br>
+		<pre><code>Tracker.exe /d .\calc.dll /c C:\Windows\write.exe</code></pre>
 		Usecase:Injection of locally stored DLL file into target process.
-        <pre><code>Tracker.exe /d .\calc.dll /c C:\Windows\write.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Use tracker.exe to proxy execution of an arbitrary DLL into another process. Since tracker.exe is also signed it can be used to bypass application whitelisting solutions.
+		<br>
+		<pre><code>Tracker.exe /d .\calc.dll /c C:\Windows\write.exe</code></pre>
+		Usecase:Injection of locally stored DLL file into target process.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

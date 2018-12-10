@@ -2,75 +2,66 @@
 layout: common
 ---
 
-{% include page_title.html title=page.name %}
-
+{% include page_title.html title=page.Name %}
 {% include function_list.html bin=page %}
 
-{{ page.description | markdownify }}
+{{ page.Description | markdownify }}
+
+
 <br>
 <p><b>Paths:</b> 
 	<ul style="list-style-type:none">
-	{% for ent in page.fullpath %}
-	<li>{{ent.path}}</li>
+	{% for ent in page.Full_Path %}
+	<li>{{ent.Path}}</li>
 	{% endfor %} 
 	</ul>
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
-	{% for ent in page.resources %}
-	<li><a href="{{ent.resource}}">{{ent.resource}}</a></li>
+<br>
+	{% for ent in page.Resources %}
+	<a href="{{ent.Link}}">{{ent.Link}}</a>
+	<br>
 	{% endfor %} 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
-	{% for pers in page.acknowledgement %}
-	<li>{{pers.Person}} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a </li>
+<br>
+	{% for pers in page.Acknowledgement %}
+	{{pers.Person}} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a>
+	<br>
 	{% endfor %} 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
-	{% for ioc in page.detection %}
-	<li>{{ioc.IOC}}</li>
+<p><b>Detection:</b>
+<br>
+	{% for ioc in page.Detection %}
+	{{ioc.IOC}}
+	<br>
 	{% endfor %} 
-	</ul>
 </p>
 <br>
 <br>
 
-{% for function in page.functions %}
-
-{% assign function_name = function[0] %}
-{% assign examples = function[1] %}
-
-<h2 id="{{ function_name }}" class="function-name">
-    {{- site.data.functions[function_name].label -}}
+{% assign test = page.Commands | group_by:"Category"%}
+{% for Command in test%}
+	{% assign function_name = Command.name | downcase %}
+<h2 id="{{function_name}}" class ="function-name">
+	{{- site.data.functions[function_name].label -}}
 </h2>
-
-{{ site.data.functions[function_name].description | markdownify }}
-
-<ul class="examples">
-
-    {% for example in examples %}
-
-{% capture code %}
-{{ example.code }}
-{% endcapture %}
-
-    <li>
-        {{ example.description | markdownify }}
-		Usecase:{{example.usecase}}
-        <pre><code>{{- code | strip -}}</code></pre>
-    </li>
-	<li>Privileges required:{{example.privileges}}</li>
-	<li>OS:{{example.operatingsystem}}</li>
-	<li>Mitre:<a href="{{example.mitrelink}}">{{example.mitreid}}</a></li>
-	<br><br>	
-    {% endfor %}
-
-</ul>
-<br><br>
+	{% for item in Command.items %}
+		{{item.Description}}
+		<br>
+		<pre><code>{{item.Command}}</code></pre>
+		Usecase:{{item.Usecase}}
+		<br>
+		Privileges required:{{item.Privileges}}
+		<br>
+		OS:{{item.OperatingSystem}}
+		<br>
+		Mitre:<a href="{{item.MitreLink}}">{{item.MitreID}}</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	{% endfor %}
 {% endfor %}

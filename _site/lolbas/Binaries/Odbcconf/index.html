@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Odbcconf/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Odbcconf/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Used in Windows for managing ODBC connections</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,62 +54,53 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b">https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b</a></li>
+	<a href="https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b">https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b</a>
+	<br>
 	
-	<li><a href="https://github.com/woanware/application-restriction-bypasses">https://github.com/woanware/application-restriction-bypasses</a></li>
+	<a href="https://github.com/woanware/application-restriction-bypasses">https://github.com/woanware/application-restriction-bypasses</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Load DLL specified in target .RSP file. See the Playloads folder for an example .RSP file.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Load DLL specified in target .RSP file. See the Playloads folder for an example .RSP file.
+		<br>
+		<pre><code>odbcconf -f file.rsp</code></pre>
 		Usecase:Execute dll file using technique that can evade defensive counter measures
-        <pre><code>odbcconf -f file.rsp</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

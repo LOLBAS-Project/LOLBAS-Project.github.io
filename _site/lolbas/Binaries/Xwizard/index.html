@@ -28,13 +28,17 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Xwizard/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Xwizard/#execute">Execute</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -50,64 +54,80 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/">http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/</a></li>
+	<a href="http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/">http://www.hexacorn.com/blog/2017/07/31/the-wizard-of-x-oppa-plugx-style/</a>
+	<br>
 	
-	<li><a href="https://www.youtube.com/watch?v=LwDHX7DVHWU">https://www.youtube.com/watch?v=LwDHX7DVHWU</a></li>
+	<a href="https://www.youtube.com/watch?v=LwDHX7DVHWU">https://www.youtube.com/watch?v=LwDHX7DVHWU</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5">https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5</a></li>
+	<a href="https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5">https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5</a>
+	<br>
+	
+	<a href="https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/">https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Adam - <a href="https://twitter.com/@Hexacorn">@Hexacorn</a </li>
+	Adam - <a href="https://twitter.com/@Hexacorn">@Hexacorn</a>
+	<br>
+	
+	Nick Tyrer - <a href="https://twitter.com/@NickTyrer">@NickTyrer</a>
+	<br>
+	
+	harr0ey - <a href="https://twitter.com/@harr0ey">@harr0ey</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Xwizard.exe running a custom class that has been added to the registry.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Xwizard.exe running a custom class that has been added to the registry.
+		<br>
+		<pre><code>xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}</code></pre>
 		Usecase:Run a com object created in registry to evade defensive counter measures
-        <pre><code>xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Xwizard.exe running a custom class that has been added to the registry. The /t and /u switch prevent an error message in later Windows 10 builds.
+		<br>
+		<pre><code>xwizard RunWizard /taero /u {00000001-0000-0000-0000-0000FEEDACDC}</code></pre>
+		Usecase:Run a com object created in registry to evade defensive counter measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

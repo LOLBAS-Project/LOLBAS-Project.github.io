@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Wab/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Wab/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Windows address book manager</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,62 +54,53 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/Hexacorn/status/991447379864932352">https://twitter.com/Hexacorn/status/991447379864932352</a></li>
+	<a href="https://twitter.com/Hexacorn/status/991447379864932352">https://twitter.com/Hexacorn/status/991447379864932352</a>
+	<br>
 	
-	<li><a href="http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/">http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/</a></li>
+	<a href="http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/">http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Adam - <a href="https://twitter.com/@Hexacorn">@Hexacorn</a </li>
+	Adam - <a href="https://twitter.com/@Hexacorn">@Hexacorn</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>WAB.exe should normally never be used</li>
+	WAB.exe should normally never be used
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Change HKLM\Software\Microsoft\WAB\DLLPath and execute DLL of choice</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Change HKLM\Software\Microsoft\WAB\DLLPath and execute DLL of choice
+		<br>
+		<pre><code>wab.exe</code></pre>
 		Usecase:Execute dll file. Bypass defensive counter measures
-        <pre><code>wab.exe</code></pre>
-    </li>
-	<li>Privileges required:Administrator</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:Administrator
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

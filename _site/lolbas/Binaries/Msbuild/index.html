@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Msbuild/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Msbuild/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Msbuild/#awl bypass">AWL bypass</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Msbuild/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Used to compile and execute code</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -61,98 +65,81 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md</a></li>
+	<a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md</a>
+	<br>
 	
-	<li><a href="https://github.com/Cn33liz/MSBuildShell">https://github.com/Cn33liz/MSBuildShell</a></li>
+	<a href="https://github.com/Cn33liz/MSBuildShell">https://github.com/Cn33liz/MSBuildShell</a>
+	<br>
 	
-	<li><a href="https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/">https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/</a></li>
+	<a href="https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/">https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	<a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	
-	<li>Cn33liz - <a href="https://twitter.com/@Cneelis">@Cneelis</a </li>
+	Cn33liz - <a href="https://twitter.com/@Cneelis">@Cneelis</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Msbuild.exe should not normally be executed on workstations</li>
+	Msbuild.exe should not normally be executed on workstations
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Build and execute a C# project stored in the target csproj file.</p>
-
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Build and execute a C# project stored in the target XML file.
+		<br>
+		<pre><code>msbuild.exe pshell.xml</code></pre>
 		Usecase:Compile and run code
-        <pre><code>msbuild.exe project.csproj</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Build and execute a C# project stored in the target XML file.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Build and execute a C# project stored in the target csproj file.
+		<br>
+		<pre><code>msbuild.exe project.csproj</code></pre>
 		Usecase:Compile and run code
-        <pre><code>msbuild.exe pshell.xml</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1127">T1127</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

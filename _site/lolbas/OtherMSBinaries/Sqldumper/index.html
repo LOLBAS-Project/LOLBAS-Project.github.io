@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Sqldumper/#dump">Dump</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Sqldumper/#dump">Dump</a></li>
+	
 </ul>
 
+	
+
 <p>Debugging utility included with Microsoft SQL.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,78 +54,71 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/countuponsec/status/910969424215232518">https://twitter.com/countuponsec/status/910969424215232518</a></li>
+	<a href="https://twitter.com/countuponsec/status/910969424215232518">https://twitter.com/countuponsec/status/910969424215232518</a>
+	<br>
 	
-	<li><a href="https://twitter.com/countuponsec/status/910977826853068800">https://twitter.com/countuponsec/status/910977826853068800</a></li>
+	<a href="https://twitter.com/countuponsec/status/910977826853068800">https://twitter.com/countuponsec/status/910977826853068800</a>
+	<br>
 	
-	<li><a href="https://support.microsoft.com/en-us/help/917825/how-to-use-the-sqldumper-exe-utility-to-generate-a-dump-file-in-sql-se">https://support.microsoft.com/en-us/help/917825/how-to-use-the-sqldumper-exe-utility-to-generate-a-dump-file-in-sql-se</a></li>
+	<a href="https://support.microsoft.com/en-us/help/917825/how-to-use-the-sqldumper-exe-utility-to-generate-a-dump-file-in-sql-se">https://support.microsoft.com/en-us/help/917825/how-to-use-the-sqldumper-exe-utility-to-generate-a-dump-file-in-sql-se</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Luis Rocha - <a href="https://twitter.com/@countuponsec">@countuponsec</a </li>
+	Luis Rocha - <a href="https://twitter.com/@countuponsec">@countuponsec</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="dump" class="function-name">Dump</h2>
-
-<p>The LOLBAS can be used to dump process.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Dump process by PID and create a dump file (Appears to create a dump file called SQLDmprXXXX.mdmp).</p>
-
+	
+<h2 id="dump" class ="function-name">Dump</h2>
+	
+		Dump process by PID and create a dump file (Appears to create a dump file called SQLDmprXXXX.mdmp).
+		<br>
+		<pre><code>sqldumper.exe 464 0 0x0110</code></pre>
 		Usecase:Dump process uisng PID.
-        <pre><code>sqldumper.exe 464 0 0x0110</code></pre>
-    </li>
-	<li>Privileges required:Administrator</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>0x01100:40 flag will create a Mimikatz compatibile dump file.</p>
-
+		<br>
+		Privileges required:Administrator
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		0x01100:40 flag will create a Mimikatz compatibile dump file.
+		<br>
+		<pre><code>sqldumper.exe 540 0 0x01100:40</code></pre>
 		Usecase:Dump LSASS.exe to Mimikatz compatable dump uisng PID.
-        <pre><code>sqldumper.exe 540 0 0x01100:40</code></pre>
-    </li>
-	<li>Privileges required:Administrator</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:Administrator
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

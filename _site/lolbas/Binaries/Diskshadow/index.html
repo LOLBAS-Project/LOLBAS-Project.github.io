@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Diskshadow/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Diskshadow/#dump">Dump</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Diskshadow/#dump">Dump</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Diskshadow/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS).</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,92 +57,72 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/">https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/</a></li>
+	<a href="https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/">https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Jimmy - <a href="https://twitter.com/@bohops">@bohops</a </li>
+	Jimmy - <a href="https://twitter.com/@bohops">@bohops</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Child process from diskshadow.exe</li>
+	Child process from diskshadow.exe
+	<br>
 	
-	<li>Diskshadow reading input from file</li>
+	Diskshadow reading input from file
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute commands using diskshadow.exe to spawn child process</p>
-
-		Usecase:Use diskshadow to bypass defensive counter measures
-        <pre><code>diskshadow> exec calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows server</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="dump" class="function-name">Dump</h2>
-
-<p>The LOLBAS can be used to dump process.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute commands using diskshadow.exe from a prepared diskshadow script.</p>
-
+	
+<h2 id="dump" class ="function-name">Dump</h2>
+	
+		Execute commands using diskshadow.exe from a prepared diskshadow script.
+		<br>
+		<pre><code>diskshadow.exe /s c:\test\diskshadow.txt</code></pre>
 		Usecase:Use diskshadow to exfiltrate data from VSS such as NTDS.dit
-        <pre><code>diskshadow.exe /s c:\test\diskshadow.txt</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows server</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows server
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Execute commands using diskshadow.exe to spawn child process
+		<br>
+		<pre><code>diskshadow> exec calc.exe</code></pre>
+		Usecase:Use diskshadow to bypass defensive counter measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows server
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

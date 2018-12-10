@@ -5,7 +5,7 @@
         <title>
             
             
-            ieaframe
+            verclsid
             
             |
             
@@ -22,96 +22,85 @@
     
     <a href="/">..</a> /
     
-    Ieaframe.dll
+    Verclsid.exe
     <div class="github-buttons">
         <a class="github-button" href="https://github.com/LOLBAS-Project/LOLBAS" data-icon="octicon-star" data-show-count="true" aria-label="Star api0cradle/LOLBAS on GitHub">Star</a>
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Ieaframe/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Verclsid/#execute">Execute</a></li>
+	
 </ul>
 
-<p>Internet Browser DLL for translating HTML code.</p>
+	
+
+
+
+
 
 <br>
 <p><b>Paths:</b> 
 	<ul style="list-style-type:none">
 	
-	<li>c:\windows\system32\ieframe.dll</li>
+	<li>C:\Windows\System32\verclsid.exe</li>
 	
-	<li>c:\windows\syswow64\ieframe.dll</li>
+	<li>C:\Windows\SysWOW64\verclsid.exe</li>
 	 
 	</ul>
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="http://www.hexacorn.com/blog/2018/03/15/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline-part-5/">http://www.hexacorn.com/blog/2018/03/15/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline-part-5/</a></li>
+	<a href="https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5">https://gist.github.com/NickTyrer/0598b60112eaafe6d07789f7964290d5</a>
+	<br>
 	
-	<li><a href="https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/">https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/</a></li>
-	
-	<li><a href="https://twitter.com/bohops/status/997690405092290561">https://twitter.com/bohops/status/997690405092290561</a></li>
-	
-	<li><a href="https://windows10dll.nirsoft.net/ieframe_dll.html">https://windows10dll.nirsoft.net/ieframe_dll.html</a></li>
+	<a href="https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/">https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Jimmy - <a href="https://twitter.com/@bohops">@bohops</a </li>
-	
-	<li>Adam - <a href="https://twitter.com/@hexacorn">@hexacorn</a </li>
+	Nick Tyrer - <a href="https://twitter.com/@NickTyrer">@NickTyrer</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch an executable payload via proxy through a(n) URL (information) file by calling OpenURL.</p>
-
-		Usecase:Load an executable payload by calling a .url file with or without quotes.  The .url file extension can be renamed.
-        <pre><code>rundll32.exe ieframe.dll,OpenURL "C:\test\calc.url"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Used to verify a COM object before it is instantiated by Windows Explorer
+		<br>
+		<pre><code>verclsid.exe /S /C {CLSID}</code></pre>
+		Usecase:Run a com object created in registry to evade defensive counter measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

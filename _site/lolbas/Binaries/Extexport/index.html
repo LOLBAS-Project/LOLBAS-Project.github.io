@@ -28,13 +28,17 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Extexport/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Extexport/#execute">Execute</a></li>
+	
 </ul>
+
+	
+
+
 
 
 
@@ -50,60 +54,50 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/">http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/</a></li>
+	<a href="http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/">http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Adam - <a href="https://twitter.com/@hexacorn">@hexacorn</a </li>
+	Adam - <a href="https://twitter.com/@hexacorn">@hexacorn</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Extexport.exe loads dll and is execute from other folder the original path</li>
+	Extexport.exe loads dll and is execute from other folder the original path
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Load a DLL located in the c:\test folder with one of the following names mozcrt19.dll, mozsqlite3.dll, or sqlite.dll</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Load a DLL located in the c:\test folder with one of the following names mozcrt19.dll, mozsqlite3.dll, or sqlite.dll
+		<br>
+		<pre><code>Extexport.exe c:\test foo bar</code></pre>
 		Usecase:Execute dll file
-        <pre><code>Extexport.exe c:\test foo bar</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Rpcping/#credentials">Credentials</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Rpcping/#credentials">Credentials</a></li>
+	
 </ul>
 
+	
+
 <p>Used to verify rpc connection</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,66 +54,59 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://github.com/vysec/RedTips">https://github.com/vysec/RedTips</a></li>
+	<a href="https://github.com/vysec/RedTips">https://github.com/vysec/RedTips</a>
+	<br>
 	
-	<li><a href="https://twitter.com/vysecurity/status/974806438316072960">https://twitter.com/vysecurity/status/974806438316072960</a></li>
+	<a href="https://twitter.com/vysecurity/status/974806438316072960">https://twitter.com/vysecurity/status/974806438316072960</a>
+	<br>
 	
-	<li><a href="https://twitter.com/vysecurity/status/873181705024266241">https://twitter.com/vysecurity/status/873181705024266241</a></li>
+	<a href="https://twitter.com/vysecurity/status/873181705024266241">https://twitter.com/vysecurity/status/873181705024266241</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	
-	<li>Vincent Yiu - <a href="https://twitter.com/@vysecurity">@vysecurity</a </li>
+	Vincent Yiu - <a href="https://twitter.com/@vysecurity">@vysecurity</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="credentials" class="function-name">Credentials</h2>
-
-<p>The LOLBAS can view credentials file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Send a RPC test connection to the target server (-s) and force the NTLM hash to be sent in the process.</p>
-
+	
+<h2 id="credentials" class ="function-name">Credentials</h2>
+	
+		Send a RPC test connection to the target server (-s) and force the NTLM hash to be sent in the process.
+		<br>
+		<pre><code>rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM</code></pre>
 		Usecase:Capture credentials on a non-standard port
-        <pre><code>rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1003">T1003</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

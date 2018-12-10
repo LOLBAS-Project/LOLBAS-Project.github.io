@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Atbroker/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Atbroker/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Helper binary for Assistive Technology (AT)</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,64 +54,56 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/">http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/</a></li>
+	<a href="http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/">http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Adam - <a href="https://twitter.com/@hexacorn">@hexacorn</a </li>
+	Adam - <a href="https://twitter.com/@hexacorn">@hexacorn</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Changes to HKCU\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\Configuration</li>
+	Changes to HKCU\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\Configuration
+	<br>
 	
-	<li>Changes to HKCU\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs</li>
+	Changes to HKCU\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs
+	<br>
 	
-	<li>Unknown AT starting C:\Windows\System32\ATBroker.exe /start malware</li>
+	Unknown AT starting C:\Windows\System32\ATBroker.exe /start malware
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Start a registered Assistive Technology (AT).</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Start a registered Assistive Technology (AT).
+		<br>
+		<pre><code>ATBroker.exe /start malware</code></pre>
 		Usecase:Executes code defined in registry for a new AT. Modifications must be made to the system registry to either register or modify an existing Assistibe Technology (AT) service entry.
-        <pre><code>ATBroker.exe /start malware</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

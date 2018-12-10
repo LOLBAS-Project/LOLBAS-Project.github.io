@@ -28,24 +28,28 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Bitsadmin/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Bitsadmin/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Bitsadmin/#copy">Copy</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Bitsadmin/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Bitsadmin/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Bitsadmin/#download">Download</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Bitsadmin/#copy">Copy</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Bitsadmin/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Used for managing background intelligent transfer</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -59,162 +63,125 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679 - slide 53">https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679 - slide 53</a></li>
+	<a href="https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679 - slide 53">https://www.slideshare.net/chrisgates/windows-attacks-at-is-the-new-black-26672679 - slide 53</a>
+	<br>
 	
-	<li><a href="https://www.youtube.com/watch?v=_8xJaaQlpBo">https://www.youtube.com/watch?v=_8xJaaQlpBo</a></li>
+	<a href="https://www.youtube.com/watch?v=_8xJaaQlpBo">https://www.youtube.com/watch?v=_8xJaaQlpBo</a>
+	<br>
 	
-	<li><a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a></li>
+	<a href="https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f">https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Rob Fuller - <a href="https://twitter.com/@mubix">@mubix</a </li>
+	Rob Fuller - <a href="https://twitter.com/@mubix">@mubix</a>
+	<br>
 	
-	<li>Chris Gates - <a href="https://twitter.com/@carnal0wnage">@carnal0wnage</a </li>
+	Chris Gates - <a href="https://twitter.com/@carnal0wnage">@carnal0wnage</a>
+	<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Child process from bitsadmin.exe</li>
+	Child process from bitsadmin.exe
+	<br>
 	
-	<li>bitsadmin creates new files</li>
+	bitsadmin creates new files
+	<br>
 	
-	<li>bitsadmin adds data to alternate data stream</li>
+	bitsadmin adds data to alternate data stream
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>One-liner that creates a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.</p>
-
-		Usecase:Execute binary file specified. Can be used as a defensive evasion.
-        <pre><code>bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.</p>
-
-		Usecase:Download file from Internet
-        <pre><code>bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\data\playfolder\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="copy" class="function-name">Copy</h2>
-
-<p>The LOLBAS can copy file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Command for copying cmd.exe to another folder</p>
-
-		Usecase:Copy file
-        <pre><code>bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command from an Alternate data stream, then resume and complete the job.</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command from an Alternate data stream, then resume and complete the job.
+		<br>
+		<pre><code>bitsadmin /create 1 bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1</code></pre>
 		Usecase:Performs execution of specified file in the alternate data stream, can be used as a defensive evasion or persistence technique.
-        <pre><code>bitsadmin /create 1 bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Create a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.
+		<br>
+		<pre><code>bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\data\playfolder\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1</code></pre>
+		Usecase:Download file from Internet
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="copy" class ="function-name">Copy</h2>
+	
+		Command for copying cmd.exe to another folder
+		<br>
+		<pre><code>bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset</code></pre>
+		Usecase:Copy file
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		One-liner that creates a bitsadmin job named 1, add cmd.exe to the job, configure the job to run the target command, then resume and complete the job.
+		<br>
+		<pre><code>bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset</code></pre>
+		Usecase:Execute binary file specified. Can be used as a defensive evasion.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

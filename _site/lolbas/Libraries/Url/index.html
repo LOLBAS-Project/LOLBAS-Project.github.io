@@ -28,15 +28,19 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Libraries/Url/#execute">Execute</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Libraries/Url/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>Internet Shortcut Shell Extension DLL.</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -50,146 +54,149 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/">https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/</a></li>
+	<a href="https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/">https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/</a>
+	<br>
 	
-	<li><a href="https://twitter.com/DissectMalware/status/995348436353470465">https://twitter.com/DissectMalware/status/995348436353470465</a></li>
+	<a href="https://twitter.com/DissectMalware/status/995348436353470465">https://twitter.com/DissectMalware/status/995348436353470465</a>
+	<br>
 	
-	<li><a href="https://twitter.com/bohops/status/974043815655956481">https://twitter.com/bohops/status/974043815655956481</a></li>
+	<a href="https://twitter.com/bohops/status/974043815655956481">https://twitter.com/bohops/status/974043815655956481</a>
+	<br>
 	
-	<li><a href="https://twitter.com/yeyint_mth/status/997355558070927360">https://twitter.com/yeyint_mth/status/997355558070927360</a></li>
+	<a href="https://twitter.com/yeyint_mth/status/997355558070927360">https://twitter.com/yeyint_mth/status/997355558070927360</a>
+	<br>
 	
-	<li><a href="https://twitter.com/Hexacorn/status/974063407321223168">https://twitter.com/Hexacorn/status/974063407321223168</a></li>
+	<a href="https://twitter.com/Hexacorn/status/974063407321223168">https://twitter.com/Hexacorn/status/974063407321223168</a>
+	<br>
 	
-	<li><a href="https://windows10dll.nirsoft.net/url_dll.html">https://windows10dll.nirsoft.net/url_dll.html</a></li>
+	<a href="https://windows10dll.nirsoft.net/url_dll.html">https://windows10dll.nirsoft.net/url_dll.html</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Adam (OpenURL) - <a href="https://twitter.com/@hexacorn">@hexacorn</a </li>
+	Adam (OpenURL) - <a href="https://twitter.com/@hexacorn">@hexacorn</a>
+	<br>
 	
-	<li>Jimmy (OpenURL) - <a href="https://twitter.com/@bohops">@bohops</a </li>
+	Jimmy (OpenURL) - <a href="https://twitter.com/@bohops">@bohops</a>
+	<br>
 	
-	<li>Malwrologist (FileProtocolHandler - HTA) - <a href="https://twitter.com/@DissectMalware">@DissectMalware</a </li>
+	Malwrologist (FileProtocolHandler - HTA) - <a href="https://twitter.com/@DissectMalware">@DissectMalware</a>
+	<br>
 	
-	<li>r0lan (Obfuscation) - <a href="https://twitter.com/@r0lan">@r0lan</a </li>
+	r0lan (Obfuscation) - <a href="https://twitter.com/@r0lan">@r0lan</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Launch a HTML application payload by calling OpenURL.</p>
-
-		Usecase:Invoke an HTML Application via mshta.exe (Default Handler).
-        <pre><code>rundll32.exe url.dll,OpenURL "C:\test\calc.hta"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable payload via proxy through a(n) URL (information) file by calling OpenURL.</p>
-
-		Usecase:Load an executable payload by calling a .url file with or without quotes.
-        <pre><code>rundll32.exe url.dll,OpenURL "C:\test\calc.url"</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable by calling OpenURL.</p>
-
-		Usecase:Load an executable payload by specifying the file protocol handler (obfuscated).
-        <pre><code>rundll32.exe url.dll,OpenURL file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable by calling FileProtocolHandler.</p>
-
-		Usecase:Launch an executable.
-        <pre><code>rundll32.exe url.dll,FileProtocolHandler calc.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch an executable by calling FileProtocolHandler.</p>
-
-		Usecase:Load an executable payload by specifying the file protocol handler (obfuscated).
-        <pre><code>rundll32.exe url.dll,FileProtocolHandler file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Launch a HTML application payload by calling FileProtocolHandler.</p>
-
-		Usecase:Invoke an HTML Application via mshta.exe (Default Handler).
-        <pre><code>rundll32.exe url.dll,FileProtocolHandler file:///C:/test/test.hta</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Launch a HTML application payload by calling OpenURL.
+		<br>
+		<pre><code>rundll32.exe url.dll,OpenURL "C:\test\calc.hta"</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable payload via proxy through a(n) URL (information) file by calling OpenURL.
+		<br>
+		<pre><code>rundll32.exe url.dll,OpenURL "C:\test\calc.url"</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable by calling OpenURL.
+		<br>
+		<pre><code>rundll32.exe url.dll,OpenURL file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable by calling FileProtocolHandler.
+		<br>
+		<pre><code>rundll32.exe url.dll,FileProtocolHandler calc.exe</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch an executable by calling FileProtocolHandler.
+		<br>
+		<pre><code>rundll32.exe url.dll,FileProtocolHandler file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Launch a HTML application payload by calling FileProtocolHandler.
+		<br>
+		<pre><code>rundll32.exe url.dll,FileProtocolHandler file:///C:/test/test.hta</code></pre>
+		Usecase:
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows
+		<br>
+		Mitre:<a href="">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

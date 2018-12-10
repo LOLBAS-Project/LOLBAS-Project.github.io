@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Regsvcs/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Regsvcs/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Regsvcs/#execute">Execute</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Regsvcs/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
+	
+
 <p>Regsvcs and Regasm are Windows command-line utilities that are used to register .NET Component Object Model (COM) assemblies</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -53,94 +57,75 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/">https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/</a></li>
+	<a href="https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/">https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	<a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a>
+	<br>
 	
-	<li><a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1121/T1121.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1121/T1121.md</a></li>
+	<a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1121/T1121.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1121/T1121.md</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Loads the target .DLL file and executes the RegisterClass function.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Loads the target .DLL file and executes the RegisterClass function.
+		<br>
+		<pre><code>regsvcs.exe AllTheThingsx64.dll</code></pre>
 		Usecase:Execute dll file and bypass Application whitelisting
-        <pre><code>regsvcs.exe AllTheThingsx64.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1121">T1121</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1121">T1121</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Loads the target .DLL file and executes the RegisterClass function.</p>
-
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Loads the target .DLL file and executes the RegisterClass function.
+		<br>
+		<pre><code>regsvcs.exe AllTheThingsx64.dll</code></pre>
 		Usecase:Execute dll file and bypass Application whitelisting
-        <pre><code>regsvcs.exe AllTheThingsx64.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1121">T1121</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1121">T1121</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

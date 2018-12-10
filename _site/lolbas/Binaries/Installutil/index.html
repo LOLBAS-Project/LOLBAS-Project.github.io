@@ -28,18 +28,22 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Installutil/#execute">Execute</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Installutil/#awl bypass">AWL bypass</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Installutil/#awl bypass">AWL bypass</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Installutil/#execute">Execute</a></li>
+	
 </ul>
 
+	
+
 <p>The Installer tool is a command-line utility that allows you to install and uninstall server resources by executing the installer components in specified assemblies</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -57,100 +61,84 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/">https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/</a></li>
+	<a href="https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/">https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/</a>
+	<br>
 	
-	<li><a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12</a></li>
+	<a href="https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12">https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12</a>
+	<br>
 	
-	<li><a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1118/T1118.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1118/T1118.md</a></li>
+	<a href="https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1118/T1118.md">https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1118/T1118.md</a>
+	<br>
 	
-	<li><a href="https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/">https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/</a></li>
+	<a href="https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/">https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/</a>
+	<br>
 	
-	<li><a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a></li>
+	<a href="https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/">https://oddvar.moe/2017/12/13/applocker-case-study-how-insecure-is-it-really-part-1/</a>
+	<br>
 	
-	<li><a href="https://docs.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool">https://docs.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool</a></li>
+	<a href="https://docs.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool">https://docs.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a </li>
+	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="execute" class="function-name">Execute</h2>
-
-<p>The LOLBAS can achieve abritrary code execution.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the target .NET DLL or EXE.</p>
-
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Execute the target .NET DLL or EXE.
+		<br>
+		<pre><code>InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll</code></pre>
 		Usecase:Use to execute code and bypass application whitelisting
-        <pre><code>InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1118">T1118</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1118">T1118</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="awl bypass" class="function-name">AWL bypass</h2>
-
-<p>The LOLBAS can bypass application whitelisting solutions.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Execute the target .NET DLL or EXE.</p>
-
+	
+<h2 id="execute" class ="function-name">Execute</h2>
+	
+		Execute the target .NET DLL or EXE.
+		<br>
+		<pre><code>InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll</code></pre>
 		Usecase:Use to execute code and bypass application whitelisting
-        <pre><code>InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1118">T1118</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1118">T1118</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

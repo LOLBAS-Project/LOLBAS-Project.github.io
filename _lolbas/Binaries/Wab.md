@@ -1,24 +1,28 @@
 ---
-name: Wab.exe
-description: Windows address book manager
-functions:
-  execute:
-    - description: Change HKLM\Software\Microsoft\WAB\DLLPath and execute DLL of choice
-      code: wab.exe
-      mitreid: T1218
-      mitrelink: https://attack.mitre.org/wiki/Technique/T1218
-      operatingsystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-      privileges: Administrator
-      usecase: Execute dll file. Bypass defensive counter measures
-resources:
-    - resource: https://twitter.com/Hexacorn/status/991447379864932352
-    - resource: http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
-fullpath:
-    - path: C:\Program Files\Windows Mail\wab.exe
-    - path: C:\Program Files (x86)\Windows Mail\wab.exe
-detection:
+Name: Wab.exe
+Description: Windows address book manager
+Author: 'Oddvar Moe'
+Created: '2018-05-25'
+Commands:
+  - Command: wab.exe
+    Description: Change HKLM\Software\Microsoft\WAB\DLLPath and execute DLL of choice
+    Usecase: Execute dll file. Bypass defensive counter measures
+    Category: Execute
+    Privileges: Administrator
+    MitreID: T1218
+    MitreLink: https://attack.mitre.org/wiki/Technique/T1218
+    OperatingSystem: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+Full_Path:
+  - Path: C:\Program Files\Windows Mail\wab.exe
+  - Path: C:\Program Files (x86)\Windows Mail\wab.exe
+Code_Sample: 
+  - Code:
+Detection:
   - IOC: WAB.exe should normally never be used
-acknowledgement:
+Resources:
+  - Link: https://twitter.com/Hexacorn/status/991447379864932352
+  - Link: http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
+Acknowledgement:
   - Person: Adam
     Handle: '@Hexacorn'
 ---
