@@ -49,6 +49,11 @@ awl bypass:
   description: |
     The LOLBAS can bypass application whitelisting solutions.
     
+uac bypass:
+  label: UAC bypass
+  description: |
+    The LOLBAS can bypass User Access Control in Windows.
+    
 reconnaissance:
   label: Reconnaissance
   description: |
