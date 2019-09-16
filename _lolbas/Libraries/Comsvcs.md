@@ -22,5 +22,5 @@ Resources:
   - Link: https://modexp.wordpress.com/2019/08/30/minidumpwritedump-via-com-services-dll/
 Acknowledegment:
   - Person: modexp
-    Handle: 
+    Handle: 'NA'
 ---
