@@ -25,6 +25,11 @@ Go here for instructions:
 <a href="https://github.com/LOLBAS-Project/LOLBAS/blob/master/CONTRIBUTING.md">https://github.com/LOLBAS-Project/LOLBAS/blob/master/CONTRIBUTING.md</a>
 <br>
 <br>
+Criteria for a binary before it can be considered a LOLBin/Lib/Script is documented here:
+<br>
+https://github.com/LOLBAS-Project/LOLBAS#criteria
+<br>
+<br>
 If you are looking for UNIX binaries you should visit <a href="https://gtfobins.github.io/">https://gtfobins.github.io/</a>
 
 [functions]: /functions/
