@@ -44,6 +44,14 @@
 <p>Part of .NET</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -101,7 +109,7 @@
 		<pre><code>regasm.exe AllTheThingsx64.dll</code></pre>
 		Usecase:Execute code and bypass Application whitelisting
 		<br>
-		Privileges required:User
+		Privileges required:Local Admin
 		<br>
 		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
 		<br>
@@ -115,9 +123,9 @@
 	
 <h2 id="execute" class ="function-name">Execute</h2>
 	
-		Loads the target .DLL file and executes the RegisterClass function.
+		Loads the target .DLL file and executes the UnRegisterClass function.
 		<br>
-		<pre><code>regasm.exe AllTheThingsx64.dll</code></pre>
+		<pre><code>regasm.exe /U AllTheThingsx64.dll</code></pre>
 		Usecase:Execute code and bypass Application whitelisting
 		<br>
 		Privileges required:User

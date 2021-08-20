@@ -44,6 +44,14 @@
 <p>Script used for manage Windows RM settings</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -115,21 +123,6 @@
 
 	
 <h2 id="execute" class ="function-name">Execute</h2>
-	
-		Hijack the Scripting.Dictionary COM Object to execute remote scriptlet (SCT) code.
-		<br>
-		<pre><code>reg.exe import c:\path\to\Slmgr.reg & winrm quickconfig</code></pre>
-		Usecase:Proxy execution
-		<br>
-		Privileges required:User
-		<br>
-		OS:Windows 10
-		<br>
-		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1216">T1216</a>
-		<br>
-		<br>
-		<br>
-		<br>
 	
 		Lateral movement/Remote Command Execution via WMI Win32_Process class over the WinRM protocol
 		<br>

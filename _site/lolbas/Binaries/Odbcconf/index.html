@@ -41,6 +41,14 @@
 <p>Used in Windows for managing ODBC connections</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -61,12 +69,18 @@
 	
 	<a href="https://github.com/woanware/application-restriction-bypasses">https://github.com/woanware/application-restriction-bypasses</a>
 	<br>
+	
+	<a href="https://twitter.com/Hexacorn/status/1187143326673330176">https://twitter.com/Hexacorn/status/1187143326673330176</a>
+	<br>
 	 
 <br>
 <p><b>Acknowledgement:</b> 
 <br>
 	
 	Casey Smith - <a href="https://twitter.com/@subtee">@subtee</a>
+	<br>
+	
+	Adam - <a href="https://twitter.com/@Hexacorn">@Hexacorn</a>
 	<br>
 	 
 </p>
@@ -89,6 +103,21 @@
 		Load DLL specified in target .RSP file. See the Playloads folder for an example .RSP file.
 		<br>
 		<pre><code>odbcconf -f file.rsp</code></pre>
+		Usecase:Execute dll file using technique that can evade defensive counter measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Execute DllREgisterServer from DLL specified.
+		<br>
+		<pre><code>odbcconf /a {REGSVR c:\test\test.dll}</code></pre>
 		Usecase:Execute dll file using technique that can evade defensive counter measures
 		<br>
 		Privileges required:User

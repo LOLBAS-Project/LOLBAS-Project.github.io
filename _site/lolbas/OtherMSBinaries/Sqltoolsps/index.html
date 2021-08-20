@@ -38,9 +38,17 @@
 
 	
 
-<p>Tool included with Microsoft SQL that loads SQL Server cmdlts. A replacement for sqlps.exe.</p>
+<p>Tool included with Microsoft SQL that loads SQL Server cmdlts. A replacement for sqlps.exe. Successor to sqlps.exe in SQL Server 2016+.</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -55,6 +63,9 @@
 <br>
 	
 	<a href="https://twitter.com/pabraeken/status/993298228840992768">https://twitter.com/pabraeken/status/993298228840992768</a>
+	<br>
+	
+	<a href="https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell?view=sql-server-2017">https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell?view=sql-server-2017</a>
 	<br>
 	 
 <br>
@@ -81,7 +92,7 @@
 	
 <h2 id="execute" class ="function-name">Execute</h2>
 	
-		Run PowerShell scripts and commands.
+		Run a SQL Server PowerShell mini-console without Module and ScriptBlock Logging.
 		<br>
 		<pre><code>SQLToolsPS.exe -noprofile -command Start-Process calc.exe</code></pre>
 		Usecase:Execute PowerShell command.

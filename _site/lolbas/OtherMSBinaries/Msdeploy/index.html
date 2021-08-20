@@ -34,6 +34,9 @@
 	
 	<li><a href="/lolbas/OtherMSBinaries/Msdeploy/#execute">Execute</a></li>
 	
+	
+	<li><a href="/lolbas/OtherMSBinaries/Msdeploy/#awl bypass">AWL bypass</a></li>
+	
 </ul>
 
 	
@@ -41,6 +44,14 @@
 <p>Microsoft tool used to deploy Web Applications.</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -55,6 +66,9 @@
 <br>
 	
 	<a href="https://twitter.com/pabraeken/status/995837734379032576">https://twitter.com/pabraeken/status/995837734379032576</a>
+	<br>
+	
+	<a href="https://twitter.com/pabraeken/status/999090532839313408">https://twitter.com/pabraeken/status/999090532839313408</a>
 	<br>
 	 
 <br>
@@ -88,7 +102,26 @@
 		<br>
 		Privileges required:User
 		<br>
-		OS:Windows
+		OS:Windows server
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="awl bypass" class ="function-name">AWL bypass</h2>
+	
+		Launch calc.bat via msdeploy.exe.
+		<br>
+		<pre><code>msdeploy.exe -verb:sync -source:RunCommand -dest:runCommand="c:\temp\calc.bat"</code></pre>
+		Usecase:Local execution of batch file using msdeploy.exe.
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows server
 		<br>
 		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1218">T1218</a>
 		<br>

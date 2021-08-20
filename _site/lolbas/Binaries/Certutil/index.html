@@ -50,6 +50,14 @@
 <p>Windows binary used for handeling certificates</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -70,6 +78,9 @@
 	
 	<a href="https://twitter.com/mattifestation/status/620107926288515072">https://twitter.com/mattifestation/status/620107926288515072</a>
 	<br>
+	
+	<a href="https://twitter.com/egre55/status/1087685529016193025">https://twitter.com/egre55/status/1087685529016193025</a>
+	<br>
 	 
 <br>
 <p><b>Acknowledgement:</b> 
@@ -78,7 +89,13 @@
 	Matt Graeber - <a href="https://twitter.com/@mattifestation">@mattifestation</a>
 	<br>
 	
-	Moriarty - <a href="https://twitter.com/@moriarty2016">@moriarty2016</a>
+	Moriarty - <a href="https://twitter.com/@Moriarty_Meng">@Moriarty_Meng</a>
+	<br>
+	
+	egre55 - <a href="https://twitter.com/@egre55">@egre55</a>
+	<br>
+	
+	Lior Adar - <a href="https://twitter.com/"></a>
 	<br>
 	 
 </p>
@@ -119,6 +136,21 @@
 		<br>
 		<br>
 	
+		Download and save 7zip to disk in the current folder.
+		<br>
+		<pre><code>certutil.exe -verifyctl -f -split http://7-zip.org/a/7z1604-x64.exe 7zip.exe</code></pre>
+		Usecase:Download file from Internet
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
 
 	
 <h2 id="ads" class ="function-name">Alternate data streams</h2>
@@ -132,7 +164,7 @@
 		<br>
 		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
 		<br>
-		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		Mitre:<a href="https://attack.mitre.org/techniques/T1096">T1096</a>
 		<br>
 		<br>
 		<br>
@@ -164,6 +196,21 @@
 		Command to decode a Base64 encoded file.
 		<br>
 		<pre><code>certutil -decode encodedInputFileName decodedOutputFileName</code></pre>
+		Usecase:Decode files to evade defensive measures
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1140">T1140</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Command to decode a hexadecimal-encoded file decodedOutputFileName
+		<br>
+		<pre><code>certutil --decodehex encoded_hexadecimal_InputFileName</code></pre>
 		Usecase:Decode files to evade defensive measures
 		<br>
 		Privileges required:User

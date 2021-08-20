@@ -47,6 +47,14 @@
 <p>Binary for working with Microsoft Joint Engine Technology (JET) database</p>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133649096-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133649096-1');
+</script>
 
 <br>
 <p><b>Paths:</b> 
@@ -64,12 +72,21 @@
 	
 	<a href="https://twitter.com/egre55/status/985994639202283520">https://twitter.com/egre55/status/985994639202283520</a>
 	<br>
+	
+	<a href="https://dfironthemountain.wordpress.com/2018/12/06/locked-file-access-using-esentutl-exe/">https://dfironthemountain.wordpress.com/2018/12/06/locked-file-access-using-esentutl-exe/</a>
+	<br>
+	
+	<a href="https://twitter.com/bohops/status/1094810861095534592">https://twitter.com/bohops/status/1094810861095534592</a>
+	<br>
 	 
 <br>
 <p><b>Acknowledgement:</b> 
 <br>
 	
 	egre55 - <a href="https://twitter.com/@egre55">@egre55</a>
+	<br>
+	
+	Mike Cary - <a href="https://twitter.com/grayfold3d">grayfold3d</a>
 	<br>
 	 
 </p>
@@ -99,6 +116,21 @@
 		OS:Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
 		<br>
 		Mitre:<a href="https://attack.mitre.org/wiki/Technique/T1105">T1105</a>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+		Copies a (locked) file using Volume Shadow Copy
+		<br>
+		<pre><code>esentutl.exe /y /vss c:\windows\ntds\ntds.dit /d c:\folder\ntds.dit</code></pre>
+		Usecase:Copy/extract a locked file such as the AD Database
+		<br>
+		Privileges required:Admin
+		<br>
+		OS:Windows 10, Windows 2016 Server, Windows 2019 Server
+		<br>
+		Mitre:<a href="https://attack.mitre.org/techniques/T1003/">T1003</a>
 		<br>
 		<br>
 		<br>
