@@ -1,25 +1,27 @@
-<input id="bin-search" type="text" placeholder="Search among {{ site.lolbas | size }} binaries by name (e.g., 'MSBuild') or by function (e.g., '/execute') or by type (e.g., '#Script')"/>
+<input id="bin-search" type="text" placeholder="Search among {{ site.lolbas | size }} binaries by name (e.g. 'MSBuild'), function (e.g. '/execute'), type (e.g. '#Script') or ATT&CK info (e.g. 'T1218')"/>
 
 <div id="bin-table-wrapper">
     <table id="bin-table">
         <thead>
             <tr>
-                <th>Binary</th>
-				<th>Functions</th>
-				<th>Type</th>
+                <th style="width: 45%">Binary</th>
+                <th style="width: 20%">Functions</th>
+                <th style="width: 20%">Type</th>
+                <th style="width: 15%">ATT&CK&reg; Techniques</th>
             </tr>
         </thead>
         <tbody>
             {% for file in site.lolbas %}
             <tr>
-                <td><a href="{{ file.url }}" class="bin-name">{{ file.Name }}</a></td>
+                <td><a href="{{ file.url | relative_url }}" class="bin-name">{{ file.Name }}</a></td>
                 <td>{% include function_list.html bin=file %}</td>
-				<td>{% include get_type_name path=file.path %}</td>
+                <td>{% include get_type_name path=file.path %}</td>
+                <td>{% include get_attack_tids.html bin=file %}</td>
             </tr>
             {% endfor %}
         </tbody>
         <tfoot>
-            <tr><td id="search-message" colspan="2">No binary matches...</td></tr>
+            <tr><td id="search-message" colspan="4">No binary matches…</td></tr>
         </tfoot>
     </table>
 </div>
@@ -43,8 +45,9 @@
                               .map(function (x) { return x.innerText })
                               .join('\n').toLowerCase();
 
-	 var types = row.children[2].textContent.toLowerCase();
-         
+     var types = row.children[2].textContent.toLowerCase();
+     var techniques = row.children[3].textContent.toLowerCase();
+
          if (queryType === '/')
          {
                 var against = functions;
@@ -55,7 +58,7 @@
          }
          else
          {
-                var against = binName;
+                var against = binName + techniques;
          }
 
          if (against.indexOf(query) !== -1) {

@@ -17,27 +17,27 @@ layout: common
 </script>
 
 <br>
-<p><b>Paths:</b> 
+<p><b>Paths:</b>
 	<ul style="list-style-type:none">
 	{% for ent in page.Full_Path %}
 	<li>{{ent.Path}}</li>
-	{% endfor %} 
+	{% endfor %}
 	</ul>
 </p>
 <br>
-<b>Resources:</b> 	
+<b>Resources:</b>
 <br>
 	{% for ent in page.Resources %}
 	<a href="{{ent.Link}}">{{ent.Link}}</a>
 	<br>
-	{% endfor %} 
+	{% endfor %}
 <br>
-<p><b>Acknowledgement:</b> 
+<p><b>Acknowledgement:</b>
 <br>
 	{% for pers in page.Acknowledgement %}
 	{{pers.Person}} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a>
 	<br>
-	{% endfor %} 
+	{% endfor %}
 </p>
 <br>
 <p><b>Detection:</b>
@@ -45,7 +45,7 @@ layout: common
 	{% for ioc in page.Detection %}
 	{{ioc.IOC}}
 	<br>
-	{% endfor %} 
+	{% endfor %}
 </p>
 <br>
 <br>
@@ -60,13 +60,13 @@ layout: common
 		{{item.Description}}
 		<br>
 		<pre><code>{{item.Command}}</code></pre>
-		Usecase:{{item.Usecase}}
+		Usecase: {{item.Usecase}}
 		<br>
-		Privileges required:{{item.Privileges}}
+		Privileges required: {{item.Privileges}}
 		<br>
-		OS:{{item.OperatingSystem}}
+		OS: {{item.OperatingSystem}}
 		<br>
-		Mitre:<a href="{{item.MitreLink}}">{{item.MitreID}}</a>
+		MITRE ATT&CK&reg: <span data-attack-tid="{{item.MitreID}}">{{item.MitreID}}</span>
 		<br>
 		<br>
 		<br>
