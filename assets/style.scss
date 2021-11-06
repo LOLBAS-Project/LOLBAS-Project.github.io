@@ -28,6 +28,18 @@ $layout-break: "(min-width: #{$column-width + $grace-space})";
     }
 }
 
+@media (max-width: 500px) {
+    .header-box {
+        flex-direction: column;
+    }
+
+    #bin-table th:nth-child(3), #bin-table td:nth-child(3),
+    #bin-table th:nth-child(4), #bin-table td:nth-child(4){
+        display:none;
+    }
+
+}
+
 // common tags
 
 body {
@@ -88,7 +100,7 @@ h2, h3, h4, h5, h5 {
 // binary list and search
 
 #bin-search {
-    margin-top: 50px;
+    margin-top: 1em;
     padding: 0.5em;
     width: 100%;
     box-sizing: border-box;
@@ -98,7 +110,8 @@ h2, h3, h4, h5, h5 {
     width: 100%;
 
     th, td {
-        padding: 0.2em 1em;
+        padding: 0.1em 0.5em;
+        overflow-wrap: anywhere;
     }
 
     th {
@@ -142,6 +155,10 @@ h2, h3, h4, h5, h5 {
     }
 }
 
+.attack-technique-list {
+    font-size: x-small;
+}
+
 // bin examples
 
 .examples {
@@ -179,12 +196,16 @@ h2, h3, h4, h5, h5 {
 }
 
 .bin-name {
-    font-family: monospace;
+    font-family: Consolas, monospace;
     font-size: 1.2rem;
 }
 
 .function-name {
     font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.attack-technique-id {
     font-weight: bold;
 }
 
@@ -196,4 +217,8 @@ h2, h3, h4, h5, h5 {
     a.github-button {
         visibility: hidden;
     }
+}
+
+.header-box {
+    display: flex;
 }

@@ -1,0 +1,9 @@
+<ul class="function-list attack-technique-list">
+	{% assign techniques = include.bin.Commands | group_by:"MitreID" %}
+	{% for technique in techniques %}
+    {% if technique.name != "" %}
+	<li data-attack-tid="{{ technique.name }}">{{ technique.name }}</li>
+    {% endif %}
+	{% endfor %}
+</ul>
+
