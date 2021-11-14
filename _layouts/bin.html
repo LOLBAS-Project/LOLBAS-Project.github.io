@@ -41,7 +41,7 @@ layout: common
 <div><b>Acknowledgements:</b>
 <ul>
 	{% for pers in page.Acknowledgement %}
-	<li>{{pers.Person}}{% if pers.Handle %} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a>{% endif %}</li>
+	<li>{{pers.Person}}{% if pers.Handle %} (<a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a>){% endif %}</li>
 	{% endfor %}
 </ul>
 </div>
@@ -53,9 +53,10 @@ layout: common
 	<b>Detection:</b>
 	<ul>
 		{% for detection in detections %}{% for entity in detection %}
-			{% assign value = entity[1] %}
 			{% if entity[0] != 'IOC' %}
-				{% capture value%}<a href="{{value}}" target="_new" data-shorten="true">{{value}}</a>{% endcapture %}
+				{% capture value %}<a href="{{ entity[1] }}" target="_new" data-shorten="true">{{ entity[1] }}</a>{% endcapture %}
+			{% else %}
+				{% assign value = entity[1] | escape %}
 			{% endif %}
 			<li>{{entity[0]}}: {{value}}</li>
 		{% endfor %}{% endfor %}
@@ -71,10 +72,10 @@ layout: common
 	{{- site.data.functions[function_name].label -}}
 </h2>
 	{% for item in Command.items %}
-		{{item.Description}}
+		{{item.Description | escape}}
 		<br>
 		<pre><code>{{item.Command}}</code></pre>
-		Usecase: {{item.Usecase}}
+		Usecase: {{item.Usecase | escape}}
 		<br>
 		Privileges required: {{item.Privileges}}
 		<br>

@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
 
 
     // If there is a pre-existing query, refresh
-    search = document.getElementById('bin-search');
+    var search = document.getElementById('bin-search');
     if(search != null){
         var query = document.getElementById('bin-search').value.toLowerCase().trim();
         if(query){
