@@ -16,38 +16,52 @@ layout: common
   gtag('config', 'UA-133649096-1');
 </script>
 
+<script src="{{ '/assets/url_helper.js' | relative_url }}"></script>
 <br>
-<p><b>Paths:</b>
+<div><b>Paths:</b>
 	<ul style="list-style-type:none">
 	{% for ent in page.Full_Path %}
 	<li>{{ent.Path}}</li>
 	{% endfor %}
 	</ul>
-</p>
+</div>
+{% assign resources = page.Resources %}
+{% if resources and resources.size > 0 %}
 <br>
 <b>Resources:</b>
-<br>
+<ul>
 	{% for ent in page.Resources %}
-	<a href="{{ent.Link}}">{{ent.Link}}</a>
-	<br>
+	<li><a href="{{ent.Link}}">{{ent.Link}}</a></li>
 	{% endfor %}
+</ul>
+{% endif %}
+{% assign acknowledgements = page.Acknowledgement %}
+{% if acknowledgements and acknowledgements.size > 0 %}
 <br>
-<p><b>Acknowledgement:</b>
-<br>
+<div><b>Acknowledgements:</b>
+<ul>
 	{% for pers in page.Acknowledgement %}
-	{{pers.Person}} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a>
-	<br>
+	<li>{{pers.Person}}{% if pers.Handle %} - <a href="https://twitter.com/{{pers.Handle}}">{{pers.Handle}}</a>{% endif %}</li>
 	{% endfor %}
-</p>
+</ul>
+</div>
+{% endif %}
+{% assign detections = page.Detection %}
+{% if detections and detections.size > 0 %}
 <br>
-<p><b>Detection:</b>
-<br>
-	{% for ioc in page.Detection %}
-	{{ioc.IOC}}
-	<br>
-	{% endfor %}
-</p>
-<br>
+<div>
+	<b>Detection:</b>
+	<ul>
+		{% for detection in detections %}{% for entity in detection %}
+			{% assign value = entity[1] %}
+			{% if entity[0] != 'IOC' %}
+				{% capture value%}<a href="{{value}}" target="_new" data-shorten="true">{{value}}</a>{% endcapture %}
+			{% endif %}
+			<li>{{entity[0]}}: {{value}}</li>
+		{% endfor %}{% endfor %}
+	</ul>
+</div>
+{% endif %}
 <br>
 
 {% assign test = page.Commands | group_by:"Category"%}
