@@ -8,8 +8,11 @@ window.addEventListener('load', function () {
 
 
     // If there is a pre-existing query, refresh
-    var query = document.getElementById('bin-search').value.toLowerCase().trim();
-    if(query){
-        filter(query);
+    var search = document.getElementById('bin-search');
+    if(search != null){
+        var query = document.getElementById('bin-search').value.toLowerCase().trim();
+        if(query){
+            filter(query);
+        }
     }
 });
