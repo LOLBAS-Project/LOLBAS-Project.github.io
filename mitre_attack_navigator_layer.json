@@ -17,26 +17,22 @@ NOTE: "Please use the rendered version of this file"
 	},
 	"techniques": [
         {% assign techniques = '' %}
-        {% assign commands = site.lolbas | map:"Commands"%}
-        {% for command in commands %}
-            {% for subcommand in command %}
-                {% assign techniques = techniques | append:subcommand.MitreID | append:"|" %}
+        {% for file in site.lolbas %}
+            {% for command in file.Commands %}
+                {% assign techniques = techniques | append:command.MitreID | append:"|" %}
             {% endfor %}
         {% endfor %}
-        {% assign occurences = techniques | split:'|' | group_by_exp:"item", "item" %}
+        {% assign occurences = techniques | split:'|' | group_by_exp:"item","item" %}
 
         {% assign max_score = 0 %}
         {% for occurence in occurences %}
         {% if occurence.size > max_score %}{% assign max_score = occurence.size %}{% endif %}
-        {"techniqueID": "{{ occurence.name }}", "score": {{ occurence.size }}, "showSubtechniques": true}{% if forloop.last == false %},{%endif%}
+        {"techniqueID": "{{ occurence.name }}", "score": {{ occurence.size }}, "showSubtechniques": true}{% unless forloop.last %},{% endunless %}
         {% endfor %}
 
     ],
 	"gradient": {
-		"colors": [
-			"#d5f2f6ff",
-			"#20e1fbff"
-		],
+		"colors": ["#cdf0fc", "#0d89b3"],
 		"minValue": 0,
 		"maxValue": {{max_score}}
 	}

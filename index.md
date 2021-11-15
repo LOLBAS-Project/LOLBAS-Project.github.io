@@ -29,7 +29,7 @@ Our <a href="https://github.com/LOLBAS-Project/LOLBAS#criteria">criteria list</a
 If you are looking for UNIX binaries, please visit <a href="https://gtfobins.github.io/">gtfobins.github.io</a>.
 <br>
 <br>
-MITRE ATT&CK&reg; and ATT&CK&reg; are registered trademarks of The MITRE Corporation.
+You can see the current ATT&amp;CK alignment of this project on the <a href="https://mitre-attack.github.io/attack-navigator/#layerURL={{ '/mitre_attack_navigator_layer.json' | absolute_url }}">ATT&amp;CK Navigator</a>. <span style="font-size: small;">MITRE ATT&amp;CK&reg; and ATT&amp;CK&reg; are registered trademarks of The MITRE Corporation.</span>
 </div>
 </div>
 
