@@ -1,7 +1,7 @@
 ---
 title: LOLBAS
 
-exclude: ['/Gemfile', '/Makefile', '/README.md', '/CONTRIBUTING.md']
+exclude: ['/Gemfile', '/Makefile', '/README.md', '/NOTICE.md', 'LICENSE']
 
 permalink: pretty
 
@@ -13,5 +13,4 @@ defaults:
   - scope:
       path: '_lolbas'
     values:
-      name: 'MSBuild.exe'
       layout: 'bin'

@@ -1,0 +1,43 @@
+---
+NOTE: "Please use the rendered version of this file"
+---
+{
+	"name": "The LOLBAS Project",
+	"versions": {"attack": "10", "navigator": "4.5.4", "layer": "4.2"},
+	"domain": "enterprise-attack",
+	"description": "ATT&CK coverage of the LOLBAS project, see https://lolbas-project.github.io/.",
+	"filters": {"platforms": ["Windows"]},
+	"layout": {
+		"layout": "flat",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"techniques": [
+        {% assign techniques = '' %}
+        {% assign commands = site.lolbas | map:"Commands"%}
+        {% for command in commands %}
+            {% for subcommand in command %}
+                {% assign techniques = techniques | append:subcommand.MitreID | append:"|" %}
+            {% endfor %}
+        {% endfor %}
+        {% assign occurences = techniques | split:'|' | group_by_exp:"item", "item" %}
+
+        {% assign max_score = 0 %}
+        {% for occurence in occurences %}
+        {% if occurence.size > max_score %}{% assign max_score = occurence.size %}{% endif %}
+        {"techniqueID": "{{ occurence.name }}", "score": {{ occurence.size }}, "showSubtechniques": true}{% if forloop.last == false %},{%endif%}
+        {% endfor %}
+
+    ],
+	"gradient": {
+		"colors": [
+			"#d5f2f6ff",
+			"#20e1fbff"
+		],
+		"minValue": 0,
+		"maxValue": {{max_score}}
+	}
+}
