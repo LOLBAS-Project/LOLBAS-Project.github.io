@@ -5,7 +5,7 @@ NOTE: "Please use the rendered version of this file"
 	"name": "The LOLBAS Project",
 	"versions": {"attack": "10", "navigator": "4.5.4", "layer": "4.2"},
 	"domain": "enterprise-attack",
-	"description": "ATT&CK coverage of the LOLBAS project, see https://lolbas-project.github.io/.",
+	"description": "ATT&CK alignment of the LOLBAS project, see https://lolbas-project.github.io/.",
 	"filters": {"platforms": ["Windows"]},
 	"layout": {
 		"layout": "flat",
