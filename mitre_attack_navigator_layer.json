@@ -3,35 +3,35 @@ NOTE: "Please use the rendered version of this file"
 ---
 {% assign techniques = '' %}
 {% for file in site.lolbas %}
-	{% for command in file.Commands %}
-		{% assign techniques = techniques | append:command.MitreID | append:"|" %}
-	{% endfor %}
+    {% for command in file.Commands %}
+        {% assign techniques = techniques | append:command.MitreID | append:"|" %}
+    {% endfor %}
 {% endfor %}
-{% assign occurences = techniques | split:'|' | group_by_exp:"item","item" %}
+{% assign occurences = techniques | split:'|' | group_by_exp:"item","item" | sort:"items" %}
 {
-	"name": "The LOLBAS Project",
-	"versions": {"attack": "10", "navigator": "4.5.4", "layer": "4.2"},
-	"domain": "enterprise-attack",
-	"description": "ATT&CK alignment of the LOLBAS project, see https://lolbas-project.github.io/.",
-	"filters": {"platforms": ["Windows"]},
-	"layout": {
-		"layout": "flat",
-		"aggregateFunction": "average",
-		"showID": false,
-		"showName": true,
-		"showAggregateScores": false,
-		"countUnscored": false
-	},
-	"techniques": [
+    "name": "The LOLBAS Project",
+    "versions": {"attack": "10", "navigator": "4.5.4", "layer": "4.2"},
+    "domain": "enterprise-attack",
+    "description": "ATT&CK alignment of the LOLBAS project, see https://lolbas-project.github.io/.",
+    "filters": {"platforms": ["Windows"]},
+    "layout": {
+        "layout": "flat",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false
+    },
+    "techniques": [
         {% assign max_score = 0 %}
         {% for occurence in occurences %}
-        {% if occurence.size > max_score %}{% assign max_score = occurence.size %}{% endif %}
-        {"techniqueID": "{{ occurence.name }}", "score": {{ occurence.size }}, "showSubtechniques": true}{% unless forloop.last %},{% endunless %}
+            {"techniqueID": "{{ occurence.name }}", "score": {{ occurence.size }}, "showSubtechniques": true}{% unless forloop.last %},{% endunless %}
+            {% if occurence.size > max_score %}{% assign max_score = occurence.size %}{% endif %}
         {% endfor %}
     ],
-	"gradient": {
-		"colors": ["#cdf0fc", "#0d89b3"],
-		"minValue": 0,
-		"maxValue": {{max_score}}
-	}
+    "gradient": {
+        "colors": ["#cdf0fc", "#0d89b3"],
+        "minValue": 0,
+        "maxValue": {{max_score}}
+    }
 }
