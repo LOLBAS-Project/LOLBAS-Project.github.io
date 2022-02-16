@@ -1,7 +1,11 @@
 ---
 Name: Wlrmdr.exe
 Description: Windows Logon Reminder executable
+<<<<<<< HEAD:_lolbas/Binaries/Wlrmdr.md
 Author: 'Moshe Kaplan'
+=======
+Author: Moshe Kaplan
+>>>>>>> 10e7961 (Applying update LOLBAS-Project/LOLBAS@55a7ea9a81fa024b1dd8ca2eeff6da66f9e8a9d4):_lolbas/Binaries/wlrmdr.md
 Created: 2022-02-16
 Commands:
   - Command: "wlrmdr.exe -s 3600 -f 0 -t _ -m _ -a 11 -u calc.exe"
