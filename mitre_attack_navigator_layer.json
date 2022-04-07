@@ -10,7 +10,7 @@ NOTE: "Please use the rendered version of this file"
 {% assign occurences = techniques | split:'|' | group_by_exp:"item","item" | sort:"items" %}
 {
     "name": "The LOLBAS Project",
-    "versions": {"attack": "10", "navigator": "4.5.4", "layer": "4.2"},
+    "versions": {"attack": "10", "navigator": "4.5.5", "layer": "4.3"},
     "domain": "enterprise-attack",
     "description": "ATT&CK alignment of the LOLBAS project, see https://lolbas-project.github.io/.",
     "filters": {"platforms": ["Windows"]},
