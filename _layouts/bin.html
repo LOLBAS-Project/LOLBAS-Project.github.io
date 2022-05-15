@@ -74,7 +74,7 @@ layout: common
 	{% for item in Command.items %}
 		{{item.Description | escape}}
 		<br>
-		<pre><code>{{item.Command}}</code></pre>
+		<pre><code>{{item.Command | escape_once}}</code></pre>
 		Usecase: {{item.Usecase | escape}}
 		<br>
 		Privileges required: {{item.Privileges}}
