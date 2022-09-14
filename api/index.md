@@ -8,7 +8,6 @@ title: APIs
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-133649096-1');
 </script>
 
@@ -34,4 +33,4 @@ This file contains every LOLBAS entry in a single file, broken down by LOLBAS fi
 
 **Type**: File per entry
 
-Finally, it is possible to access the raw YAML files via GitHub. The structure can be seen via the <a href="https://github.com/LOLBAS-Project/LOLBAS/tree/master/yml">GitHub interface</a>.
+Finally, it is possible to access the raw YAML files via GitHub. The file structure can be found on <a href="https://github.com/LOLBAS-Project/LOLBAS/tree/master/yml">GitHub</a>.
