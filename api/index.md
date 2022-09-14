@@ -12,7 +12,7 @@ title: APIs
 </script>
 
 
-Currently, the data from the LOLBAS project is accessible in the following ways:
+Currently, data from the LOLBAS Project can be accessed in the following ways:
 
 ## JSON
 **Entry point**: <a href="{{'/api/lolbas.json' | relative_url }}">{{'/api/lolbas.json' | relative_url}}</a>
