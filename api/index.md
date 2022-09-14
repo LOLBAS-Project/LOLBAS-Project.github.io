@@ -15,14 +15,14 @@ title: APIs
 Currently, the data from the LOLBAS project is accessible in the following ways:
 
 ## JSON
-**Entry point**: <a href="{{'/api/lolbas.json' | absolute_url}}">{{'/api/lolbas.json' | relative_url}}</a>
+**Entry point**: <a href="{{'/api/lolbas.json' | relative_url }}">{{'/api/lolbas.json' | relative_url}}</a>
 
 **Type**: Single file
 
 This file contains every LOLBAS entry in a single file, using the same structure as the underlying YAML files.
 
 ## CSV
-**Entry point**: <a href="{{'/api/lolbas.csv' | absolute_url}}">{{'/api/lolbas.csv' | relative_url}}</a>
+**Entry point**: <a href="{{'/api/lolbas.csv' | relative_url }}">{{'/api/lolbas.csv' | relative_url}}</a>
 
 **Type**: Single file
 
