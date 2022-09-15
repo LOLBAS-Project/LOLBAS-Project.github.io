@@ -33,5 +33,5 @@ Acknowledgement:
   - Person: Emin Atac
     Handle: '@p0w3rsh3ll'
   - Person: Stamatis Chatzimangou
-    Handle: '@_st0pp3r_' 
+    Handle: '@_st0pp3r_'
 ---
