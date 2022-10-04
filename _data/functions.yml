@@ -47,7 +47,7 @@ compile:
 awl bypass:
   label: AWL bypass
   description: |
-    The LOLBAS can bypass application whitelisting solutions.
+    The LOLBAS can bypass application allowlisting solutions.
     
 uac bypass:
   label: UAC bypass
@@ -62,4 +62,14 @@ reconnaissance:
 dump:
   label: Dump
   description: |
-    The LOLBAS can be used to dump process.
+    The LOLBAS can be used to dump the memory contents of a process.
+
+tamper:
+  label: Tamper
+  description: |
+    The LOLBAS can be used to tamper with files, processes, etc.
+
+conceal:
+  label: Conceal
+  description: |
+    The LOLBAS can be used to conceal malicious activity.
