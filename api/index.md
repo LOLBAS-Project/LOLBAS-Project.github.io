@@ -29,8 +29,9 @@ This file contains every LOLBAS entry in a single file, using the same structure
 This file contains every LOLBAS entry in a single file, broken down by LOLBAS file and command.
 
 ## YAML
-**Entry point**: <a href="https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/yml/">https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/yml/</a>
+**Entry point**: <a href="https://github.com/LOLBAS-Project/LOLBAS/tree/master/yml">https://github.com/LOLBAS-Project/LOLBAS/tree/master/yml</a>
 
 **Type**: File per entry
 
-Finally, it is possible to access the raw YAML files via GitHub. The file structure can be found on <a href="https://github.com/LOLBAS-Project/LOLBAS/tree/master/yml">GitHub</a>.
+Finally, it is possible to access the raw YAML files via GitHub. 
+
