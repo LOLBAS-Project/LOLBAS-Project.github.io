@@ -30,6 +30,8 @@ Our <a href="https://github.com/LOLBAS-Project/LOLBAS#criteria">criteria list</a
 <br>
 <br>
 If you are looking for UNIX binaries, please visit <a href="https://gtfobins.github.io/">gtfobins.github.io</a>.
+<br>
+If you are looking for drivers, please visit <a href="https://www.loldrivers.io/">loldrivers.io</a>.
 </div>
 </div>
 
