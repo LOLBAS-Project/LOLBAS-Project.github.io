@@ -10,7 +10,7 @@ title: Contributors
             if (/<([^>]+)>; rel="next"/g.test(githubApi.headers.get("link"))) {
                 next_page = /<([^>]+)>; rel="next"/g.exec(githubApi.headers.get("link"))[1];
             } else {
-                break;
+                next_page = null;
             }
             let contributors = await (githubApi).json();
             contributors.forEach(function (x) {
