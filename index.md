@@ -21,7 +21,7 @@ title: LOLBAS
 
 For more info on the project, click on the logo.
 <br><br>
-If you want to contribute, check out our
+If you want to <a href="{{ '/contributors' | relative_url}}">contribute</a>, check out our
 <a href="https://github.com/LOLBAS-Project/LOLBAS/blob/master/CONTRIBUTING.md">contribution guide</a>.
 Our <a href="https://github.com/LOLBAS-Project/LOLBAS#criteria">criteria list</a> sets out what we define as a LOLBin/Script/Lib. More information on programmatically accesssing this project can be found on the <a href="{{'/api' | relative_url }}">API page</a>.
 <br>

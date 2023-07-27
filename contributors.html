@@ -1,0 +1,64 @@
+---
+layout: page
+title: Contributors
+---
+<script>
+    async function findGitHubContributors() {
+        let next_page = 'https://api.github.com/repos/LOLBAS-project/LOLBAS/contributors?anon=false';
+        while(next_page){
+            let githubApi = await fetch(next_page)
+            if (/<([^>]+)>; rel="next"/g.test(githubApi.headers.get("link"))) {
+                next_page = /<([^>]+)>; rel="next"/g.exec(githubApi.headers.get("link"))[1];
+            } else {
+                break;
+            }
+            let contributors = await (githubApi).json();
+            contributors.forEach(function (x) {
+                var div = document.createElement('div');
+                div.innerHTML = '<a href="https://github.com/' + x['login'] + '"><img src="https://avatars.githubusercontent.com/u/' + x['id'] + '?s=16&v=4" alt="Avatar of ' + x['login'] + '" class="external-favicon" /></a> <a href="https://github.com/LOLBAS-project/LOLBAS/commits?author=' + x['login'] + '">' + x['login'] + '</a>';
+                document.getElementById("contributors").appendChild(div);
+            });
+        }
+    }
+    findGitHubContributors();
+</script>
+
+<p>We thank everyone who has contributed to this project via our <a href="https://www.github.com/LOLBAS-Project/LOLBAS">GitHub repository</a>:</p>
+<div id="contributors"></div>
+<p>We are also grateful to all who provided resources, such as research articles, blogs, and documentation, that enabled the creation of new entries for this project:</p>
+<p>
+<table cellspacing=0 id="bin-table">
+    <thead>
+        <tr>
+            <th style="width:80%">Website</td>
+            <th style="width:20%">Number of references</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%- assign resources_url_all = '' | split: ',' %}
+        {%- assign sites_expand = 'twitter.com,github.com,gist.github.com,medium.com' | split: ',' %}
+        {%- for file in site.lolbas %}
+            {%- for resource in file.Resources %}
+                {% assign base_url_ = resource.Link | downcase | replace: "www.","" | split: '//' | last | split: '/' %}
+                {% assign base_url = base_url_[0] %}
+                {% if base_url != null and base_url != "" %}
+                    {% if sites_expand contains base_url %}
+                        {% assign base_url = base_url_[0] | append: '/' | append: base_url_[1] %}
+                    {% endif %}
+                    {% assign resources_url_all = resources_url_all | push: base_url %}
+                {% endif %}
+            {%- endfor %}
+        {%- endfor %}
+        {%- assign resources_url = resources_url_all | group_by_exp: "item", "item" | sort: 'size' | reverse
+        | group_by: "size" %}
+        {%- for count in resources_url -%}
+            {%- assign items = count.items | sort: 'name' %}
+            {%- for elem in items %}
+            <tr>
+                <td><img src="https://icons.duckduckgo.com/ip3/{{ elem.name | split:'/' | first | url_encode }}.ico" class="external-favicon" alt="Favicon of {{elem.name | split:'/' | first | escape}}" /> <a href="https://{{ elem.name |escape}}">{{ elem.name | escape }}</a></td>
+                <td>{{ count.name }}</td>
+            </tr>
+            {%- endfor %}
+        {%- endfor -%}
+    </tbody>
+</table>
