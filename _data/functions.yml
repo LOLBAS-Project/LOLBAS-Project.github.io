@@ -2,28 +2,28 @@
 execute:
   label: Execute
   description: |
-    The LOLBAS can achieve abritrary code execution.
+    The LOLBAS can achieve arbitrary code execution.
 
 download:
   label: Download
   description: |
     The LOLBAS can download files.
-    
+
 upload:
   label: Upload
   description: |
     The LOLBAS can upload files.
-    
+
 encode:
   label: Encode
   description: |
     The LOLBAS can encode files.
-    
+
 decode:
   label: Decode
   description: |
     The LOLBAS can decode files.
-    
+
 ads:
   label: Alternate data streams
   description: |
@@ -38,27 +38,27 @@ credentials:
   label: Credentials
   description: |
     The LOLBAS can view credentials file.
-    
+
 compile:
   label: Compile
   description: |
     The LOLBAS can compile code.
-    
+
 awl bypass:
   label: AWL bypass
   description: |
     The LOLBAS can bypass application allowlisting solutions.
-    
+
 uac bypass:
   label: UAC bypass
   description: |
     The LOLBAS can bypass User Access Control in Windows.
-    
+
 reconnaissance:
   label: Reconnaissance
   description: |
     The LOLBAS can be used to gather interesting information.
-    
+
 dump:
   label: Dump
   description: |
