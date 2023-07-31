@@ -8,12 +8,11 @@ title: LOLBAS
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-133649096-1');
 </script>
 
 <div class="header-box">
-<a href="https://github.com/LOLBAS-Project/LOLBAS/blob/master/README.md"><img src="{{ '/assets/logo.png' | relative_url }}" height="150" style="margin-right: 10px;"></a>
+<a href="https://github.com/LOLBAS-Project/LOLBAS/blob/master/README.md"><img src="{{ '/assets/logo.png' | relative_url }}" height="150" alt="{{site.title}} Logo" style="margin-right: 10px;"></a>
 <div>
 <h2 style="margin-top: 0">Living Off The Land Binaries, Scripts and Libraries</h2>
 
