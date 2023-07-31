@@ -2,7 +2,6 @@
 	{% assign catergors = include.bin.Commands | group_by:"Category" %}
 	{% for cats in catergors %}
 	{% assign type = cats.name | downcase %}
-	<li><a href="{{ include.bin.url | relative_url }}#{{ type }}">{{ site.data.functions[type].label }}</a></li>
+	<li><a href="{{ include.bin.url | relative_url }}#{{ type | url_encode | replace:'+','%20'}}">{{ site.data.functions[type].label }}</a></li>
 	{% endfor %}
 </ul>
-

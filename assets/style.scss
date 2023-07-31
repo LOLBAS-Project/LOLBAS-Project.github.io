@@ -228,3 +228,24 @@ ul {
     list-style-position: inside;
     padding-left: 0;
 }
+
+.external-favicon {
+    width: 16px;
+    vertical-align: middle;
+}
+
+#contributors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    gap: 1px 5px;
+    min-height: 50px;
+}
+
+#contributors>div {
+    padding: 3px;
+    border: 1px solid $accent;
+    border-radius: 2px;
+}
