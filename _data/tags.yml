@@ -1,0 +1,4 @@
+---
+INetCache: 'INetCache downloaders typically store files in a randomly-named folder under <code>%LOCALAPPDATA%\Microsoft\Windows\INetCache\IE</code>, having added <code>[1]</code> or a higher number to the file name (but before the file extension).<br>If you were to download a file named <code>XYZ.exe</code>, the full path of a downloaded file can be obtained by executing the following command:<br><code>cmd.exe /c "where /r %LOCALAPPDATA%\Microsoft\Windows\INetCache XYZ*"</code>'
+DLL: This LOLBAS executes Dynamic-Link Libraries (DLLs).
+WSH: This LOLBAS executes scripts in Windows Script Host (WSH) languages, such as VBScript and JScript.

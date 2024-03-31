@@ -75,6 +75,7 @@ layout: common
 		{{item.Description | escape}}
 		<br>
 		<pre><code>{{item.Command | escape_once}}</code></pre>
+		{% if item.Tags %} <div class="tags">Tags:{% for tag in item.Tags%}<div class="tag inline" id="tag-{{tag}}">{{tag}}<div class="tag-tooltip content" id="tag-{{tag}}-tooltip">{{site.data.tags[tag]}}</div></div>{%endfor%}</div><br>{%endif%}
 		Usecase: {{item.Usecase | escape}}
 		<br>
 		Privileges required: {{item.Privileges}}

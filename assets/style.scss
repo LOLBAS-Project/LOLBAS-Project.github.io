@@ -249,3 +249,39 @@ ul {
     border: 1px solid $accent;
     border-radius: 2px;
 }
+
+.tags {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.tag {
+    background-color: $accent;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.tag .tag-tooltip {
+    display: none;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    z-index: 99999;
+    border: 2px solid $accent;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 700px;
+    padding: 3px;
+}
+
+.tag:hover .tag-tooltip {
+    display: block;
+
+}
