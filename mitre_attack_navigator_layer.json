@@ -1,16 +1,17 @@
 ---
 NOTE: "Please use the rendered version of this file"
 ---
-{% assign techniques = '' %}
-{% for file in site.lolbas %}
-    {% for command in file.Commands %}
-        {% assign techniques = techniques | append:command.MitreID | append:"|" %}
-    {% endfor %}
-{% endfor %}
-{% assign occurences = techniques | split:'|' | group_by_exp:"item","item" | sort:"items" %}
+{%- assign techniques = '' -%}
+{%- for file in site.lolbas -%}
+    {% for command in file.Commands -%}
+        {% assign techniques = techniques | append:command.MitreID | append:"|" -%}
+    {% endfor -%}
+{%- endfor -%}
+{%- assign occurrences = techniques | split:'|' | group_by_exp:"item","item" | sort:"items" -%}
+{%- assign subtechniques = occurrences  | where_exp:"item","item.name contains '.'" | group_by_exp:"item","item.name | split:'.' | slice:0" | map:'name' |join:','|split:',' -%}
 {
-    "name": "The LOLBAS Project",
-    "versions": {"attack": "13", "navigator": "4.6.4", "layer": "4.4"},
+    "name": "The LOLBAS Projectx",
+    "versions": {"attack": "14.1", "navigator": "4.9.4", "layer": "4.5"},
     "domain": "enterprise-attack",
     "description": "ATT&CK alignment of the LOLBAS project, see https://lolbas-project.github.io/.",
     "filters": {"platforms": ["Windows"]},
@@ -20,18 +21,22 @@ NOTE: "Please use the rendered version of this file"
         "showID": false,
         "showName": true,
         "showAggregateScores": false,
-        "countUnscored": false
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
     },
     "techniques": [
-        {% assign max_score = 0 %}
-        {% for occurence in occurences %}
-            {"techniqueID": "{{ occurence.name }}", "score": {{ occurence.size }}, "showSubtechniques": true}{% unless forloop.last %},{% endunless %}
-            {% if occurence.size > max_score %}{% assign max_score = occurence.size %}{% endif %}
-        {% endfor %}
+        {%- assign max_score = 0 -%}
+        {% for occurrence in occurrences %}
+        {"techniqueID": "{{ occurrence.name }}", "score": {{ occurrence.size }}{% if subtechniques contains occurrence.name %}, "showSubtechniques": true{% endif %}}{% unless forloop.last %},{% endunless %}
+            {%- if occurrence.size > max_score %}{% assign max_score = occurrence.size %}{% endif -%}
+        {%- endfor -%}
     ],
     "gradient": {
         "colors": ["#cdf0fc", "#0d89b3"],
         "minValue": 0,
         "maxValue": {{max_score}}
-    }
+    },
+    "selectTechniquesAcrossTactics": true,
+    "selectSubtechniquesWithParent": false,
+    "selectVisibleTechniques": false
 }
