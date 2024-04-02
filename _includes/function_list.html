@@ -1,8 +1,8 @@
-<ul class="function-list">
+<div class="function-list">
 	{%- assign catergors = include.bin.Commands | group_by:"Category" -%}
 	{%- for cats in catergors -%}
 	{%- assign type = cats.name | downcase -%}
-	{%- assign tags = cats.items | map:'Tags' | compact | join:', ' -%}
-	<li><a href="{{ include.bin.url | relative_url }}#{{ type | url_encode | replace:'+','%20'}}">{{ site.data.functions[type].label }}{% if tags.size>0 %} ({{tags}}){% endif %}</a></li>
+	{%- assign tags = cats.items | map:'Tags' | compact | uniq | join:', ' -%}
+	<div><a href="{{ include.bin.url | relative_url }}#{{ type | url_encode | replace:'+','%20'}}">{{ site.data.functions[type].label }}{% if tags.size>0 %} ({{tags}}){% endif %}</a></div>
 	{%- endfor -%}
-</ul>
+</div>
