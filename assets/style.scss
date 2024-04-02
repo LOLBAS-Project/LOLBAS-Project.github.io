@@ -38,12 +38,18 @@ $layout-break: "(min-width: #{$column-width + $grace-space})";
         display:none;
     }
 
+    .tag .tag-tooltip {
+        width: max-content;
+        max-width: 60vw !important;
+        transform: translate(-60%, calc(-100% - 2em));
+    }
 }
 
 // common tags
 
 body {
     font-family: sans, sans-serif;
+    word-break: break-word;
 }
 
 code {
@@ -279,7 +285,6 @@ ul {
     border-radius: 5px;
     background-color: white;
     color: black;
-    width: 700px;
     padding: 3px;
     width: max-content;
     max-width: 500px;
