@@ -38,12 +38,18 @@ $layout-break: "(min-width: #{$column-width + $grace-space})";
         display:none;
     }
 
+    .tag .tag-tooltip {
+        width: max-content;
+        max-width: 60vw !important;
+        transform: translate(-60%, calc(-100% - 2em));
+    }
 }
 
 // common tags
 
 body {
     font-family: sans, sans-serif;
+    word-break: break-word;
 }
 
 code {
@@ -132,15 +138,14 @@ h2, h3, h4, h5, h5 {
 // function description
 
 .function-list {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 0.8rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
+    gap: 1px 3px;
+    div {
+        flex-basis: 1;
         display: inline-block;
         padding: 0.25em 0.5em;
-        margin: 0.2em 0;
         border: 1px solid $accent;
 
         a:link, a:visited {
@@ -248,4 +253,85 @@ ul {
     padding: 3px;
     border: 1px solid $accent;
     border-radius: 2px;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+}
+
+.tags dd {
+    display: flex;
+    gap: 1px 5px;
+}
+
+.tag {
+    background-color: $accent;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.tag .tag-tooltip {
+    cursor: text;
+    display: none;
+    position: absolute;
+    top: 1.9em;
+    left: 0;
+    z-index: 99999;
+    border: 2px solid $accent;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    width: max-content;
+    max-width: 500px;
+}
+
+.tag:hover .tag-tooltip,
+.tag-tooltip:hover {
+    display: inline-table;
+}
+
+
+.properties {
+    display: flex;
+    flex-direction: column;
+}
+
+.properties .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.properties .property {
+    font-weight: bold;
+    min-width: 195px;
+    box-sizing: border-box
+}
+
+.properties .property::after {
+    content: ':\00a0';
+}
+
+ol+h2.function-name {
+    margin-top: 3em;
+}
+
+ol {
+    padding: 0;
+}
+
+ol li+li {
+    margin-top: 3em;
+}
+
+ol li:only-child {
+    list-style: none
+}
+
+dl.row>dd {
+    margin: 0;
 }

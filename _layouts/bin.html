@@ -71,20 +71,19 @@ layout: common
 <h2 id="{{function_name}}" class ="function-name">
 	{{- site.data.functions[function_name].label -}}
 </h2>
+<ol>
 	{% for item in Command.items %}
-		{{item.Description | escape}}
-		<br>
+	<li>
+		<p>{{item.Description | escape}}</p>
 		<pre><code>{{item.Command | escape_once}}</code></pre>
-		Usecase: {{item.Usecase | escape}}
-		<br>
-		Privileges required: {{item.Privileges}}
-		<br>
-		OS: {{item.OperatingSystem}}
-		<br>
-		MITRE ATT&CK&reg: <span data-attack-tid="{{item.MitreID}}">{{item.MitreID}}</span>
-		<br>
-		<br>
-		<br>
-		<br>
+		<div class="properties">
+		<dl class="row"><dt class="property">Use case</dt><dd>{{item.Usecase | escape}}</dd></dl>
+		<dl class="row"><dt class="property">Privileges required</dt><dd>{{item.Privileges}}</dd></dl>
+		<dl class="row"><dt class="property">Operating systems</dt><dd>{{item.OperatingSystem}}</dd></dl>
+		<dl class="row"><dt class="property">ATT&CK&reg; technique</dt><dd><span data-attack-tid="{{item.MitreID}}">{{item.MitreID}}</span></dd></dl>
+		{% if item.Tags %}<dl class="tags row"><dt class="property">Tags</dt><dd>{% for tag_items in item.Tags %}{% for tag_item in tag_items %}{%assign key=tag_item[0]%}{%assign value=tag_item[1]%}{%assign tag=key | append:': ' | append:value %}{% assign default_text = 'This function was tagged with "' | append: tag | append:'".' %}<div class="tag">{{tag}}<div class="tag-tooltip">{{site.data.tags[key][value] | default:default_text}}</div></div>{%endfor%}{%endfor%}</dd></dl>{%endif%}
+		</div>
+	</li>
 	{% endfor %}
+</ol>
 {% endfor %}
