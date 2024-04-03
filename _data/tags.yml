@@ -6,7 +6,7 @@ Execute:
   WSH: This LOLBAS executes scripts in Windows Script Host (WSH) languages, such as VBScript and JScript.
 Type:
   Compression: This LOLBAS involves (de)compression of one or more files.
-Lolbas:
+Application:
   GUI: This LOLBAS will cause a graphical user interface (GUI) to be displayed.
 Input:
   Custom Format: This LOLBAS expects the input file to follow a set structure; check the description and linked resources for more details.
