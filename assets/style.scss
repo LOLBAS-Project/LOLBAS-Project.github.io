@@ -1,8 +1,8 @@
 ---
 ---
-
+@use "sass:color";
 $accent: #2fc0f0;
-$lighter: #cdf0fc;
+$lighter: color.adjust($accent, $lightness: 40%);
 $hover: #0d89b3;
 
 // layout
@@ -100,7 +100,7 @@ a:hover {
 
 // permalink on headings
 
-h2, h3, h4, h5, h5 {
+h2, h3, h4, h5 {
     .permalink {
         margin-left: 5px;
         text-decoration: none;
@@ -121,6 +121,12 @@ h2, h3, h4, h5, h5 {
             visibility: visible;
         }
     }
+}
+
+h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 // binary list and search
@@ -362,6 +368,11 @@ dl.row>dd {
 dl { /* Required for Chrome, default in Firefox */
     margin: 0;
 }
+
+section + section {
+    margin-top: 1em;
+}
+
 
 .path-highlight {
     color: #888;
