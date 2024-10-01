@@ -8,9 +8,13 @@ function shorten_url(url_input) {
     return url_input
 }
 
+const highlight_path = file_path => file_path.replace(/(\&lt;.*?\&gt;)/g, '<span class="path-highlight">$1</span>');
+
 window.addEventListener('load', function () {
     document.querySelectorAll('a[data-shorten]').forEach((element) => {
-        element.innerHTML = shorten_url(element.innerHTML)
+        element.innerHTML = shorten_url(element.innerHTML);
+    });
+    document.querySelectorAll('*[data-file-path]').forEach((element) => {
+        element.innerHTML = highlight_path(element.innerHTML);
     });
 });
-
