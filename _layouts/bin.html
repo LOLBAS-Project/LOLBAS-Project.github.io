@@ -21,7 +21,7 @@ layout: common
 <div><b>Paths:</b>
 	<ul style="list-style-type:none">
 	{% for ent in page.Full_Path %}
-	<li>{{ent.Path | escape }}</li>
+	<li data-file-path>{{ent.Path | escape }}</li>
 	{% endfor %}
 	</ul>
 </div>
