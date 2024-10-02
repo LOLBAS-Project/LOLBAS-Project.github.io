@@ -1,8 +1,7 @@
 ---
 ---
-@use "sass:color";
 $accent: #2fc0f0;
-$lighter: color.adjust($accent, $lightness: 40%);
+$lighter: lighten($accent, 40%);
 $hover: #0d89b3;
 
 // layout
