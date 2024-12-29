@@ -2,8 +2,35 @@
 Download:
   INetCache: 'INetCache downloaders typically store files in a randomly-named folder under <code>%LOCALAPPDATA%\Microsoft\Windows\INetCache\IE</code>, having added <code>[1]</code> or a higher number between the file''s name and its extension.<br>If you downloaded a file named <code>XYZ.exe</code>, the full path of the downloaded file can be obtained by executing the following command:<br><code>cmd.exe /c "where /r %LOCALAPPDATA%\Microsoft\Windows\INetCache XYZ*"</code>'
 Execute:
+  .NetObjects: This LOLBAS can execute .NET code via .NET Objects, which can e.g be configured to execute command lines.
+  CHM: This LOLBAS can execute compiled HTML (CHM) files.
+  ClickOnce: This LOLBAS can execute ClickOne manifests.
+  CMD: This LOLBAS can execute command lines.
+  COM: This LOLBAS can trigger COM objects for execution.
+  CSharp: This LOLBAS compiles and executes CSharp code.
+  DLL (.NET): This LOLBAS executes .NET Dynamic-Link Libraries (DLLs).
   DLL: This LOLBAS executes Dynamic-Link Libraries (DLLs).
+  EXE (.NET): This LOLBAS can start .NET executables (without a custom command line).
+  EXE: This LOLBAS can start executables (without a custom command line).
+  FSharp: This LOLBAS compiles and executes FSharp code.
+  HTA: This LOLBAS can execute Microsoft's HTML Application (HTA) files; this implies WSH languages, such as VBScript and JScript.
+  INF: This LOLBAS can trigger setup information (INF) files, which can be used for e.g. execution of command lines.
+  JScript: This LOLBAS can execute JScript code, Microsoft's implementation of JavaScript.
+  MSI: This LOLBAS can execute Microsoft Installer (MSI) files.
+  MST: This LOLBAS can execute Microsoft Installer Transform (MST) files.
+  Node.JS: This LOLBAS can execute JavaScript files via a Node.JS engine.
+  Nuget: This LOLBAS can install NuGet packages (see nuget.org).
+  PowerShell: This LOLBAS executes arbitrary PowerShell code.
+  Remote: This LOLBAS can execute a payload hosted in a remote location.
+  SCT: This LOLBAS can execute script component (SCT) files; this implies WSH languages, such as VBScript and JScript.
+  Shellcode: This LOLBAS can execute raw shellcode.
+  URL: This LOLBAS can open .URL files, which can e.g. be configured to download and run remotely-hosted executables.
+  VB.NET: This LOLBAS can execute VB.NET code.
+  VBScript: This LOLBAS can execute VBScript code.
   WSH: This LOLBAS executes scripts in Windows Script Host (WSH) languages, such as VBScript and JScript.
+  XBAP: This LOLBAS can execute XAML Browser Application (XBAP) files.
+  XOML: This LOLBAS execute files in Extensible Object Markup Language (XOML) format, a serialization format for Windows Workflow Foundation's workflow objects.
+  XSL: This LOLBAS can execute Extensible Stylesheet Language (XSL) files.
 Type:
   Compression: This LOLBAS involves (de)compression of one or more files.
 Application:
