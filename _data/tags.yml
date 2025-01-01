@@ -6,7 +6,7 @@ Download:
     %LOCALAPPDATA%\Microsoft\Windows\INetCache\IE
 
     , having added "[1]" or a higher number between the file's name and its extension.
-    For examples, if you downloaded a file named "XYZ.exe", the full path of the downloaded file can be obtained by executing the following command:
+    For example, if you downloaded a file named "XYZ.exe", the full path of the downloaded file can be obtained by executing the following command:
 
     cmd.exe /c "where /r %LOCALAPPDATA%\Microsoft\Windows\INetCache XYZ*"
 
