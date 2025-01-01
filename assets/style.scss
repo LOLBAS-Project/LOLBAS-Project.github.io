@@ -380,11 +380,12 @@ $xy-border: (
       opacity: 0;
       padding: .25rem .5rem;
       position: absolute;
-      text-align: center;
+      text-align: left;
       text-transform: none;
       transition: opacity .2s;
       visibility: hidden;
       z-index: 1;
+      white-space: break-spaces;
       max-width: 300px;
       width: 300px;
     }
