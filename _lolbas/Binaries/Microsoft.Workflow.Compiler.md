@@ -13,7 +13,7 @@ Commands:
     OperatingSystem: Windows 10S, Windows 11
     Tags:
       - Execute: VB.Net
-      - Execute: Csharp
+      - Execute: CSharp
   - Command: Microsoft.Workflow.Compiler.exe tests.txt results.txt
     Description: Compile and execute C# or VB.net code in a XOML file referenced in the test.txt file.
     Usecase: Compile and run code

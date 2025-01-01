@@ -34,7 +34,7 @@ Execute:
   SCT: This LOLBAS can execute script component (SCT) files; this implies WSH languages, such as VBScript and JScript.
   Shellcode: This LOLBAS can execute raw shellcode.
   URL: This LOLBAS can open .URL files, which can e.g. be configured to download and run remotely-hosted executables.
-  VB.NET: This LOLBAS can execute VB.NET code.
+  VB.Net: This LOLBAS can execute VB.NET code.
   VBScript: This LOLBAS can execute VBScript code.
   WSH: This LOLBAS executes scripts in Windows Script Host (WSH) languages, such as VBScript and JScript.
   XBAP: This LOLBAS can execute XAML Browser Application (XBAP) files.
