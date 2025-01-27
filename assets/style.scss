@@ -69,6 +69,11 @@ code {
     border-radius: 0.25em;
     color: $accent;
     background: $lighter;
+
+    .path {
+        color: #777;
+        border-bottom: 1px dashed $accent;
+    }
 }
 
 pre {
