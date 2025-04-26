@@ -11,7 +11,7 @@ NOTE: "Please use the rendered version of this file"
 {%- assign subtechniques = occurrences  | where_exp:"item","item.name contains '.'" | group_by_exp:"item","item.name | split:'.' | slice:0" | map:'name' |join:','|split:',' -%}
 {
     "name": "The LOLBAS Project",
-    "versions": {"attack": "15", "navigator": "4.9.5", "layer": "4.5"},
+    "versions": {"attack": "17", "navigator": "5.1.0", "layer": "4.5"},
     "domain": "enterprise-attack",
     "description": "ATT&CK alignment of the LOLBAS project, see https://lolbas-project.github.io/.",
     "filters": {"platforms": ["Windows"]},
