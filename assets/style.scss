@@ -340,6 +340,10 @@ ol li:only-child {
 dl.row>dd {
     margin: 0;
 }
+dd>p {
+
+    margin: 0;
+}
 
 dl { /* Required for Chrome, default in Firefox */
     margin: 0;

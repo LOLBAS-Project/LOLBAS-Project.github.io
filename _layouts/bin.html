@@ -74,10 +74,10 @@ layout: common
 		<ol>
 			{% for item in Command.items -%}
 			<li>
-				<p>{{item.Description | escape}}</p>
+				{{item.Description | markdownify}}
 				<pre><code>{{item.Command | escape_once}}</code></pre>
 				<div class="properties">
-					<dl class="row"><dt class="property">Use case</dt><dd>{{item.Usecase | escape}}</dd></dl>
+					<dl class="row"><dt class="property">Use case</dt><dd>{{item.Usecase | markdownify}}</dd></dl>
 					<dl class="row"><dt class="property">Privileges required</dt><dd>{{item.Privileges}}</dd></dl>
 					<dl class="row"><dt class="property">Operating systems</dt><dd>{{item.OperatingSystem}}</dd></dl>
 					<dl class="row"><dt class="property">ATT&CK&reg; technique</dt><dd><span data-attack-tid="{{item.MitreID}}">{{item.MitreID}}</span></dd></dl>
