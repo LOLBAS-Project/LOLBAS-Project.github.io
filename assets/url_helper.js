@@ -19,7 +19,7 @@ window.addEventListener('load', function () {
     });
 
     this.document.querySelectorAll("pre>code").forEach(x => {
-        let value = x.innerText;
+        let value = x.innerHTML;
 
         const path_or_folder = y => y == 'folder' ? 'folder' : `file with a${y ? (' ' + y) : 'n arbitrary'} extension`
         const path_folder = y => y == 'folder' ? 'folder' : `file${y || '.ext'}`

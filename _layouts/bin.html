@@ -58,7 +58,7 @@ layout: common
 			{% else %}
 				{% assign value = entity[1] | escape %}
 			{%- endif -%}
-			<li>{{entity[0]}}: {{value}}</li>
+			<li>{{entity[0]}}: {{value | markdownify  | remove: '<p>' | remove: '</p>'}}</li>
 			{%- endfor %}{% endfor %}
 		</ul>
 	</section>
