@@ -26,5 +26,5 @@ Acknowledgement:
   - Person: Bogac Kaya
     Handle: '@bogackayaa'
   - Person: Furkan Celik
-    Handle: '@fkrnclk34'
+    Handle: '@frknclk034'
 ---
